@@ -1,0 +1,1727 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/res/js/scripts.js" line="1699" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2bb1f890-3710-4cbb-a037-e4f9a19f1acd" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cf4_data_entry.php" afterPath="$PROJECT_DIR$/cf4_data_entry.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cf4_search.php" afterPath="$PROJECT_DIR$/cf4_search.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cf4_view_list_record.php" afterPath="$PROJECT_DIR$/cf4_view_list_record.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.ini" afterPath="$PROJECT_DIR$/config.ini" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/followup_meds_data_entry.php" afterPath="$PROJECT_DIR$/followup_meds_data_entry.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/footer.php" afterPath="$PROJECT_DIR$/footer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/function.php" afterPath="$PROJECT_DIR$/function.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/function_global.php" afterPath="$PROJECT_DIR$/function_global.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generate_xml.php" afterPath="$PROJECT_DIR$/generate_xml.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/home.php" afterPath="$PROJECT_DIR$/home.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hsa_data_entry.php" afterPath="$PROJECT_DIR$/hsa_data_entry.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/print/cf4_report_claims.php" afterPath="$PROJECT_DIR$/print/cf4_report_claims.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/js/scripts.js" afterPath="$PROJECT_DIR$/res/js/scripts.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/genXML.xml" afterPath="$PROJECT_DIR$/tmp/genXML.xml" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_TABLE_DETAILS" value="true" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <expand />
+    <select />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="function.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/function.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="7469" column="0" lean-forward="true" selection-start-line="7469" selection-start-column="0" selection-end-line="7469" selection-end-column="0" />
+              <folding>
+                <marker date="1558667249366" expanded="true" signature="766:996" ph="SELECT * FRO... TBL_FACILITY_PROFILE" />
+                <marker date="1558667249366" expanded="true" signature="766:1015" ph="SELECT * FRO... TSEKAP_TBL_HCI_PROFILE" />
+                <marker date="1558667249366" expanded="true" signature="3130:3401" ph="SELECT * FRO... LIB_MUNICIPALITY" />
+                <marker date="1558667249366" expanded="true" signature="3884:3921" ph="SELECT * FRO... " />
+                <marker date="1558667249366" expanded="true" signature="3884:3981" ph="SELECT * FRO... TSEKAP_LIB_SKIN" />
+                <marker date="1558667249366" expanded="true" signature="3884:4024" ph="SELECT * FRO... TSEKAP_LIB_SKIN" />
+                <marker date="1558667249366" expanded="true" signature="4569:4598" ph="SELECT * FRO... " />
+                <marker date="1558667249366" expanded="true" signature="4569:4599" ph="SELECT * FRO... " />
+                <marker date="1558667249366" expanded="true" signature="4569:4710" ph="SELECT * FRO... TSEKAP_LIB_HEENT" />
+                <marker date="1558667249366" expanded="true" signature="5256:5397" ph="SELECT * FRO... TSEKAP_LIB_CHEST" />
+                <marker date="1558667249366" expanded="true" signature="5943:6084" ph="SELECT * FRO... TSEKAP_LIB_HEART" />
+                <marker date="1558667249366" expanded="true" signature="6632:6775" ph="SELECT * FRO... TSEKAP_LIB_ABDOMEN" />
+                <marker date="1558667249366" expanded="true" signature="7331:7478" ph="SELECT * FRO... TSEKAP_LIB_EXTREMITIES" />
+                <marker date="1558667249366" expanded="true" signature="8036:8177" ph="SELECT * FRO... TSEKAP_LIB_NEURO" />
+                <marker date="1558667249366" expanded="true" signature="8731:8880" ph="SELECT * FRO... TSEKAP_LIB_NEURO" />
+                <marker date="1558667249366" expanded="true" signature="9428:9578" ph="SELECT * FRO... TSEKAP_LIB_DIGITAL_RECTAL" />
+                <marker date="1558667249366" expanded="true" signature="10138:10290" ph="SELECT * FRO... TSEKAP_LIB_DIGITAL_RECTAL" />
+                <marker date="1558667249366" expanded="true" signature="10833:10973" ph="SELECT * FRO... TSEKAP_LIB_ICD" />
+                <marker date="1558667249366" expanded="true" signature="11519:11879" ph="SELECT * FRO... TSEKAP_LIB_DIAGNOSTIC" />
+                <marker date="1558667249366" expanded="true" signature="12428:12543" ph="SELECT * FRO... TSEKAP_LIB_MANAGEMENT" />
+                <marker date="1558667249366" expanded="true" signature="12428:12597" ph="SELECT * FRO... TSEKAP_LIB_MANAGEMENT" />
+                <marker date="1558667249366" expanded="true" signature="13164:13776" ph="SELECT PROCO... LIB_PROVINCE" />
+                <marker date="1558667249366" expanded="true" signature="14326:14436" ph="SELECT * FRO... TSEKAP_LIB_MEDS_GENERIC" />
+                <marker date="1558667249366" expanded="true" signature="14986:15093" ph="SELECT * FRO... TSEKAP_LIB_WAIVED_REASON" />
+                <marker date="1558667249366" expanded="true" signature="15112:15226" ph="SELECT * FRO... TSEKAP_LIB_MEDS" />
+                <marker date="1558667249366" expanded="true" signature="15826:16019" ph="SELECT * FRO... TSEKAP_LIB_CHEST_OBSERVATION" />
+                <marker date="1558667249366" expanded="true" signature="16553:16743" ph="SELECT * FRO... TSEKAP_LIB_CHEST_FINDINGS" />
+                <marker date="1558667249366" expanded="true" signature="17229:17330" ph="SELECT * FRO... TSEKAP_LIB_MEDS" />
+                <marker date="1558667249366" expanded="true" signature="17932:18029" ph="SELECT * FRO... LIB_MUNICIPALITY" />
+                <marker date="1558667249366" expanded="true" signature="18627:18946" ph="SELECT * FRO... LIB_BARANGAY" />
+                <marker date="1558667249366" expanded="true" signature="19584:19655" ph="SELECT * FRO... LIB_PROVINCE" />
+                <marker date="1558667249366" expanded="true" signature="20249:20488" ph="SELECT * FRO... LIB_ZIPCODE" />
+                <marker date="1558667249366" expanded="true" signature="21131:21202" ph="SELECT * FRO... TSEKAP_TBL_ENLIST" />
+                <marker date="1558667249366" expanded="true" signature="21842:21908" ph="SELECT * FRO... TSEKAP_TBL_ENLIST" />
+                <marker date="1558667249366" expanded="true" signature="21842:21916" ph="SELECT * FRO... TSEKAP_TBL_ENLIST" />
+                <marker date="1558667249366" expanded="true" signature="22580:23152" ph="SELECT soap.... TSEKAP_TBL_SOAP" />
+                <marker date="1558667249366" expanded="true" signature="22580:23210" ph="SELECT soap.... TSEKAP_TBL_SOAP" />
+                <marker date="1558667249366" expanded="true" signature="22580:23215" ph="SELECT soap.... TSEKAP_TBL_SOAP" />
+                <marker date="1558667249366" expanded="true" signature="22580:23222" ph="SELECT soap.... TSEKAP_TBL_SOAP" />
+                <marker date="1558667249366" expanded="true" signature="23874:24327" ph="SELECT soap.... TSEKAP_TBL_SOAP" />
+                <marker date="1558667249366" expanded="true" signature="23874:24328" ph="SELECT soap.... TSEKAP_TBL_SOAP" />
+                <marker date="1558667249366" expanded="true" signature="23874:24488" ph="SELECT * FRO... TSEKAP_TBL_SOAP" />
+                <marker date="1558667249366" expanded="true" signature="23874:24568" ph="SELECT soap.... TSEKAP_TBL_SOAP" />
+                <marker date="1558667249366" expanded="true" signature="25166:25711" ph="SELECT *, CA... TSEKAP_TBL_ENLIST" />
+                <marker date="1558667249366" expanded="true" signature="26374:27561" ph="SELECT * FRO... TSEKAP_TBL_SOAP" />
+                <marker date="1558667249366" expanded="true" signature="26374:27721" ph="SELECT * FRO... TSEKAP_TBL_SOAP" />
+                <marker date="1558667249366" expanded="true" signature="26374:27804" ph="SELECT * FRO... TSEKAP_TBL_SOAP" />
+                <marker date="1558667249366" expanded="true" signature="26374:27881" ph="SELECT * FRO... TSEKAP_TBL_SOAP" />
+                <marker date="1558667249366" expanded="true" signature="26374:27976" ph="SELECT * FRO... TSEKAP_TBL_SOAP" />
+                <marker date="1558667249366" expanded="true" signature="26374:27982" ph="SELECT * FRO... TSEKAP_TBL_SOAP" />
+                <marker date="1558667249366" expanded="true" signature="26531:26547" ph="/*PATIENT IN... " />
+                <marker date="1558667249366" expanded="true" signature="26681:26702" ph="/*CONSULTATI... " />
+                <marker date="1558667249366" expanded="true" signature="26858:26892" ph="/*SUBJECTIVE... " />
+                <marker date="1558667249366" expanded="true" signature="27036:27071" ph="/*OBJECTIVE/... " />
+                <marker date="1558667249366" expanded="true" signature="27227:27272" ph="/*OBJECTIVE/... " />
+                <marker date="1558667249366" expanded="true" signature="27416:27444" ph="/*PLAN/MANAG... " />
+                <marker date="1558667249366" expanded="true" signature="28703:28825" ph="SELECT * FRO... TSEKAP_TBL_SOAP" />
+                <marker date="1558667249366" expanded="true" signature="28703:28831" ph="SELECT * FRO... TSEKAP_TBL_SOAP" />
+                <marker date="1558667249366" expanded="true" signature="29525:29839" ph="SELECT * FRO... TSEKAP_TBL_SOAP" />
+                <marker date="1558667249366" expanded="true" signature="29525:29885" ph="SELECT * FRO... TSEKAP_TBL_SOAP" />
+                <marker date="1558667249366" expanded="true" signature="29525:29891" ph="SELECT * FRO... TSEKAP_TBL_SOAP" />
+                <marker date="1558667249366" expanded="true" signature="29525:29900" ph="SELECT * FRO... TSEKAP_TBL_SOAP" />
+                <marker date="1558667249366" expanded="true" signature="29525:29979" ph="SELECT * FRO... TSEKAP_TBL_SOAP" />
+                <marker date="1558667249366" expanded="true" signature="30721:31166" ph="SELECT * FRO... TSEKAP_TBL_SOAP" />
+                <marker date="1558667249366" expanded="true" signature="30721:31208" ph="SELECT *, li... TSEKAP_TBL_SOAP" />
+                <marker date="1558667249366" expanded="true" signature="30721:31277" ph="SELECT *, li... TSEKAP_TBL_SOAP" />
+                <marker date="1558667249366" expanded="true" signature="30721:31295" ph="SELECT *, li... TSEKAP_TBL_SOAP" />
+                <marker date="1558667249366" expanded="true" signature="32058:32372" ph="SELECT *, li... TSEKAP_TBL_SOAP" />
+                <marker date="1558667249366" expanded="true" signature="32058:32490" ph="SELECT * FRO... TSEKAP_TBL_SOAP" />
+                <marker date="1558667249366" expanded="true" signature="32058:32508" ph="SELECT * FRO... TSEKAP_TBL_SOAP" />
+                <marker date="1558667249366" expanded="true" signature="33261:33575" ph="SELECT * FRO... TSEKAP_TBL_SOAP" />
+                <marker date="1558667249366" expanded="true" signature="33261:33711" ph="SELECT * FRO... TSEKAP_TBL_SOAP" />
+                <marker date="1558667249366" expanded="true" signature="34456:34767" ph="SELECT * FRO... TSEKAP_TBL_SOAP" />
+                <marker date="1558667249366" expanded="true" signature="34456:34809" ph="SELECT * FRO... TSEKAP_TBL_SOAP" />
+                <marker date="1558667249366" expanded="true" signature="34456:34902" ph="SELECT * FRO... TSEKAP_TBL_SOAP" />
+                <marker date="1558667249366" expanded="true" signature="35628:35923" ph="SELECT * FRO... TSEKAP_TBL_SOAP" />
+                <marker date="1558667249366" expanded="true" signature="35628:36099" ph="SELECT * FRO... TSEKAP_TBL_SOAP" />
+                <marker date="1558667249366" expanded="true" signature="35628:36122" ph="SELECT * FRO... TSEKAP_TBL_SOAP" />
+                <marker date="1558667249366" expanded="true" signature="36763:37352" ph="SELECT * FRO... TSEKAP_TBL_SOAP_DIAGNOSTIC" />
+                <marker date="1558667249366" expanded="true" signature="36763:37422" ph="SELECT diag.... TSEKAP_TBL_SOAP_DIAGNOSTIC" />
+                <marker date="1558667249366" expanded="true" signature="36763:37425" ph="SELECT diag.... TSEKAP_TBL_SOAP_DIAGNOSTIC" />
+                <marker date="1558667249366" expanded="true" signature="36763:37445" ph="SELECT diag.... TSEKAP_TBL_SOAP_DIAGNOSTIC" />
+                <marker date="1558667249366" expanded="true" signature="36763:37452" ph="SELECT diag.... TSEKAP_TBL_SOAP_DIAGNOSTIC" />
+                <marker date="1558667249366" expanded="true" signature="36763:37462" ph="SELECT diag.... TSEKAP_TBL_SOAP_DIAGNOSTIC" />
+                <marker date="1558667249366" expanded="true" signature="36763:37476" ph="SELECT diag.... TSEKAP_TBL_SOAP_DIAGNOSTIC" />
+                <marker date="1558667249366" expanded="true" signature="36763:37508" ph="SELECT diag.... TSEKAP_TBL_SOAP_DIAGNOSTIC" />
+                <marker date="1558667249366" expanded="true" signature="38086:38275" ph="SELECT * FRO... TSEKAP_LIB_MEDICINE" />
+                <marker date="1558667249366" expanded="true" signature="38853:39147" ph="SELECT * FRO... TSEKAP_LIB_MEDICINE" />
+                <marker date="1558667249366" expanded="true" signature="39725:40019" ph="SELECT * FRO... TSEKAP_LIB_MEDICINE" />
+                <marker date="1558667249366" expanded="true" signature="40597:40725" ph="SELECT * FRO... TSEKAP_LIB_MEDICINE" />
+                <marker date="1558667249366" expanded="true" signature="41306:41604" ph="SELECT * FRO... TSEKAP_LIB_MEDICINE" />
+                <marker date="1558667249366" expanded="true" signature="42182:42476" ph="SELECT * FRO... TSEKAP_LIB_MEDICINE" />
+                <marker date="1558667249366" expanded="true" signature="43057:43354" ph="SELECT * FRO... TSEKAP_LIB_MEDICINE" />
+                <marker date="1558667249366" expanded="true" signature="43933:44124" ph="SELECT * FRO... TSEKAP_LIB_MEDS_SALT" />
+                <marker date="1558667249366" expanded="true" signature="44701:44892" ph="SELECT * FRO... TSEKAP_LIB_MEDS_UNIT" />
+                <marker date="1558667249366" expanded="true" signature="45471:45663" ph="SELECT * FRO... TSEKAP_LIB_MEDS_GENERIC" />
+                <marker date="1558667249366" expanded="true" signature="46243:46446" ph="SELECT * FRO... TSEKAP_LIB_MEDS_STRENGTH" />
+                <marker date="1558667249366" expanded="true" signature="47023:47214" ph="SELECT * FRO... TSEKAP_LIB_MEDS_FORM" />
+                <marker date="1558667249366" expanded="true" signature="47794:47994" ph="SELECT * FRO... TSEKAP_LIB_MEDS_PACKAGE" />
+                <marker date="1558667249366" expanded="true" signature="48616:48763" ph="SELECT * FRO... TSEKAP_LIB_OBLIGATED" />
+                <marker date="1558667249366" expanded="true" signature="49403:49552" ph="SELECT * FRO... TSEKAP_LIB_WAIVED_REASON" />
+                <marker date="1558667249366" expanded="true" signature="50189:50337" ph="SELECT * FRO... TSEKAP_LIB_DIAGNOSTIC" />
+                <marker date="1558667249366" expanded="true" signature="50970:51109" ph="SELECT * FRO... LIB_PROVINCE" />
+                <marker date="1558667249366" expanded="true" signature="51781:51993" ph="SELECT * FRO... LIB_MUNICIPALITY" />
+                <marker date="1558667249366" expanded="true" signature="52744:52998" ph="SELECT * FRO... LIB_BARANGAY" />
+                <marker date="1558667249366" expanded="true" signature="54218:55405" ph="SELECT CASE_... TSEKAP_TBL_ENLIST" />
+                <marker date="1558667249366" expanded="true" signature="55824:57002" ph="SELECT CASE_... TSEKAP_TBL_ENLIST" />
+                <marker date="1558667249366" expanded="true" signature="57421:58599" ph="SELECT CASE_... TSEKAP_TBL_ENLIST" />
+                <marker date="1558667249366" expanded="true" signature="59258:60647" ph="SELECT ENLIS... TSEKAP_TBL_ENLIST" />
+                <marker date="1558667249366" expanded="true" signature="61066:62444" ph="SELECT ENLIS... TSEKAP_TBL_ENLIST" />
+                <marker date="1558667249366" expanded="true" signature="62863:64241" ph="SELECT ENLIS... TSEKAP_TBL_ENLIST" />
+                <marker date="1558667249366" expanded="true" signature="64888:66259" ph="SELECT ENLIS... TSEKAP_TBL_ENLIST" />
+                <marker date="1558667249366" expanded="true" signature="66678:68038" ph="SELECT ENLIS... TSEKAP_TBL_ENLIST" />
+                <marker date="1558667249366" expanded="true" signature="68457:69817" ph="SELECT ENLIS... TSEKAP_TBL_ENLIST" />
+                <marker date="1558667249366" expanded="true" signature="70472:72303" ph="SELECT ENLIS... TSEKAP_TBL_ENLIST" />
+                <marker date="1558667249366" expanded="true" signature="72722:74539" ph="SELECT ENLIS... TSEKAP_TBL_ENLIST" />
+                <marker date="1558667249366" expanded="true" signature="74958:76775" ph="SELECT ENLIS... TSEKAP_TBL_ENLIST" />
+                <marker date="1558667249366" expanded="true" signature="77426:80067" ph="SELECT ENLIS... TSEKAP_TBL_ENLIST" />
+                <marker date="1558667249366" expanded="true" signature="80486:83116" ph="SELECT ENLIS... TSEKAP_TBL_ENLIST" />
+                <marker date="1558667249366" expanded="true" signature="83535:86165" ph="SELECT ENLIS... TSEKAP_TBL_ENLIST" />
+                <marker date="1558667249366" expanded="true" signature="86819:88550" ph="SELECT ENLIS... TSEKAP_TBL_ENLIST" />
+                <marker date="1558667249366" expanded="true" signature="88969:90679" ph="SELECT ENLIS... TSEKAP_TBL_ENLIST" />
+                <marker date="1558667249366" expanded="true" signature="91098:92810" ph="SELECT ENLIS... TSEKAP_TBL_ENLIST" />
+                <marker date="1558667249366" expanded="true" signature="93464:95196" ph="SELECT ENLIS... TSEKAP_TBL_ENLIST" />
+                <marker date="1558667249366" expanded="true" signature="95615:97326" ph="SELECT ENLIS... TSEKAP_TBL_ENLIST" />
+                <marker date="1558667249366" expanded="true" signature="97745:99458" ph="SELECT ENLIS... TSEKAP_TBL_ENLIST" />
+                <marker date="1558667249366" expanded="true" signature="100878:101266" ph="SELECT CLAIM... TSEKAP_TBL_ENLIST" />
+                <marker date="1558667249366" expanded="true" signature="101601:102052" ph="SELECT CLAIM... TSEKAP_TBL_ENLIST" />
+                <marker date="1558667249366" expanded="true" signature="102474:102987" ph="SELECT CLAIM... TSEKAP_TBL_ENLIST" />
+                <marker date="1558667249366" expanded="true" signature="103454:104026" ph="SELECT CLAIM... TSEKAP_TBL_ENLIST" />
+                <marker date="1558667249366" expanded="true" signature="104560:105132" ph="SELECT CLAIM... TSEKAP_TBL_ENLIST" />
+                <marker date="1558667249366" expanded="true" signature="105702:106345" ph="SELECT CLAIM... TSEKAP_TBL_ENLIST" />
+                <marker date="1558667249366" expanded="true" signature="107432:108300" ph="SELECT SOAP.... TSEKAP_TBL_SOAP_DIAGNOSTIC" />
+                <marker date="1558667249366" expanded="true" signature="108584:109488" ph="SELECT SOAP.... TSEKAP_TBL_SOAP_DIAGNOSTIC" />
+                <marker date="1558667249366" expanded="true" signature="109859:110830" ph="SELECT SOAP.... TSEKAP_TBL_SOAP_DIAGNOSTIC" />
+                <marker date="1558667249366" expanded="true" signature="111248:112285" ph="SELECT SOAP.... TSEKAP_TBL_SOAP_DIAGNOSTIC" />
+                <marker date="1558667249366" expanded="true" signature="112768:113805" ph="SELECT SOAP.... TSEKAP_TBL_SOAP_DIAGNOSTIC" />
+                <marker date="1558667249366" expanded="true" signature="114324:115439" ph="SELECT SOAP.... TSEKAP_TBL_SOAP_DIAGNOSTIC" />
+                <marker date="1558667249366" expanded="true" signature="116369:117057" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_HCI_PROFILE... " />
+                <marker date="1558667249366" expanded="true" signature="121221:122531" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_ENLIST... " />
+                <marker date="1558667249366" expanded="true" signature="125836:127113" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_HIST_ENLIST... " />
+                <marker date="1558667249366" expanded="true" signature="138009:139230" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_HIST_ENLIST... " />
+                <marker date="1558667249366" expanded="true" signature="143019:143197" ph="SELECT * FRO... TSEKAP_TBL_ENLIST" />
+                <marker date="1558667249366" expanded="true" signature="143019:143243" ph="SELECT * FRO... TSEKAP_TBL_ENLIST" />
+                <marker date="1558667249366" expanded="true" signature="143019:143265" ph="SELECT * FRO... TSEKAP_TBL_ENLIST" />
+                <marker date="1558667249366" expanded="true" signature="144164:144276" ph="SELECT * FRO... TSEKAP_TBL_ASSIGN" />
+                <marker date="1558667249366" expanded="true" signature="144164:144342" ph="SELECT * FRO... TSEKAP_TBL_ASSIGN" />
+                <marker date="1558667249366" expanded="true" signature="173182:173927" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_SOAP... " />
+                <marker date="1558667249366" expanded="true" signature="175245:175933" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_SOAP_SUBJECTIVE... " />
+                <marker date="1558667249366" expanded="true" signature="177081:177655" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_SOAP_OBLIGATED... " />
+                <marker date="1558667249366" expanded="true" signature="178812:179732" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_SOAP_PEPERT... " />
+                <marker date="1558667249366" expanded="true" signature="181015:181731" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_SOAP_PEMISC... " />
+                <marker date="1558667249366" expanded="true" signature="183003:183830" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_SOAP_PESPECIFIC... " />
+                <marker date="1558667249366" expanded="true" signature="185072:185433" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_SOAP_ICD... " />
+                <marker date="1558667249366" expanded="true" signature="186384:186852" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_SOAP_DIAGNOSTIC... " />
+                <marker date="1558667249366" expanded="true" signature="187755:188141" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_SOAP_MANAGEMENT... " />
+                <marker date="1558667249366" expanded="true" signature="189030:189394" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_SOAP_ADVICE... " />
+                <marker date="1558667249366" expanded="true" signature="190504:192209" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_MEDICINE... " />
+                <marker date="1558667249366" expanded="true" signature="194502:196546" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_DIAG_CBC... " />
+                <marker date="1558667249366" expanded="true" signature="199127:201145" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_DIAG_URINALYSIS... " />
+                <marker date="1558667249366" expanded="true" signature="203693:205045" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_DIAG_FECALYSIS... " />
+                <marker date="1558667249366" expanded="true" signature="206779:207861" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_DIAG_CHESTXRAY... " />
+                <marker date="1558667249366" expanded="true" signature="209386:210434" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_DIAG_SPUTUM... " />
+                <marker date="1558667249366" expanded="true" signature="209386:210435" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_DIAG_SPUTUM... " />
+                <marker date="1558667249366" expanded="true" signature="211944:213040" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_DIAG_LIPIDPROF... " />
+                <marker date="1558667249366" expanded="true" signature="214542:215464" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_DIAG_FBS... " />
+                <marker date="1558667249366" expanded="true" signature="216812:217611" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_DIAG_ECG... " />
+                <marker date="1558667249366" expanded="true" signature="218897:219707" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_DIAG_PAPSSMEAR... " />
+                <marker date="1558667249366" expanded="true" signature="221077:222179" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_DIAG_OGTT... " />
+                <marker date="1558667249366" expanded="true" signature="223579:223776" ph="SELECT * FRO... TSEKAP_TBL_HCI_PROFILE" />
+                <marker date="1558667249366" expanded="true" signature="224482:224689" ph="SELECT * FRO... TSEKAP_TBL_ENLIST" />
+                <marker date="1558667249366" expanded="true" signature="225397:229349" ph="SELECT *, pr... TSEKAP_TBL_PROFILE" />
+                <marker date="1558667249366" expanded="true" signature="225588:225607" ph="/*PATIENT DE... " />
+                <marker date="1558667249366" expanded="true" signature="225745:225776" ph="/*PATIENTS D... " />
+                <marker date="1558667249366" expanded="true" signature="225920:225947" ph="/*PERSONAL/S... " />
+                <marker date="1558667249366" expanded="true" signature="226094:226125" ph="/*OB-GYNE HI... " />
+                <marker date="1558667249366" expanded="true" signature="226272:226303" ph="/*OB-GYNE HI... " />
+                <marker date="1558667249366" expanded="true" signature="226444:226487" ph="/*PERTINENT " />
+                <marker date="1558667249366" expanded="true" signature="226637:226693" ph="/*PERTINENT " />
+                <marker date="1558667249366" expanded="true" signature="226846:226899" ph="/*PERTINENT " />
+                <marker date="1558667249366" expanded="true" signature="227043:227071" ph="/*NCD HIGH-R... " />
+                <marker date="1558667249366" expanded="true" signature="227212:227240" ph="/*PLAN/MANAG... " />
+                <marker date="1558667249366" expanded="true" signature="227386:227414" ph="/*PLAN/MANAG... " />
+                <marker date="1558667249366" expanded="true" signature="227807:227858" ph="SELECT MAX(U... TSEKAP_TBL_PROF_OINFO" />
+                <marker date="1558667249366" expanded="true" signature="227990:228043" ph="SELECT MAX(U... TSEKAP_TBL_PROF_SOCHIST" />
+                <marker date="1558667249366" expanded="true" signature="228176:228230" ph="SELECT MAX(U... TSEKAP_TBL_PROF_PREGHIST" />
+                <marker date="1558667249366" expanded="true" signature="228363:228417" ph="SELECT MAX(U... TSEKAP_TBL_PROF_MENSHIST" />
+                <marker date="1558667249366" expanded="true" signature="228548:228600" ph="SELECT MAX(U... TSEKAP_TBL_PROF_PEPERT" />
+                <marker date="1558667249366" expanded="true" signature="228734:228789" ph="SELECT MAX(U... TSEKAP_TBL_PROF_BLOODTYPE" />
+                <marker date="1558667249366" expanded="true" signature="228924:228980" ph="SELECT MAX(U... TSEKAP_TBL_PROF_PESPECIFIC" />
+                <marker date="1558667249366" expanded="true" signature="229112:229165" ph="SELECT MAX(U... TSEKAP_TBL_PROF_NCDQANS" />
+                <marker date="1558667249366" expanded="true" signature="229296:229348" ph="SELECT MAX(U... TSEKAP_TBL_PROF_ADVICE" />
+                <marker date="1558667249366" expanded="true" signature="229438:232455" ph="SELECT *, pr... TSEKAP_TBL_PROFILE" />
+                <marker date="1558667249366" expanded="true" signature="229438:232456" ph="SELECT *, pr... TSEKAP_TBL_PROFILE" />
+                <marker date="1558667249366" expanded="true" signature="229438:232512" ph="SELECT *, pr... TSEKAP_TBL_PROFILE" />
+                <marker date="1558667249366" expanded="true" signature="229438:232529" ph="SELECT *, pr... TSEKAP_TBL_PROFILE" />
+                <marker date="1558667249366" expanded="true" signature="229627:229646" ph="/*PATIENT DE... " />
+                <marker date="1558667249366" expanded="true" signature="229782:229813" ph="/*PATIENTS D... " />
+                <marker date="1558667249366" expanded="true" signature="229955:229982" ph="/*PERSONAL/S... " />
+                <marker date="1558667249366" expanded="true" signature="230127:230158" ph="/*OB-GYNE HI... " />
+                <marker date="1558667249366" expanded="true" signature="230303:230334" ph="/*OB-GYNE HI... " />
+                <marker date="1558667249366" expanded="true" signature="230473:230516" ph="/*PERTINENT " />
+                <marker date="1558667249366" expanded="true" signature="230664:230720" ph="/*PERTINENT " />
+                <marker date="1558667249366" expanded="true" signature="230871:230924" ph="/*PERTINENT " />
+                <marker date="1558667249366" expanded="true" signature="231066:231094" ph="/*NCD HIGH-R... " />
+                <marker date="1558667249366" expanded="true" signature="231233:231261" ph="/*PLAN/MANAG... " />
+                <marker date="1558667249366" expanded="true" signature="231405:231433" ph="/*PLAN/MANAG... " />
+                <marker date="1558667249366" expanded="true" signature="231760:231773" ph="SELECT MAX(U... TSEKAP_TBL_PROF_OINFO" />
+                <marker date="1558667249366" expanded="true" signature="233257:233982" ph="SELECT medhi... TSEKAP_TBL_PROFILE" />
+                <marker date="1558667249366" expanded="true" signature="233476:233496" ph="/*PATIENTS D... " />
+                <marker date="1558667249366" expanded="true" signature="234767:235482" ph="SELECT mhspe... TSEKAP_TBL_PROFILE" />
+                <marker date="1558667249366" expanded="true" signature="234767:235507" ph="SELECT mhspe... TSEKAP_TBL_PROFILE" />
+                <marker date="1558667249366" expanded="true" signature="234989:235009" ph="/*PATIENTS D... " />
+                <marker date="1558667249366" expanded="true" signature="236294:237014" ph="SELECT pemis... TSEKAP_TBL_PROFILE" />
+                <marker date="1558667249366" expanded="true" signature="236512:236532" ph="/*PATIENTS D... " />
+                <marker date="1558667249366" expanded="true" signature="237790:238495" ph="SELECT surgh... TSEKAP_TBL_PROFILE" />
+                <marker date="1558667249366" expanded="true" signature="237790:238520" ph="SELECT surgh... TSEKAP_TBL_PROFILE" />
+                <marker date="1558667249366" expanded="true" signature="238010:238030" ph="/*PATIENTS D... " />
+                <marker date="1558667249366" expanded="true" signature="239293:239993" ph="SELECT famhi... TSEKAP_TBL_PROFILE" />
+                <marker date="1558667249366" expanded="true" signature="239293:240018" ph="SELECT famhi... TSEKAP_TBL_PROFILE" />
+                <marker date="1558667249366" expanded="true" signature="239512:239532" ph="/*PATIENTS D... " />
+                <marker date="1558667249366" expanded="true" signature="240802:241517" ph="SELECT fhspe... TSEKAP_TBL_PROFILE" />
+                <marker date="1558667249366" expanded="true" signature="240802:241542" ph="SELECT fhspe... TSEKAP_TBL_PROFILE" />
+                <marker date="1558667249366" expanded="true" signature="241024:241044" ph="/*PATIENTS D... " />
+                <marker date="1558667249366" expanded="true" signature="242318:243044" ph="SELECT immun... TSEKAP_TBL_PROFILE" />
+                <marker date="1558667249366" expanded="true" signature="242536:242556" ph="/*PATIENTS D... " />
+                <marker date="1558667249366" expanded="true" signature="243816:244556" ph="SELECT diagn... TSEKAP_TBL_PROFILE" />
+                <marker date="1558667249366" expanded="true" signature="244038:244058" ph="/*PATIENTS D... " />
+                <marker date="1558667249366" expanded="true" signature="245328:246068" ph="SELECT manag... TSEKAP_TBL_PROFILE" />
+                <marker date="1558667249366" expanded="true" signature="245550:245570" ph="/*PATIENTS D... " />
+                <marker date="1558667249366" expanded="true" signature="246822:247099" ph="SELECT *, so... TSEKAP_TBL_SOAP" />
+                <marker date="1558667249366" expanded="true" signature="247811:249099" ph="SELECT *, so... TSEKAP_TBL_SOAP" />
+                <marker date="1558667249366" expanded="true" signature="247811:249166" ph="SELECT *, so... TSEKAP_TBL_SOAP" />
+                <marker date="1558667249366" expanded="true" signature="248055:248083" ph="/*PLAN/MANAG... " />
+                <marker date="1558667249366" expanded="true" signature="248219:248253" ph="/*PHYSICAL E... " />
+                <marker date="1558667249366" expanded="true" signature="248401:248451" ph="/*PERTINENT " />
+                <marker date="1558667249366" expanded="true" signature="248599:248618" ph="/*CHIEF COMP... " />
+                <marker date="1558667249366" expanded="true" signature="249941:250530" ph="SELECT diagn... TSEKAP_TBL_SOAP" />
+                <marker date="1558667249366" expanded="true" signature="251294:251848" ph="SELECT icd.*... TSEKAP_TBL_SOAP" />
+                <marker date="1558667249366" expanded="true" signature="252626:253215" ph="SELECT manag... TSEKAP_TBL_SOAP" />
+                <marker date="1558667249366" expanded="true" signature="254008:254621" ph="SELECT pemis... TSEKAP_TBL_SOAP" />
+                <marker date="1558667249366" expanded="true" signature="255368:255891" ph="SELECT * FRO... TSEKAP_TBL_MEDICINE" />
+                <marker date="1558667249366" expanded="true" signature="255368:256025" ph="SELECT * FRO... TSEKAP_TBL_MEDICINE" />
+                <marker date="1558667249366" expanded="true" signature="255368:256038" ph="SELECT * FRO... TSEKAP_TBL_MEDICINE" />
+                <marker date="1558667249366" expanded="true" signature="255368:256081" ph="SELECT * FRO... " />
+                <marker date="1558667249366" expanded="true" signature="255368:256716" ph="SELECT * FRO... " />
+                <marker date="1558667249366" expanded="true" signature="255368:256775" ph="SELECT meds.... " />
+                <marker date="1558667249366" expanded="true" signature="256119:256716" ph="SELECT * FRO... TSEKAP_TBL_MEDICINE" />
+                <marker date="1558667249366" expanded="true" signature="257483:257999" ph="SELECT * FRO... TSEKAP_TBL_ENLIST" />
+                <marker date="1558667249366" expanded="true" signature="257483:258080" ph="SELECT * FRO... TSEKAP_TBL_ENLIST" />
+                <marker date="1558667249366" expanded="true" signature="257483:258156" ph="SELECT * FRO... TSEKAP_TBL_ENLIST" />
+                <marker date="1558667249366" expanded="true" signature="258871:259265" ph="SELECT *, en... TSEKAP_TBL_ENLIST" />
+                <marker date="1558667249366" expanded="true" signature="258871:259267" ph="SELECT *, en... " />
+                <marker date="1558667249366" expanded="true" signature="258871:259318" ph="SELECT *, en... TSEKAP_TBL_ENLIST" />
+                <marker date="1558667249366" expanded="true" signature="258871:259327" ph="SELECT *, en... TSEKAP_TBL_ENLIST" />
+                <marker date="1558667249366" expanded="true" signature="258871:259331" ph="SELECT *, en... TSEKAP_TBL_ENLIST" />
+                <marker date="1558667249366" expanded="true" signature="258871:259338" ph="SELECT *, en... TSEKAP_TBL_ENLIST" />
+                <marker date="1558667249366" expanded="true" signature="260003:260417" ph="SELECT *, en... TSEKAP_TBL_ENLIST" />
+                <marker date="1558667249366" expanded="true" signature="260003:260502" ph="SELECT *, en... TSEKAP_TBL_ENLIST" />
+                <marker date="1558667249366" expanded="true" signature="261171:261582" ph="SELECT *, en... TSEKAP_TBL_ENLIST" />
+                <marker date="1558667249366" expanded="true" signature="261171:261661" ph="SELECT *, en... TSEKAP_TBL_ENLIST" />
+                <marker date="1558667249366" expanded="true" signature="262330:262741" ph="SELECT *, en... TSEKAP_TBL_ENLIST" />
+                <marker date="1558667249366" expanded="true" signature="262330:262819" ph="SELECT *, en... TSEKAP_TBL_ENLIST" />
+                <marker date="1558667249366" expanded="true" signature="263485:263888" ph="SELECT *, en... TSEKAP_TBL_ENLIST" />
+                <marker date="1558667249366" expanded="true" signature="263485:263965" ph="SELECT *, en... TSEKAP_TBL_ENLIST" />
+                <marker date="1558667249366" expanded="true" signature="264634:265046" ph="SELECT *, en... TSEKAP_TBL_ENLIST" />
+                <marker date="1558667249366" expanded="true" signature="264634:265127" ph="SELECT *, en... TSEKAP_TBL_ENLIST" />
+                <marker date="1558667249366" expanded="true" signature="265790:266183" ph="SELECT *, en... TSEKAP_TBL_ENLIST" />
+                <marker date="1558667249366" expanded="true" signature="265790:266262" ph="SELECT *, en... TSEKAP_TBL_ENLIST" />
+                <marker date="1558667249366" expanded="true" signature="266925:267318" ph="SELECT *, en... TSEKAP_TBL_ENLIST" />
+                <marker date="1558667249366" expanded="true" signature="266925:267390" ph="SELECT *, en... TSEKAP_TBL_ENLIST" />
+                <marker date="1558667249366" expanded="true" signature="268054:268450" ph="SELECT *, en... TSEKAP_TBL_ENLIST" />
+                <marker date="1558667249366" expanded="true" signature="268054:268529" ph="SELECT *, en... TSEKAP_TBL_ENLIST" />
+                <marker date="1558667249366" expanded="true" signature="269198:269600" ph="SELECT *, en... TSEKAP_TBL_ENLIST" />
+                <marker date="1558667249366" expanded="true" signature="269198:269665" ph="SELECT *, en... TSEKAP_TBL_ENLIST" />
+                <marker date="1558667249366" expanded="true" signature="269198:269672" ph="SELECT *, en... TSEKAP_TBL_ENLIST" />
+                <marker date="1558667249366" expanded="true" signature="270349:270789" ph="SELECT *, CA... TSEKAP_TBL_ASSIGN" />
+                <marker date="1558667249366" expanded="true" signature="271378:271859" ph="SELECT soap.... TSEKAP_TBL_SOAP" />
+                <marker date="1558667249366" expanded="true" signature="271378:271913" ph="SELECT soap.... TSEKAP_TBL_SOAP" />
+                <marker date="1558667249366" expanded="true" signature="271378:271940" ph="SELECT soap.... TSEKAP_TBL_SOAP" />
+                <marker date="1558667249366" expanded="true" signature="272638:272780" ph="SELECT * FRO... TSEKAP_TBL_ENLIST" />
+                <marker date="1558667249366" expanded="true" signature="272638:272826" ph="SELECT * FRO... TSEKAP_TBL_ENLIST" />
+                <marker date="1558667249366" expanded="true" signature="272638:272846" ph="SELECT * FRO... TSEKAP_TBL_ENLIST" />
+                <marker date="1558667249366" expanded="true" signature="312121:312732" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_PROF_DIAGNOSTIC... " />
+                <marker date="1558667249366" expanded="true" signature="313787:314173" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_PROF_MANAGEMENT... " />
+                <marker date="1558667249366" expanded="true" signature="315072:315436" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_PROF_ADVICE... " />
+                <marker date="1558667249366" expanded="true" signature="316360:317117" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_PROFILE... " />
+                <marker date="1558667249366" expanded="true" signature="318547:319735" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_PROF_OINFO... " />
+                <marker date="1558667249366" expanded="true" signature="321364:321710" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_PROF_MEDHIST... " />
+                <marker date="1558667249366" expanded="true" signature="322612:323023" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_PROF_MHSPECIFIC... " />
+                <marker date="1558667249366" expanded="true" signature="323977:324370" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_PROF_SURGHIST... " />
+                <marker date="1558667249366" expanded="true" signature="325302:325648" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_PROF_FAMHIST... " />
+                <marker date="1558667249366" expanded="true" signature="326552:326963" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_PROF_FHSPECIFIC... " />
+                <marker date="1558667249366" expanded="true" signature="327949:328516" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_PROF_SOCHIST... " />
+                <marker date="1558667249366" expanded="true" signature="329638:330237" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_PROF_IMMUNIZATION... " />
+                <marker date="1558667249366" expanded="true" signature="331475:332386" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_PROF_MENSHIST... " />
+                <marker date="1558667249366" expanded="true" signature="333911:334734" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_PROF_PREGHIST... " />
+                <marker date="1558667249366" expanded="true" signature="336162:336948" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_PROF_PEPERT... " />
+                <marker date="1558667249366" expanded="true" signature="338227:338587" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_PROF_PEGENSURVEY... " />
+                <marker date="1558667249366" expanded="true" signature="339474:339874" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_COURSE_WARD... " />
+                <marker date="1558667249366" expanded="true" signature="340824:341220" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_PROF_BLOODTYPE... " />
+                <marker date="1558667249366" expanded="true" signature="342214:342930" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_PROF_PEMISC... " />
+                <marker date="1558667249366" expanded="true" signature="344262:345100" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_PROF_PESPECIFIC... " />
+                <marker date="1558667249366" expanded="true" signature="346630:349177" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_PROF_NCDQANS... " />
+                <marker date="1558667249366" expanded="true" signature="351586:351744" ph="SELECT MAX(U... TSEKAP_TBL_ENLIST" />
+                <marker date="1558667249366" expanded="true" signature="352377:352538" ph="SELECT MAX(U... TSEKAP_TBL_PROFILE" />
+                <marker date="1558667249366" expanded="true" signature="353179:353332" ph="SELECT UPD_C... TSEKAP_TBL_SOAP" />
+                <marker date="1558667249366" expanded="true" signature="353957:354216" ph="SELECT * FRO... TSEKAP_LIB_PACKAGE_TYPE" />
+                <marker date="1558667249366" expanded="true" signature="355609:355988" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_UPLOAD... " />
+                <marker date="1558667249366" expanded="true" signature="356414:358614" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_ASSIGN... " />
+                <marker date="1558667249366" expanded="true" signature="358615:360679" ph="UPDATE MEM_P... " />
+                <marker date="1558667249366" expanded="true" signature="363634:364014" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_UPLOAD... " />
+                <marker date="1558667249366" expanded="true" signature="365187:365602" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_REPORTS... " />
+                <marker date="1558667249366" expanded="true" signature="366460:366655" ph="SELECT * FRO... TSEKAP_LIB_MDISEASES" />
+                <marker date="1558667249366" expanded="true" signature="367228:367362" ph="SELECT * FRO... TSEKAP_SEQNO" />
+                <marker date="1558667249366" expanded="true" signature="367996:368267" ph="SELECT LAST_... TSEKAP_SEQNO_DET" />
+                <marker date="1558667249366" expanded="true" signature="369470:369662" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_SEQNO_DET... " />
+                <marker date="1558667249366" expanded="true" signature="371102:371239" ph="SELECT * FRO... TSEKAP_TBL_ENLIST" />
+                <marker date="1558667249366" expanded="true" signature="371900:374375" ph="SELECT *, en... TSEKAP_TBL_ENLIST" />
+                <marker date="1558667249366" expanded="true" signature="372007:372028" ph="/*ENLISTMENT... " />
+                <marker date="1558667249366" expanded="true" signature="372155:372175" ph="/*PATIENTS D... " />
+                <marker date="1558667249366" expanded="true" signature="372303:372334" ph="/*PATIENTS D... " />
+                <marker date="1558667249366" expanded="true" signature="372468:372495" ph="/*PERSONAL/S... " />
+                <marker date="1558667249366" expanded="true" signature="372632:372663" ph="/*OB-GYNE HI... " />
+                <marker date="1558667249366" expanded="true" signature="372800:372831" ph="/*OB-GYNE HI... " />
+                <marker date="1558667249366" expanded="true" signature="372962:373005" ph="/*PERTINENT " />
+                <marker date="1558667249366" expanded="true" signature="373145:373201" ph="/*PERTINENT " />
+                <marker date="1558667249366" expanded="true" signature="373344:373397" ph="/*PERTINENT " />
+                <marker date="1558667249366" expanded="true" signature="373531:373559" ph="/*NCD HIGH-R... " />
+                <marker date="1558667249366" expanded="true" signature="373701:373729" ph="/*NCD HIGH-R... " />
+                <marker date="1558667249366" expanded="true" signature="375079:375554" ph="SELECT * FRO... TSEKAP_TBL_PROFILE" />
+                <marker date="1558667249366" expanded="true" signature="375172:375192" ph="/*PATIENTS D... " />
+                <marker date="1558667249366" expanded="true" signature="375326:375360" ph="/*PAST MEDIC... " />
+                <marker date="1558667249366" expanded="true" signature="376259:376744" ph="SELECT * FRO... TSEKAP_TBL_PROFILE" />
+                <marker date="1558667249366" expanded="true" signature="376352:376372" ph="/*PATIENTS D... " />
+                <marker date="1558667249366" expanded="true" signature="376515:376547" ph="/*PAST MEDIC... " />
+                <marker date="1558667249366" expanded="true" signature="377439:378155" ph="SELECT * FRO... TSEKAP_TBL_PROFILE" />
+                <marker date="1558667249366" expanded="true" signature="377532:377552" ph="/*PATIENTS D... " />
+                <marker date="1558667249366" expanded="true" signature="377686:377714" ph="/*FAMILY HIS... " />
+                <marker date="1558667249366" expanded="true" signature="377857:377894" ph="/*FAMILY HIS... " />
+                <marker date="1558667249366" expanded="true" signature="378857:379347" ph="SELECT * FRO... TSEKAP_TBL_PROFILE" />
+                <marker date="1558667249366" expanded="true" signature="378950:378970" ph="/*PATIENTS D... " />
+                <marker date="1558667249366" expanded="true" signature="379113:379150" ph="/*FAMILY HIS... " />
+                <marker date="1558667249366" expanded="true" signature="380039:380510" ph="SELECT * FRO... TSEKAP_TBL_PROFILE" />
+                <marker date="1558667249366" expanded="true" signature="380132:380152" ph="/*PATIENTS D... " />
+                <marker date="1558667249366" expanded="true" signature="380289:380317" ph="/*FAMILY HIS... " />
+                <marker date="1558667249366" expanded="true" signature="381214:381679" ph="SELECT * FRO... TSEKAP_TBL_PROFILE" />
+                <marker date="1558667249366" expanded="true" signature="381307:381327" ph="/*PATIENTS D... " />
+                <marker date="1558667249366" expanded="true" signature="381458:381486" ph="/*FAMILY HIS... " />
+                <marker date="1558667249366" expanded="true" signature="382338:382841" ph="SELECT * FRO... TSEKAP_TBL_PROFILE" />
+                <marker date="1558667249366" expanded="true" signature="382431:382451" ph="/*PATIENTS D... " />
+                <marker date="1558667249366" expanded="true" signature="383547:384020" ph="SELECT * FRO... TSEKAP_TBL_PROFILE" />
+                <marker date="1558667249366" expanded="true" signature="383640:383660" ph="/*PATIENTS D... " />
+                <marker date="1558667249366" expanded="true" signature="383797:383825" ph="/*FAMILY HIS... " />
+                <marker date="1558667249366" expanded="true" signature="384654:384842" ph="SELECT * FRO... TSEKAP_LIB_IMMCHILD" />
+                <marker date="1558667249366" expanded="true" signature="385370:385559" ph="SELECT * FRO... TSEKAP_LIB_IMMYOUNGW" />
+                <marker date="1558667249366" expanded="true" signature="386090:386278" ph="SELECT * FRO... TSEKAP_LIB_IMMPREGW" />
+                <marker date="1558667249366" expanded="true" signature="386808:386998" ph="SELECT * FRO... TSEKAP_LIB_IMMELDERLY" />
+                <marker date="1558667249366" expanded="true" signature="387548:387662" ph="SELECT * FRO... TSEKAP_TBL_ENLIST" />
+                <marker date="1558667249366" expanded="true" signature="388864:389645" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_ENLIST... " />
+                <marker date="1558667249366" expanded="true" signature="400145:400326" ph="SELECT * FRO... TSEKAP_TBL_ENLIST" />
+                <marker date="1558667249366" expanded="true" signature="400145:400478" ph="SELECT * FRO... TSEKAP_TBL_ENLIST" />
+                <marker date="1558667249366" expanded="true" signature="400387:400409" ph="SELECT MAX(T... " />
+                <marker date="1558667249366" expanded="true" signature="400387:400414" ph="SELECT MAX(T... " />
+                <marker date="1558667249366" expanded="true" signature="400387:400477" ph="SELECT MAX(T... TSEKAP_TBL_ENLIST" />
+                <marker date="1558667249366" expanded="true" signature="401076:402497" ph="SELECT *, pr... TSEKAP_TBL_PROFILE" />
+                <marker date="1558667249366" expanded="true" signature="401076:402660" ph="SELECT *, pr... TSEKAP_TBL_PROFILE" />
+                <marker date="1558667249366" expanded="true" signature="401203:401222" ph="/*PATIENT DE... " />
+                <marker date="1558667249366" expanded="true" signature="401500:401531" ph="/*OB-GYNE HI... " />
+                <marker date="1558667249366" expanded="true" signature="401676:401707" ph="/*OB-GYNE HI... " />
+                <marker date="1558667249366" expanded="true" signature="401846:401889" ph="/*PERTINENT " />
+                <marker date="1558667249366" expanded="true" signature="402040:402093" ph="/*PERTINENT " />
+                <marker date="1558667249366" expanded="true" signature="402237:402265" ph="/*PLAN/MANAG... " />
+                <marker date="1558667249366" expanded="true" signature="402569:402659" ph="SELECT MAX(T... TSEKAP_TBL_ENLIST" />
+                <marker date="1558667249366" expanded="true" signature="403306:403737" ph="SELECT *, en... TSEKAP_TBL_ENLIST" />
+                <marker date="1558667249366" expanded="true" signature="403306:403900" ph="SELECT *, en... TSEKAP_TBL_ENLIST" />
+                <marker date="1558667249366" expanded="true" signature="403430:403449" ph="/*PATIENT DE... " />
+                <marker date="1558667249366" expanded="true" signature="403809:403899" ph="SELECT MAX(T... TSEKAP_TBL_ENLIST" />
+                <marker date="1558667249366" expanded="true" signature="404546:405353" ph="SELECT medhi... TSEKAP_TBL_PROFILE" />
+                <marker date="1558667249366" expanded="true" signature="404546:405520" ph="SELECT medhi... TSEKAP_TBL_PROFILE" />
+                <marker date="1558667249366" expanded="true" signature="404802:404822" ph="/*PATIENTS D... " />
+                <marker date="1558667249366" expanded="true" signature="405429:405519" ph="SELECT MAX(T... TSEKAP_TBL_ENLIST" />
+                <marker date="1558667249366" expanded="true" signature="406170:406965" ph="SELECT mhspe... TSEKAP_TBL_PROFILE" />
+                <marker date="1558667249366" expanded="true" signature="406170:407128" ph="SELECT mhspe... TSEKAP_TBL_PROFILE" />
+                <marker date="1558667249366" expanded="true" signature="406425:406445" ph="/*PATIENTS D... " />
+                <marker date="1558667249366" expanded="true" signature="407037:407127" ph="SELECT MAX(T... TSEKAP_TBL_ENLIST" />
+                <marker date="1558667249366" expanded="true" signature="407770:408549" ph="SELECT pemis... TSEKAP_TBL_PROFILE" />
+                <marker date="1558667249366" expanded="true" signature="407770:408712" ph="SELECT pemis... TSEKAP_TBL_PROFILE" />
+                <marker date="1558667249366" expanded="true" signature="408021:408041" ph="/*PATIENTS D... " />
+                <marker date="1558667249366" expanded="true" signature="408621:408711" ph="SELECT MAX(T... TSEKAP_TBL_ENLIST" />
+                <marker date="1558667249366" expanded="true" signature="409356:410143" ph="SELECT surgh... TSEKAP_TBL_PROFILE" />
+                <marker date="1558667249366" expanded="true" signature="409356:410306" ph="SELECT surgh... TSEKAP_TBL_PROFILE" />
+                <marker date="1558667249366" expanded="true" signature="409609:409629" ph="/*PATIENTS D... " />
+                <marker date="1558667249366" expanded="true" signature="410215:410305" ph="SELECT MAX(T... TSEKAP_TBL_ENLIST" />
+                <marker date="1558667249366" expanded="true" signature="410946:411461" ph="SELECT * FRO... TSEKAP_TBL_SOAP" />
+                <marker date="1558667249366" expanded="true" signature="410946:411620" ph="SELECT * FRO... TSEKAP_TBL_SOAP" />
+                <marker date="1558667249366" expanded="true" signature="411529:411619" ph="SELECT MAX(T... TSEKAP_TBL_ENLIST" />
+                <marker date="1558667249366" expanded="true" signature="412258:412668" ph="SELECT * FRO... TSEKAP_TBL_MEDICINE" />
+                <marker date="1558667249366" expanded="true" signature="412258:412827" ph="SELECT * FRO... TSEKAP_TBL_MEDICINE" />
+                <marker date="1558667249366" expanded="true" signature="412736:412826" ph="SELECT MAX(T... TSEKAP_TBL_ENLIST" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="hsa_data_entry.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hsa_data_entry.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="37196">
+              <caret line="2188" column="105" lean-forward="false" selection-start-line="2188" selection-start-column="105" selection-end-line="2188" selection-end-column="105" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="scripts.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/js/scripts.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="52275">
+              <caret line="3075" column="16" lean-forward="false" selection-start-line="3075" selection-start-column="12" selection-end-line="3075" selection-end-column="16" />
+              <folding>
+                <marker date="1553493860000" expanded="true" signature="21177:21220" ph="..." />
+                <marker date="1553493860000" expanded="true" signature="54686:55510" ph="..." />
+                <marker date="1553493860000" expanded="false" signature="54762:54838" ph="..." />
+                <marker date="1553493860000" expanded="false" signature="55010:55068" ph="..." />
+                <marker date="1553493860000" expanded="false" signature="55388:55399" ph="..." />
+                <marker date="1553493860000" expanded="true" signature="57477:57502" ph="..." />
+                <marker date="1553493860000" expanded="true" signature="57503:57506" ph="..." />
+                <marker date="1553493860000" expanded="true" signature="57503:57559" ph="..." />
+                <marker date="1553493860000" expanded="true" signature="57503:58736" ph="..." />
+                <marker date="1553493860000" expanded="true" signature="57503:59532" ph="..." />
+                <marker date="1553493860000" expanded="true" signature="59418:59429" ph="..." />
+                <marker date="1553493860000" expanded="true" signature="60718:60743" ph="..." />
+                <marker date="1553493860000" expanded="true" signature="60744:60939" ph="..." />
+                <marker date="1553493860000" expanded="true" signature="60744:62676" ph="..." />
+                <marker date="1553493860000" expanded="true" signature="62562:62573" ph="..." />
+                <marker date="1553493860000" expanded="true" signature="64786:64811" ph="..." />
+                <marker date="1553493860000" expanded="true" signature="64812:66345" ph="..." />
+                <marker date="1553493860000" expanded="true" signature="66239:66250" ph="..." />
+                <marker date="1553493860000" expanded="true" signature="67350:67375" ph="..." />
+                <marker date="1553493860000" expanded="true" signature="67376:68811" ph="..." />
+                <marker date="1553493860000" expanded="true" signature="68705:68716" ph="..." />
+                <marker date="1553493860000" expanded="true" signature="69952:70656" ph="..." />
+                <marker date="1553493860000" expanded="false" signature="70020:70061" ph="..." />
+                <marker date="1553493860000" expanded="false" signature="70222:70245" ph="..." />
+                <marker date="1553493860000" expanded="false" signature="70542:70553" ph="..." />
+                <marker date="1553493860000" expanded="true" signature="71596:71737" ph="..." />
+                <marker date="1553493860000" expanded="true" signature="71596:71787" ph="..." />
+                <marker date="1553493860000" expanded="true" signature="71596:72015" ph="..." />
+                <marker date="1553493860000" expanded="true" signature="71596:72171" ph="..." />
+                <marker date="1553493860000" expanded="true" signature="71596:72322" ph="..." />
+                <marker date="1553493860000" expanded="true" signature="71660:71683" ph="..." />
+                <marker date="1553493860000" expanded="true" signature="71850:71891" ph="..." />
+                <marker date="1553493860000" expanded="true" signature="71850:71917" ph="..." />
+                <marker date="1553493860000" expanded="true" signature="72212:72223" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PhilHealthEClaimsEncryptor.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PhilHealthEClaimsEncryptor.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4063">
+              <caret line="243" column="27" lean-forward="false" selection-start-line="243" selection-start-column="20" selection-end-line="243" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="genCf4XmlReport.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tmp/genCf4XmlReport.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="13" column="53" lean-forward="false" selection-start-line="13" selection-start-column="53" selection-end-line="13" selection-end-column="53" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="genXML.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tmp/genXML.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="228" lean-forward="false" selection-start-line="0" selection-start-column="183" selection-end-line="0" selection-end-column="228" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="assignment_report.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assignment_report.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1241">
+              <caret line="78" column="74" lean-forward="false" selection-start-line="78" selection-start-column="67" selection-end-line="78" selection-end-column="74" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="upload_assignment.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/upload_assignment.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="595">
+              <caret line="61" column="35" lean-forward="false" selection-start-line="61" selection-start-column="35" selection-end-line="61" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="consultation_data_entry.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/consultation_data_entry.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2822">
+              <caret line="166" column="90" lean-forward="false" selection-start-line="166" selection-start-column="90" selection-end-line="166" selection-end-column="90" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="function_global.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/function_global.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="8024">
+              <caret line="472" column="12" lean-forward="false" selection-start-line="472" selection-start-column="12" selection-end-line="472" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>addmed</find>
+      <find>plan/</find>
+      <find>savecons</find>
+      <find>$fileName</find>
+      <find>labora</find>
+      <find>pDependen</find>
+      <find>main prof</find>
+      <find>saveprofili</find>
+      <find>savecf4</find>
+      <find>SAVEPAT</find>
+      <find>generatecf</find>
+      <find>checkother</find>
+      <find>insert</find>
+      <find>submit</find>
+      <find>showTab</find>
+      <find>SAVECF4</find>
+      <find>pEmrId</find>
+      <find>insertmedicine</find>
+      <find>decrypt</find>
+      <find>findings</find>
+      <find>glucose</find>
+      <find>ogtt</find>
+      <find>ecg</find>
+      <find>save</find>
+      <find>valida</find>
+      <find>menshi</find>
+      <find>contact</find>
+      <find>tbl_assign</find>
+      <find>delivery</find>
+      <find>generateep</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/loadMunicipality.php" />
+        <option value="$PROJECT_DIR$/loadBarangay.php" />
+        <option value="$PROJECT_DIR$/registered_view_list.php" />
+        <option value="$PROJECT_DIR$/xx_generate_cf4_report.php" />
+        <option value="$PROJECT_DIR$/cf4_dl_file.php" />
+        <option value="$PROJECT_DIR$/enFile.php" />
+        <option value="$PROJECT_DIR$/files/Output/CF4_12345_20181116.xml" />
+        <option value="$PROJECT_DIR$/hci_registration.php" />
+        <option value="$PROJECT_DIR$/print/print_cf4_report.php" />
+        <option value="$PROJECT_DIR$/print/cf4_claims.php" />
+        <option value="$PROJECT_DIR$/registration_search.php" />
+        <option value="$PROJECT_DIR$/hsa_search.php" />
+        <option value="$PROJECT_DIR$/files/Downloads/Assignment_H93005836_10082018.xml" />
+        <option value="$PROJECT_DIR$/files/Downloads/Assignment_H93005836_01212018.xml" />
+        <option value="$PROJECT_DIR$/files/Uploads/H93005836_01222019.xml" />
+        <option value="$PROJECT_DIR$/upload_assignment.php" />
+        <option value="$PROJECT_DIR$/authenticate.php" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/files/Downloads/note.txt" />
+        <option value="$PROJECT_DIR$/registration_data_entry.php" />
+        <option value="$PROJECT_DIR$/xx_raw_generate_cf4_report.php" />
+        <option value="$PROJECT_DIR$/print/cf4_report.php" />
+        <option value="$PROJECT_DIR$/config_cf4.ini" />
+        <option value="$PROJECT_DIR$/CF4functions.php" />
+        <option value="$PROJECT_DIR$/followups_meds_list.php" />
+        <option value="$PROJECT_DIR$/followups_meds_search.php" />
+        <option value="$PROJECT_DIR$/menu.php" />
+        <option value="$PROJECT_DIR$/consultation_search.php" />
+        <option value="$PROJECT_DIR$/consultation_list_of_patient.php" />
+        <option value="$PROJECT_DIR$/followup_meds_search.php" />
+        <option value="$PROJECT_DIR$/loadMedsGeneric.php" />
+        <option value="$PROJECT_DIR$/loadMedsSalt.php" />
+        <option value="$PROJECT_DIR$/loadMedsUnit.php" />
+        <option value="$PROJECT_DIR$/followup_meds_list.php" />
+        <option value="$PROJECT_DIR$/tmp/genCf4XmlReport.xml" />
+        <option value="$PROJECT_DIR$/generate_cf4_report.php" />
+        <option value="$PROJECT_DIR$/PhilHealthEClaimsEncryptor.php" />
+        <option value="$PROJECT_DIR$/footer.php" />
+        <option value="$PROJECT_DIR$/followup_meds_data_entry.php" />
+        <option value="$PROJECT_DIR$/hsa_data_entry.php" />
+        <option value="$PROJECT_DIR$/consultation_data_entry.php" />
+        <option value="$PROJECT_DIR$/generate_xml.php" />
+        <option value="$PROJECT_DIR$/cf4_search.php" />
+        <option value="$PROJECT_DIR$/print/cf4_report_claims.php" />
+        <option value="$PROJECT_DIR$/home.php" />
+        <option value="$PROJECT_DIR$/cf4_data_entry.php" />
+        <option value="$PROJECT_DIR$/res/js/scripts.js" />
+        <option value="$PROJECT_DIR$/cf4_view_list_record.php" />
+        <option value="$PROJECT_DIR$/function.php" />
+        <option value="$PROJECT_DIR$/function_global.php" />
+        <option value="$PROJECT_DIR$/tmp/genXML.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Z" type="b2602c69:ProjectViewProjectNode" />
+              <item name="exps" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Z" type="b2602c69:ProjectViewProjectNode" />
+              <item name="exps" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="print" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Z" type="b2602c69:ProjectViewProjectNode" />
+              <item name="exps" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="res" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Z" type="b2602c69:ProjectViewProjectNode" />
+              <item name="exps" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="tmp" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/xampp/php/php.ini" />
+    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="DDL Data Source" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\xps" />
+      <recent name="C:\xampp\htdocs\exepcb\res" />
+      <recent name="C:\xampp\htdocs\exepcb\files\Input" />
+      <recent name="C:\xampp\htdocs\exepcb\files" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\exps\print" />
+      <recent name="C:\xampp\htdocs\exps" />
+      <recent name="C:\xampp\htdocs\exps\files\Downloads" />
+      <recent name="C:\xampp\htdocs\xps" />
+      <recent name="C:\xampp\htdocs\xps\print" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2bb1f890-3710-4cbb-a037-e4f9a19f1acd" name="Default" comment="" />
+      <created>1516591409028</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1516591409028</updated>
+      <workItem from="1516929987878" duration="384000" />
+      <workItem from="1516932155999" duration="894000" />
+      <workItem from="1516934580651" duration="5805000" />
+      <workItem from="1516953721295" duration="684000" />
+      <workItem from="1517189028693" duration="26231000" />
+      <workItem from="1517359146423" duration="13672000" />
+      <workItem from="1517453005644" duration="3630000" />
+      <workItem from="1517794034801" duration="598000" />
+      <workItem from="1517898634989" duration="12487000" />
+      <workItem from="1518052607709" duration="17164000" />
+      <workItem from="1518157981622" duration="73000" />
+      <workItem from="1518158123589" duration="11027000" />
+      <workItem from="1518398007162" duration="12321000" />
+      <workItem from="1518415299334" duration="25117000" />
+      <workItem from="1518999638598" duration="26226000" />
+      <workItem from="1519112525246" duration="3924000" />
+      <workItem from="1519168814690" duration="1112000" />
+      <workItem from="1519172395554" duration="25000" />
+      <workItem from="1519175787597" duration="12104000" />
+      <workItem from="1519286483244" duration="689000" />
+      <workItem from="1519605303911" duration="3358000" />
+      <workItem from="1519717705855" duration="599000" />
+      <workItem from="1519812351444" duration="19505000" />
+      <workItem from="1520313352652" duration="2652000" />
+      <workItem from="1520379120987" duration="118285000" />
+      <workItem from="1520927007473" duration="185398000" />
+      <workItem from="1521761887305" duration="36005000" />
+      <workItem from="1522051030220" duration="22472000" />
+      <workItem from="1522194832589" duration="67391000" />
+      <workItem from="1523598806285" duration="33141000" />
+      <workItem from="1524034902645" duration="60655000" />
+      <workItem from="1524619551464" duration="152506000" />
+      <workItem from="1526859916997" duration="20188000" />
+      <workItem from="1526949564593" duration="81007000" />
+      <workItem from="1527552872135" duration="154917000" />
+      <workItem from="1528697996327" duration="17140000" />
+      <workItem from="1529288222345" duration="58620000" />
+      <workItem from="1529886553503" duration="21771000" />
+      <workItem from="1529983203671" duration="117599000" />
+      <workItem from="1531360466843" duration="83255000" />
+      <workItem from="1533261050118" duration="7488000" />
+      <workItem from="1534207849543" duration="27422000" />
+      <workItem from="1534399002312" duration="50439000" />
+      <workItem from="1535007867179" duration="163000" />
+      <workItem from="1535013886901" duration="300000" />
+      <workItem from="1535416358229" duration="491000" />
+      <workItem from="1535418189364" duration="7347000" />
+      <workItem from="1535436494496" duration="39929000" />
+      <workItem from="1535677179763" duration="11085000" />
+      <workItem from="1535936574918" duration="191888000" />
+      <workItem from="1537837999157" duration="98025000" />
+      <workItem from="1538721760058" duration="3256000" />
+      <workItem from="1538957363762" duration="150647000" />
+      <workItem from="1539931618769" duration="3431000" />
+      <workItem from="1540174852030" duration="16201000" />
+      <workItem from="1540276089788" duration="70996000" />
+      <workItem from="1542588564304" duration="60380000" />
+      <workItem from="1543890245923" duration="4475000" />
+      <workItem from="1545093734933" duration="16674000" />
+      <workItem from="1546477475227" duration="9000" />
+      <workItem from="1546479503156" duration="18609000" />
+      <workItem from="1546824413215" duration="23176000" />
+      <workItem from="1547421782391" duration="9938000" />
+      <workItem from="1547607222923" duration="147467000" />
+      <workItem from="1549502414522" duration="3992000" />
+      <workItem from="1550557415809" duration="20130000" />
+      <workItem from="1550880404976" duration="83647000" />
+      <workItem from="1551667655923" duration="28847000" />
+      <workItem from="1552869683804" duration="13706000" />
+      <workItem from="1553912439334" duration="1366000" />
+      <workItem from="1554707269999" duration="1218000" />
+      <workItem from="1554856175241" duration="842000" />
+      <workItem from="1555399335310" duration="577000" />
+      <workItem from="1557362546071" duration="563000" />
+      <workItem from="1557880221051" duration="15354000" />
+      <workItem from="1561439905081" duration="728000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="2821139000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23072916" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.10498409" sideWeight="0.51145834" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22043702" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" x="1372" y="214" width="1416" height="676" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39448568" sideWeight="0.48854166" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12301166" sideWeight="0.4875" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.10498409" sideWeight="0.51145834" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" x="1372" y="214" width="1416" height="676" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18263811" sideWeight="0.48854166" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.079533406" sideWeight="0.4875" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22043702" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="30" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/files/Output/CF4_42-0000-560-B_20190130.xml" />
+    <entry file="file://$PROJECT_DIR$/files/Output/H93005836_20190130_EPCB.xml" />
+    <entry file="file://$PROJECT_DIR$/files/Output/CF4_42-0000-560-B_20190131.xml" />
+    <entry file="file://$PROJECT_DIR$/xx_config_cf4.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="28" lean-forward="false" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xx_CF4functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1631">
+          <caret line="507" column="43" lean-forward="true" selection-start-line="507" selection-start-column="43" selection-end-line="507" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logout.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/phpstorm.jar!/resources/html5-schema/html5/tables.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="221" column="16" lean-forward="false" selection-start-line="221" selection-start-column="16" selection-end-line="221" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/print/cf4_report.php" />
+    <entry file="file://$PROJECT_DIR$/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hsa_search.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/menu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="22" column="96" lean-forward="false" selection-start-line="22" selection-start-column="96" selection-end-line="22" selection-end-column="96" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consultation_search.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="470">
+          <caret line="223" column="89" lean-forward="false" selection-start-line="223" selection-start-column="82" selection-end-line="223" selection-end-column="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa0.940/cf4_report.php" />
+    <entry file="file://$PROJECT_DIR$/print/print_report.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/print/print_cf4_report.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/files/Input/pnpki_philhealth_eclaims_auth_cert.pem">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loadMedsPackage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loadMedsGeneric.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loadMedsStrength.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="14" lean-forward="false" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/followup_meds_search.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="884">
+          <caret line="186" column="33" lean-forward="false" selection-start-line="186" selection-start-column="33" selection-end-line="186" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loadMedsSalt.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="89" lean-forward="false" selection-start-line="15" selection-start-column="89" selection-end-line="15" selection-end-column="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loadMedsUnit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="89" lean-forward="false" selection-start-line="14" selection-start-column="89" selection-end-line="14" selection-end-column="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/followup_meds_list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="69" column="71" lean-forward="false" selection-start-line="69" selection-start-column="71" selection-end-line="69" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/followup_meds_data.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="102" column="53" lean-forward="false" selection-start-line="102" selection-start-column="53" selection-end-line="102" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xx_content.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/followup_meds_data_entry.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="850">
+          <caret line="50" column="5" lean-forward="false" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="45" lean-forward="false" selection-start-line="7" selection-start-column="45" selection-end-line="7" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xx_raw_generate_cf4_report.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="113" column="37" lean-forward="false" selection-start-line="102" selection-start-column="36" selection-end-line="113" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consultation_list_of_patient.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1666">
+          <caret line="98" column="113" lean-forward="false" selection-start-line="98" selection-start-column="113" selection-end-line="98" selection-end-column="113" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cf4_search.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="226" column="0" lean-forward="false" selection-start-line="226" selection-start-column="0" selection-end-line="227" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/print/cf4_report_claims.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="507">
+          <caret line="592" column="26" lean-forward="false" selection-start-line="592" selection-start-column="26" selection-end-line="592" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/registered_view_list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="65" column="45" lean-forward="false" selection-start-line="65" selection-start-column="45" selection-end-line="65" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consultation_list_of_all_patients.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1037">
+          <caret line="61" column="60" lean-forward="false" selection-start-line="61" selection-start-column="60" selection-end-line="61" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="799">
+          <caret line="47" column="49" lean-forward="false" selection-start-line="47" selection-start-column="49" selection-end-line="47" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cf4_view_list_record.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1411">
+          <caret line="88" column="85" lean-forward="false" selection-start-line="88" selection-start-column="85" selection-end-line="88" selection-end-column="85" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generate_cf4_report.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1054">
+          <caret line="62" column="70" lean-forward="false" selection-start-line="62" selection-start-column="70" selection-end-line="62" selection-end-column="70" />
+          <folding>
+            <marker date="1551322848000" expanded="true" signature="6281:6328" ph="..." />
+            <marker date="1551322848000" expanded="true" signature="6991:7035" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cf4_data_entry.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1003">
+          <caret line="64" column="84" lean-forward="false" selection-start-line="64" selection-start-column="84" selection-end-line="64" selection-end-column="84" />
+          <folding>
+            <marker date="1553490822000" expanded="true" signature="107552:107578" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generate_xml.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2567">
+          <caret line="151" column="80" lean-forward="false" selection-start-line="151" selection-start-column="80" selection-end-line="151" selection-end-column="80" />
+          <folding>
+            <marker date="1552011484000" expanded="true" signature="1358:1399" ph="..." />
+            <marker date="1552011484000" expanded="true" signature="1848:1893" ph="..." />
+            <marker date="1552011484000" expanded="true" signature="7569:7603" ph="..." />
+            <marker date="1552011484000" expanded="true" signature="7604:7752" ph="..." />
+            <marker date="1552011484000" expanded="true" signature="7604:7842" ph="..." />
+            <marker date="1552011484000" expanded="true" signature="10160:10207" ph="..." />
+            <marker date="1552011484000" expanded="true" signature="11295:11339" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PhilHealthEClaimsEncryptor.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4063">
+          <caret line="243" column="27" lean-forward="false" selection-start-line="243" selection-start-column="20" selection-end-line="243" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tmp/genCf4XmlReport.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="53" lean-forward="false" selection-start-line="13" selection-start-column="53" selection-end-line="13" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consultation_data_entry.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2822">
+          <caret line="166" column="90" lean-forward="false" selection-start-line="166" selection-start-column="90" selection-end-line="166" selection-end-column="90" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/js/scripts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52275">
+          <caret line="3075" column="16" lean-forward="false" selection-start-line="3075" selection-start-column="12" selection-end-line="3075" selection-end-column="16" />
+          <folding>
+            <marker date="1553493860000" expanded="true" signature="21177:21220" ph="..." />
+            <marker date="1553493860000" expanded="true" signature="54686:55510" ph="..." />
+            <marker date="1553493860000" expanded="false" signature="54762:54838" ph="..." />
+            <marker date="1553493860000" expanded="false" signature="55010:55068" ph="..." />
+            <marker date="1553493860000" expanded="false" signature="55388:55399" ph="..." />
+            <marker date="1553493860000" expanded="true" signature="57477:57502" ph="..." />
+            <marker date="1553493860000" expanded="true" signature="57503:57506" ph="..." />
+            <marker date="1553493860000" expanded="true" signature="57503:57559" ph="..." />
+            <marker date="1553493860000" expanded="true" signature="57503:58736" ph="..." />
+            <marker date="1553493860000" expanded="true" signature="57503:59532" ph="..." />
+            <marker date="1553493860000" expanded="true" signature="59418:59429" ph="..." />
+            <marker date="1553493860000" expanded="true" signature="60718:60743" ph="..." />
+            <marker date="1553493860000" expanded="true" signature="60744:60939" ph="..." />
+            <marker date="1553493860000" expanded="true" signature="60744:62676" ph="..." />
+            <marker date="1553493860000" expanded="true" signature="62562:62573" ph="..." />
+            <marker date="1553493860000" expanded="true" signature="64786:64811" ph="..." />
+            <marker date="1553493860000" expanded="true" signature="64812:66345" ph="..." />
+            <marker date="1553493860000" expanded="true" signature="66239:66250" ph="..." />
+            <marker date="1553493860000" expanded="true" signature="67350:67375" ph="..." />
+            <marker date="1553493860000" expanded="true" signature="67376:68811" ph="..." />
+            <marker date="1553493860000" expanded="true" signature="68705:68716" ph="..." />
+            <marker date="1553493860000" expanded="true" signature="69952:70656" ph="..." />
+            <marker date="1553493860000" expanded="false" signature="70020:70061" ph="..." />
+            <marker date="1553493860000" expanded="false" signature="70222:70245" ph="..." />
+            <marker date="1553493860000" expanded="false" signature="70542:70553" ph="..." />
+            <marker date="1553493860000" expanded="true" signature="71596:71737" ph="..." />
+            <marker date="1553493860000" expanded="true" signature="71596:71787" ph="..." />
+            <marker date="1553493860000" expanded="true" signature="71596:72015" ph="..." />
+            <marker date="1553493860000" expanded="true" signature="71596:72171" ph="..." />
+            <marker date="1553493860000" expanded="true" signature="71596:72322" ph="..." />
+            <marker date="1553493860000" expanded="true" signature="71660:71683" ph="..." />
+            <marker date="1553493860000" expanded="true" signature="71850:71891" ph="..." />
+            <marker date="1553493860000" expanded="true" signature="71850:71917" ph="..." />
+            <marker date="1553493860000" expanded="true" signature="72212:72223" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hsa_data_entry.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="37196">
+          <caret line="2188" column="105" lean-forward="false" selection-start-line="2188" selection-start-column="105" selection-end-line="2188" selection-end-column="105" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/pdf_viewer.php" />
+    <entry file="file://$PROJECT_DIR$/function_global.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8024">
+          <caret line="472" column="12" lean-forward="false" selection-start-line="472" selection-start-column="12" selection-end-line="472" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tmp/genXML.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="228" lean-forward="false" selection-start-line="0" selection-start-column="183" selection-end-line="0" selection-end-column="228" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assignment_report.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1241">
+          <caret line="78" column="74" lean-forward="false" selection-start-line="78" selection-start-column="67" selection-end-line="78" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/upload_assignment.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="61" column="35" lean-forward="false" selection-start-line="61" selection-start-column="35" selection-end-line="61" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/function.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="7469" column="0" lean-forward="true" selection-start-line="7469" selection-start-column="0" selection-end-line="7469" selection-end-column="0" />
+          <folding>
+            <marker date="1558667249366" expanded="true" signature="766:996" ph="SELECT * FRO... TBL_FACILITY_PROFILE" />
+            <marker date="1558667249366" expanded="true" signature="766:1015" ph="SELECT * FRO... TSEKAP_TBL_HCI_PROFILE" />
+            <marker date="1558667249366" expanded="true" signature="3130:3401" ph="SELECT * FRO... LIB_MUNICIPALITY" />
+            <marker date="1558667249366" expanded="true" signature="3884:3921" ph="SELECT * FRO... " />
+            <marker date="1558667249366" expanded="true" signature="3884:3981" ph="SELECT * FRO... TSEKAP_LIB_SKIN" />
+            <marker date="1558667249366" expanded="true" signature="3884:4024" ph="SELECT * FRO... TSEKAP_LIB_SKIN" />
+            <marker date="1558667249366" expanded="true" signature="4569:4598" ph="SELECT * FRO... " />
+            <marker date="1558667249366" expanded="true" signature="4569:4599" ph="SELECT * FRO... " />
+            <marker date="1558667249366" expanded="true" signature="4569:4710" ph="SELECT * FRO... TSEKAP_LIB_HEENT" />
+            <marker date="1558667249366" expanded="true" signature="5256:5397" ph="SELECT * FRO... TSEKAP_LIB_CHEST" />
+            <marker date="1558667249366" expanded="true" signature="5943:6084" ph="SELECT * FRO... TSEKAP_LIB_HEART" />
+            <marker date="1558667249366" expanded="true" signature="6632:6775" ph="SELECT * FRO... TSEKAP_LIB_ABDOMEN" />
+            <marker date="1558667249366" expanded="true" signature="7331:7478" ph="SELECT * FRO... TSEKAP_LIB_EXTREMITIES" />
+            <marker date="1558667249366" expanded="true" signature="8036:8177" ph="SELECT * FRO... TSEKAP_LIB_NEURO" />
+            <marker date="1558667249366" expanded="true" signature="8731:8880" ph="SELECT * FRO... TSEKAP_LIB_NEURO" />
+            <marker date="1558667249366" expanded="true" signature="9428:9578" ph="SELECT * FRO... TSEKAP_LIB_DIGITAL_RECTAL" />
+            <marker date="1558667249366" expanded="true" signature="10138:10290" ph="SELECT * FRO... TSEKAP_LIB_DIGITAL_RECTAL" />
+            <marker date="1558667249366" expanded="true" signature="10833:10973" ph="SELECT * FRO... TSEKAP_LIB_ICD" />
+            <marker date="1558667249366" expanded="true" signature="11519:11879" ph="SELECT * FRO... TSEKAP_LIB_DIAGNOSTIC" />
+            <marker date="1558667249366" expanded="true" signature="12428:12543" ph="SELECT * FRO... TSEKAP_LIB_MANAGEMENT" />
+            <marker date="1558667249366" expanded="true" signature="12428:12597" ph="SELECT * FRO... TSEKAP_LIB_MANAGEMENT" />
+            <marker date="1558667249366" expanded="true" signature="13164:13776" ph="SELECT PROCO... LIB_PROVINCE" />
+            <marker date="1558667249366" expanded="true" signature="14326:14436" ph="SELECT * FRO... TSEKAP_LIB_MEDS_GENERIC" />
+            <marker date="1558667249366" expanded="true" signature="14986:15093" ph="SELECT * FRO... TSEKAP_LIB_WAIVED_REASON" />
+            <marker date="1558667249366" expanded="true" signature="15112:15226" ph="SELECT * FRO... TSEKAP_LIB_MEDS" />
+            <marker date="1558667249366" expanded="true" signature="15826:16019" ph="SELECT * FRO... TSEKAP_LIB_CHEST_OBSERVATION" />
+            <marker date="1558667249366" expanded="true" signature="16553:16743" ph="SELECT * FRO... TSEKAP_LIB_CHEST_FINDINGS" />
+            <marker date="1558667249366" expanded="true" signature="17229:17330" ph="SELECT * FRO... TSEKAP_LIB_MEDS" />
+            <marker date="1558667249366" expanded="true" signature="17932:18029" ph="SELECT * FRO... LIB_MUNICIPALITY" />
+            <marker date="1558667249366" expanded="true" signature="18627:18946" ph="SELECT * FRO... LIB_BARANGAY" />
+            <marker date="1558667249366" expanded="true" signature="19584:19655" ph="SELECT * FRO... LIB_PROVINCE" />
+            <marker date="1558667249366" expanded="true" signature="20249:20488" ph="SELECT * FRO... LIB_ZIPCODE" />
+            <marker date="1558667249366" expanded="true" signature="21131:21202" ph="SELECT * FRO... TSEKAP_TBL_ENLIST" />
+            <marker date="1558667249366" expanded="true" signature="21842:21908" ph="SELECT * FRO... TSEKAP_TBL_ENLIST" />
+            <marker date="1558667249366" expanded="true" signature="21842:21916" ph="SELECT * FRO... TSEKAP_TBL_ENLIST" />
+            <marker date="1558667249366" expanded="true" signature="22580:23152" ph="SELECT soap.... TSEKAP_TBL_SOAP" />
+            <marker date="1558667249366" expanded="true" signature="22580:23210" ph="SELECT soap.... TSEKAP_TBL_SOAP" />
+            <marker date="1558667249366" expanded="true" signature="22580:23215" ph="SELECT soap.... TSEKAP_TBL_SOAP" />
+            <marker date="1558667249366" expanded="true" signature="22580:23222" ph="SELECT soap.... TSEKAP_TBL_SOAP" />
+            <marker date="1558667249366" expanded="true" signature="23874:24327" ph="SELECT soap.... TSEKAP_TBL_SOAP" />
+            <marker date="1558667249366" expanded="true" signature="23874:24328" ph="SELECT soap.... TSEKAP_TBL_SOAP" />
+            <marker date="1558667249366" expanded="true" signature="23874:24488" ph="SELECT * FRO... TSEKAP_TBL_SOAP" />
+            <marker date="1558667249366" expanded="true" signature="23874:24568" ph="SELECT soap.... TSEKAP_TBL_SOAP" />
+            <marker date="1558667249366" expanded="true" signature="25166:25711" ph="SELECT *, CA... TSEKAP_TBL_ENLIST" />
+            <marker date="1558667249366" expanded="true" signature="26374:27561" ph="SELECT * FRO... TSEKAP_TBL_SOAP" />
+            <marker date="1558667249366" expanded="true" signature="26374:27721" ph="SELECT * FRO... TSEKAP_TBL_SOAP" />
+            <marker date="1558667249366" expanded="true" signature="26374:27804" ph="SELECT * FRO... TSEKAP_TBL_SOAP" />
+            <marker date="1558667249366" expanded="true" signature="26374:27881" ph="SELECT * FRO... TSEKAP_TBL_SOAP" />
+            <marker date="1558667249366" expanded="true" signature="26374:27976" ph="SELECT * FRO... TSEKAP_TBL_SOAP" />
+            <marker date="1558667249366" expanded="true" signature="26374:27982" ph="SELECT * FRO... TSEKAP_TBL_SOAP" />
+            <marker date="1558667249366" expanded="true" signature="26531:26547" ph="/*PATIENT IN... " />
+            <marker date="1558667249366" expanded="true" signature="26681:26702" ph="/*CONSULTATI... " />
+            <marker date="1558667249366" expanded="true" signature="26858:26892" ph="/*SUBJECTIVE... " />
+            <marker date="1558667249366" expanded="true" signature="27036:27071" ph="/*OBJECTIVE/... " />
+            <marker date="1558667249366" expanded="true" signature="27227:27272" ph="/*OBJECTIVE/... " />
+            <marker date="1558667249366" expanded="true" signature="27416:27444" ph="/*PLAN/MANAG... " />
+            <marker date="1558667249366" expanded="true" signature="28703:28825" ph="SELECT * FRO... TSEKAP_TBL_SOAP" />
+            <marker date="1558667249366" expanded="true" signature="28703:28831" ph="SELECT * FRO... TSEKAP_TBL_SOAP" />
+            <marker date="1558667249366" expanded="true" signature="29525:29839" ph="SELECT * FRO... TSEKAP_TBL_SOAP" />
+            <marker date="1558667249366" expanded="true" signature="29525:29885" ph="SELECT * FRO... TSEKAP_TBL_SOAP" />
+            <marker date="1558667249366" expanded="true" signature="29525:29891" ph="SELECT * FRO... TSEKAP_TBL_SOAP" />
+            <marker date="1558667249366" expanded="true" signature="29525:29900" ph="SELECT * FRO... TSEKAP_TBL_SOAP" />
+            <marker date="1558667249366" expanded="true" signature="29525:29979" ph="SELECT * FRO... TSEKAP_TBL_SOAP" />
+            <marker date="1558667249366" expanded="true" signature="30721:31166" ph="SELECT * FRO... TSEKAP_TBL_SOAP" />
+            <marker date="1558667249366" expanded="true" signature="30721:31208" ph="SELECT *, li... TSEKAP_TBL_SOAP" />
+            <marker date="1558667249366" expanded="true" signature="30721:31277" ph="SELECT *, li... TSEKAP_TBL_SOAP" />
+            <marker date="1558667249366" expanded="true" signature="30721:31295" ph="SELECT *, li... TSEKAP_TBL_SOAP" />
+            <marker date="1558667249366" expanded="true" signature="32058:32372" ph="SELECT *, li... TSEKAP_TBL_SOAP" />
+            <marker date="1558667249366" expanded="true" signature="32058:32490" ph="SELECT * FRO... TSEKAP_TBL_SOAP" />
+            <marker date="1558667249366" expanded="true" signature="32058:32508" ph="SELECT * FRO... TSEKAP_TBL_SOAP" />
+            <marker date="1558667249366" expanded="true" signature="33261:33575" ph="SELECT * FRO... TSEKAP_TBL_SOAP" />
+            <marker date="1558667249366" expanded="true" signature="33261:33711" ph="SELECT * FRO... TSEKAP_TBL_SOAP" />
+            <marker date="1558667249366" expanded="true" signature="34456:34767" ph="SELECT * FRO... TSEKAP_TBL_SOAP" />
+            <marker date="1558667249366" expanded="true" signature="34456:34809" ph="SELECT * FRO... TSEKAP_TBL_SOAP" />
+            <marker date="1558667249366" expanded="true" signature="34456:34902" ph="SELECT * FRO... TSEKAP_TBL_SOAP" />
+            <marker date="1558667249366" expanded="true" signature="35628:35923" ph="SELECT * FRO... TSEKAP_TBL_SOAP" />
+            <marker date="1558667249366" expanded="true" signature="35628:36099" ph="SELECT * FRO... TSEKAP_TBL_SOAP" />
+            <marker date="1558667249366" expanded="true" signature="35628:36122" ph="SELECT * FRO... TSEKAP_TBL_SOAP" />
+            <marker date="1558667249366" expanded="true" signature="36763:37352" ph="SELECT * FRO... TSEKAP_TBL_SOAP_DIAGNOSTIC" />
+            <marker date="1558667249366" expanded="true" signature="36763:37422" ph="SELECT diag.... TSEKAP_TBL_SOAP_DIAGNOSTIC" />
+            <marker date="1558667249366" expanded="true" signature="36763:37425" ph="SELECT diag.... TSEKAP_TBL_SOAP_DIAGNOSTIC" />
+            <marker date="1558667249366" expanded="true" signature="36763:37445" ph="SELECT diag.... TSEKAP_TBL_SOAP_DIAGNOSTIC" />
+            <marker date="1558667249366" expanded="true" signature="36763:37452" ph="SELECT diag.... TSEKAP_TBL_SOAP_DIAGNOSTIC" />
+            <marker date="1558667249366" expanded="true" signature="36763:37462" ph="SELECT diag.... TSEKAP_TBL_SOAP_DIAGNOSTIC" />
+            <marker date="1558667249366" expanded="true" signature="36763:37476" ph="SELECT diag.... TSEKAP_TBL_SOAP_DIAGNOSTIC" />
+            <marker date="1558667249366" expanded="true" signature="36763:37508" ph="SELECT diag.... TSEKAP_TBL_SOAP_DIAGNOSTIC" />
+            <marker date="1558667249366" expanded="true" signature="38086:38275" ph="SELECT * FRO... TSEKAP_LIB_MEDICINE" />
+            <marker date="1558667249366" expanded="true" signature="38853:39147" ph="SELECT * FRO... TSEKAP_LIB_MEDICINE" />
+            <marker date="1558667249366" expanded="true" signature="39725:40019" ph="SELECT * FRO... TSEKAP_LIB_MEDICINE" />
+            <marker date="1558667249366" expanded="true" signature="40597:40725" ph="SELECT * FRO... TSEKAP_LIB_MEDICINE" />
+            <marker date="1558667249366" expanded="true" signature="41306:41604" ph="SELECT * FRO... TSEKAP_LIB_MEDICINE" />
+            <marker date="1558667249366" expanded="true" signature="42182:42476" ph="SELECT * FRO... TSEKAP_LIB_MEDICINE" />
+            <marker date="1558667249366" expanded="true" signature="43057:43354" ph="SELECT * FRO... TSEKAP_LIB_MEDICINE" />
+            <marker date="1558667249366" expanded="true" signature="43933:44124" ph="SELECT * FRO... TSEKAP_LIB_MEDS_SALT" />
+            <marker date="1558667249366" expanded="true" signature="44701:44892" ph="SELECT * FRO... TSEKAP_LIB_MEDS_UNIT" />
+            <marker date="1558667249366" expanded="true" signature="45471:45663" ph="SELECT * FRO... TSEKAP_LIB_MEDS_GENERIC" />
+            <marker date="1558667249366" expanded="true" signature="46243:46446" ph="SELECT * FRO... TSEKAP_LIB_MEDS_STRENGTH" />
+            <marker date="1558667249366" expanded="true" signature="47023:47214" ph="SELECT * FRO... TSEKAP_LIB_MEDS_FORM" />
+            <marker date="1558667249366" expanded="true" signature="47794:47994" ph="SELECT * FRO... TSEKAP_LIB_MEDS_PACKAGE" />
+            <marker date="1558667249366" expanded="true" signature="48616:48763" ph="SELECT * FRO... TSEKAP_LIB_OBLIGATED" />
+            <marker date="1558667249366" expanded="true" signature="49403:49552" ph="SELECT * FRO... TSEKAP_LIB_WAIVED_REASON" />
+            <marker date="1558667249366" expanded="true" signature="50189:50337" ph="SELECT * FRO... TSEKAP_LIB_DIAGNOSTIC" />
+            <marker date="1558667249366" expanded="true" signature="50970:51109" ph="SELECT * FRO... LIB_PROVINCE" />
+            <marker date="1558667249366" expanded="true" signature="51781:51993" ph="SELECT * FRO... LIB_MUNICIPALITY" />
+            <marker date="1558667249366" expanded="true" signature="52744:52998" ph="SELECT * FRO... LIB_BARANGAY" />
+            <marker date="1558667249366" expanded="true" signature="54218:55405" ph="SELECT CASE_... TSEKAP_TBL_ENLIST" />
+            <marker date="1558667249366" expanded="true" signature="55824:57002" ph="SELECT CASE_... TSEKAP_TBL_ENLIST" />
+            <marker date="1558667249366" expanded="true" signature="57421:58599" ph="SELECT CASE_... TSEKAP_TBL_ENLIST" />
+            <marker date="1558667249366" expanded="true" signature="59258:60647" ph="SELECT ENLIS... TSEKAP_TBL_ENLIST" />
+            <marker date="1558667249366" expanded="true" signature="61066:62444" ph="SELECT ENLIS... TSEKAP_TBL_ENLIST" />
+            <marker date="1558667249366" expanded="true" signature="62863:64241" ph="SELECT ENLIS... TSEKAP_TBL_ENLIST" />
+            <marker date="1558667249366" expanded="true" signature="64888:66259" ph="SELECT ENLIS... TSEKAP_TBL_ENLIST" />
+            <marker date="1558667249366" expanded="true" signature="66678:68038" ph="SELECT ENLIS... TSEKAP_TBL_ENLIST" />
+            <marker date="1558667249366" expanded="true" signature="68457:69817" ph="SELECT ENLIS... TSEKAP_TBL_ENLIST" />
+            <marker date="1558667249366" expanded="true" signature="70472:72303" ph="SELECT ENLIS... TSEKAP_TBL_ENLIST" />
+            <marker date="1558667249366" expanded="true" signature="72722:74539" ph="SELECT ENLIS... TSEKAP_TBL_ENLIST" />
+            <marker date="1558667249366" expanded="true" signature="74958:76775" ph="SELECT ENLIS... TSEKAP_TBL_ENLIST" />
+            <marker date="1558667249366" expanded="true" signature="77426:80067" ph="SELECT ENLIS... TSEKAP_TBL_ENLIST" />
+            <marker date="1558667249366" expanded="true" signature="80486:83116" ph="SELECT ENLIS... TSEKAP_TBL_ENLIST" />
+            <marker date="1558667249366" expanded="true" signature="83535:86165" ph="SELECT ENLIS... TSEKAP_TBL_ENLIST" />
+            <marker date="1558667249366" expanded="true" signature="86819:88550" ph="SELECT ENLIS... TSEKAP_TBL_ENLIST" />
+            <marker date="1558667249366" expanded="true" signature="88969:90679" ph="SELECT ENLIS... TSEKAP_TBL_ENLIST" />
+            <marker date="1558667249366" expanded="true" signature="91098:92810" ph="SELECT ENLIS... TSEKAP_TBL_ENLIST" />
+            <marker date="1558667249366" expanded="true" signature="93464:95196" ph="SELECT ENLIS... TSEKAP_TBL_ENLIST" />
+            <marker date="1558667249366" expanded="true" signature="95615:97326" ph="SELECT ENLIS... TSEKAP_TBL_ENLIST" />
+            <marker date="1558667249366" expanded="true" signature="97745:99458" ph="SELECT ENLIS... TSEKAP_TBL_ENLIST" />
+            <marker date="1558667249366" expanded="true" signature="100878:101266" ph="SELECT CLAIM... TSEKAP_TBL_ENLIST" />
+            <marker date="1558667249366" expanded="true" signature="101601:102052" ph="SELECT CLAIM... TSEKAP_TBL_ENLIST" />
+            <marker date="1558667249366" expanded="true" signature="102474:102987" ph="SELECT CLAIM... TSEKAP_TBL_ENLIST" />
+            <marker date="1558667249366" expanded="true" signature="103454:104026" ph="SELECT CLAIM... TSEKAP_TBL_ENLIST" />
+            <marker date="1558667249366" expanded="true" signature="104560:105132" ph="SELECT CLAIM... TSEKAP_TBL_ENLIST" />
+            <marker date="1558667249366" expanded="true" signature="105702:106345" ph="SELECT CLAIM... TSEKAP_TBL_ENLIST" />
+            <marker date="1558667249366" expanded="true" signature="107432:108300" ph="SELECT SOAP.... TSEKAP_TBL_SOAP_DIAGNOSTIC" />
+            <marker date="1558667249366" expanded="true" signature="108584:109488" ph="SELECT SOAP.... TSEKAP_TBL_SOAP_DIAGNOSTIC" />
+            <marker date="1558667249366" expanded="true" signature="109859:110830" ph="SELECT SOAP.... TSEKAP_TBL_SOAP_DIAGNOSTIC" />
+            <marker date="1558667249366" expanded="true" signature="111248:112285" ph="SELECT SOAP.... TSEKAP_TBL_SOAP_DIAGNOSTIC" />
+            <marker date="1558667249366" expanded="true" signature="112768:113805" ph="SELECT SOAP.... TSEKAP_TBL_SOAP_DIAGNOSTIC" />
+            <marker date="1558667249366" expanded="true" signature="114324:115439" ph="SELECT SOAP.... TSEKAP_TBL_SOAP_DIAGNOSTIC" />
+            <marker date="1558667249366" expanded="true" signature="116369:117057" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_HCI_PROFILE... " />
+            <marker date="1558667249366" expanded="true" signature="121221:122531" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_ENLIST... " />
+            <marker date="1558667249366" expanded="true" signature="125836:127113" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_HIST_ENLIST... " />
+            <marker date="1558667249366" expanded="true" signature="138009:139230" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_HIST_ENLIST... " />
+            <marker date="1558667249366" expanded="true" signature="143019:143197" ph="SELECT * FRO... TSEKAP_TBL_ENLIST" />
+            <marker date="1558667249366" expanded="true" signature="143019:143243" ph="SELECT * FRO... TSEKAP_TBL_ENLIST" />
+            <marker date="1558667249366" expanded="true" signature="143019:143265" ph="SELECT * FRO... TSEKAP_TBL_ENLIST" />
+            <marker date="1558667249366" expanded="true" signature="144164:144276" ph="SELECT * FRO... TSEKAP_TBL_ASSIGN" />
+            <marker date="1558667249366" expanded="true" signature="144164:144342" ph="SELECT * FRO... TSEKAP_TBL_ASSIGN" />
+            <marker date="1558667249366" expanded="true" signature="173182:173927" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_SOAP... " />
+            <marker date="1558667249366" expanded="true" signature="175245:175933" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_SOAP_SUBJECTIVE... " />
+            <marker date="1558667249366" expanded="true" signature="177081:177655" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_SOAP_OBLIGATED... " />
+            <marker date="1558667249366" expanded="true" signature="178812:179732" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_SOAP_PEPERT... " />
+            <marker date="1558667249366" expanded="true" signature="181015:181731" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_SOAP_PEMISC... " />
+            <marker date="1558667249366" expanded="true" signature="183003:183830" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_SOAP_PESPECIFIC... " />
+            <marker date="1558667249366" expanded="true" signature="185072:185433" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_SOAP_ICD... " />
+            <marker date="1558667249366" expanded="true" signature="186384:186852" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_SOAP_DIAGNOSTIC... " />
+            <marker date="1558667249366" expanded="true" signature="187755:188141" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_SOAP_MANAGEMENT... " />
+            <marker date="1558667249366" expanded="true" signature="189030:189394" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_SOAP_ADVICE... " />
+            <marker date="1558667249366" expanded="true" signature="190504:192209" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_MEDICINE... " />
+            <marker date="1558667249366" expanded="true" signature="194502:196546" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_DIAG_CBC... " />
+            <marker date="1558667249366" expanded="true" signature="199127:201145" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_DIAG_URINALYSIS... " />
+            <marker date="1558667249366" expanded="true" signature="203693:205045" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_DIAG_FECALYSIS... " />
+            <marker date="1558667249366" expanded="true" signature="206779:207861" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_DIAG_CHESTXRAY... " />
+            <marker date="1558667249366" expanded="true" signature="209386:210434" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_DIAG_SPUTUM... " />
+            <marker date="1558667249366" expanded="true" signature="209386:210435" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_DIAG_SPUTUM... " />
+            <marker date="1558667249366" expanded="true" signature="211944:213040" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_DIAG_LIPIDPROF... " />
+            <marker date="1558667249366" expanded="true" signature="214542:215464" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_DIAG_FBS... " />
+            <marker date="1558667249366" expanded="true" signature="216812:217611" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_DIAG_ECG... " />
+            <marker date="1558667249366" expanded="true" signature="218897:219707" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_DIAG_PAPSSMEAR... " />
+            <marker date="1558667249366" expanded="true" signature="221077:222179" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_DIAG_OGTT... " />
+            <marker date="1558667249366" expanded="true" signature="223579:223776" ph="SELECT * FRO... TSEKAP_TBL_HCI_PROFILE" />
+            <marker date="1558667249366" expanded="true" signature="224482:224689" ph="SELECT * FRO... TSEKAP_TBL_ENLIST" />
+            <marker date="1558667249366" expanded="true" signature="225397:229349" ph="SELECT *, pr... TSEKAP_TBL_PROFILE" />
+            <marker date="1558667249366" expanded="true" signature="225588:225607" ph="/*PATIENT DE... " />
+            <marker date="1558667249366" expanded="true" signature="225745:225776" ph="/*PATIENTS D... " />
+            <marker date="1558667249366" expanded="true" signature="225920:225947" ph="/*PERSONAL/S... " />
+            <marker date="1558667249366" expanded="true" signature="226094:226125" ph="/*OB-GYNE HI... " />
+            <marker date="1558667249366" expanded="true" signature="226272:226303" ph="/*OB-GYNE HI... " />
+            <marker date="1558667249366" expanded="true" signature="226444:226487" ph="/*PERTINENT " />
+            <marker date="1558667249366" expanded="true" signature="226637:226693" ph="/*PERTINENT " />
+            <marker date="1558667249366" expanded="true" signature="226846:226899" ph="/*PERTINENT " />
+            <marker date="1558667249366" expanded="true" signature="227043:227071" ph="/*NCD HIGH-R... " />
+            <marker date="1558667249366" expanded="true" signature="227212:227240" ph="/*PLAN/MANAG... " />
+            <marker date="1558667249366" expanded="true" signature="227386:227414" ph="/*PLAN/MANAG... " />
+            <marker date="1558667249366" expanded="true" signature="227807:227858" ph="SELECT MAX(U... TSEKAP_TBL_PROF_OINFO" />
+            <marker date="1558667249366" expanded="true" signature="227990:228043" ph="SELECT MAX(U... TSEKAP_TBL_PROF_SOCHIST" />
+            <marker date="1558667249366" expanded="true" signature="228176:228230" ph="SELECT MAX(U... TSEKAP_TBL_PROF_PREGHIST" />
+            <marker date="1558667249366" expanded="true" signature="228363:228417" ph="SELECT MAX(U... TSEKAP_TBL_PROF_MENSHIST" />
+            <marker date="1558667249366" expanded="true" signature="228548:228600" ph="SELECT MAX(U... TSEKAP_TBL_PROF_PEPERT" />
+            <marker date="1558667249366" expanded="true" signature="228734:228789" ph="SELECT MAX(U... TSEKAP_TBL_PROF_BLOODTYPE" />
+            <marker date="1558667249366" expanded="true" signature="228924:228980" ph="SELECT MAX(U... TSEKAP_TBL_PROF_PESPECIFIC" />
+            <marker date="1558667249366" expanded="true" signature="229112:229165" ph="SELECT MAX(U... TSEKAP_TBL_PROF_NCDQANS" />
+            <marker date="1558667249366" expanded="true" signature="229296:229348" ph="SELECT MAX(U... TSEKAP_TBL_PROF_ADVICE" />
+            <marker date="1558667249366" expanded="true" signature="229438:232455" ph="SELECT *, pr... TSEKAP_TBL_PROFILE" />
+            <marker date="1558667249366" expanded="true" signature="229438:232456" ph="SELECT *, pr... TSEKAP_TBL_PROFILE" />
+            <marker date="1558667249366" expanded="true" signature="229438:232512" ph="SELECT *, pr... TSEKAP_TBL_PROFILE" />
+            <marker date="1558667249366" expanded="true" signature="229438:232529" ph="SELECT *, pr... TSEKAP_TBL_PROFILE" />
+            <marker date="1558667249366" expanded="true" signature="229627:229646" ph="/*PATIENT DE... " />
+            <marker date="1558667249366" expanded="true" signature="229782:229813" ph="/*PATIENTS D... " />
+            <marker date="1558667249366" expanded="true" signature="229955:229982" ph="/*PERSONAL/S... " />
+            <marker date="1558667249366" expanded="true" signature="230127:230158" ph="/*OB-GYNE HI... " />
+            <marker date="1558667249366" expanded="true" signature="230303:230334" ph="/*OB-GYNE HI... " />
+            <marker date="1558667249366" expanded="true" signature="230473:230516" ph="/*PERTINENT " />
+            <marker date="1558667249366" expanded="true" signature="230664:230720" ph="/*PERTINENT " />
+            <marker date="1558667249366" expanded="true" signature="230871:230924" ph="/*PERTINENT " />
+            <marker date="1558667249366" expanded="true" signature="231066:231094" ph="/*NCD HIGH-R... " />
+            <marker date="1558667249366" expanded="true" signature="231233:231261" ph="/*PLAN/MANAG... " />
+            <marker date="1558667249366" expanded="true" signature="231405:231433" ph="/*PLAN/MANAG... " />
+            <marker date="1558667249366" expanded="true" signature="231760:231773" ph="SELECT MAX(U... TSEKAP_TBL_PROF_OINFO" />
+            <marker date="1558667249366" expanded="true" signature="233257:233982" ph="SELECT medhi... TSEKAP_TBL_PROFILE" />
+            <marker date="1558667249366" expanded="true" signature="233476:233496" ph="/*PATIENTS D... " />
+            <marker date="1558667249366" expanded="true" signature="234767:235482" ph="SELECT mhspe... TSEKAP_TBL_PROFILE" />
+            <marker date="1558667249366" expanded="true" signature="234767:235507" ph="SELECT mhspe... TSEKAP_TBL_PROFILE" />
+            <marker date="1558667249366" expanded="true" signature="234989:235009" ph="/*PATIENTS D... " />
+            <marker date="1558667249366" expanded="true" signature="236294:237014" ph="SELECT pemis... TSEKAP_TBL_PROFILE" />
+            <marker date="1558667249366" expanded="true" signature="236512:236532" ph="/*PATIENTS D... " />
+            <marker date="1558667249366" expanded="true" signature="237790:238495" ph="SELECT surgh... TSEKAP_TBL_PROFILE" />
+            <marker date="1558667249366" expanded="true" signature="237790:238520" ph="SELECT surgh... TSEKAP_TBL_PROFILE" />
+            <marker date="1558667249366" expanded="true" signature="238010:238030" ph="/*PATIENTS D... " />
+            <marker date="1558667249366" expanded="true" signature="239293:239993" ph="SELECT famhi... TSEKAP_TBL_PROFILE" />
+            <marker date="1558667249366" expanded="true" signature="239293:240018" ph="SELECT famhi... TSEKAP_TBL_PROFILE" />
+            <marker date="1558667249366" expanded="true" signature="239512:239532" ph="/*PATIENTS D... " />
+            <marker date="1558667249366" expanded="true" signature="240802:241517" ph="SELECT fhspe... TSEKAP_TBL_PROFILE" />
+            <marker date="1558667249366" expanded="true" signature="240802:241542" ph="SELECT fhspe... TSEKAP_TBL_PROFILE" />
+            <marker date="1558667249366" expanded="true" signature="241024:241044" ph="/*PATIENTS D... " />
+            <marker date="1558667249366" expanded="true" signature="242318:243044" ph="SELECT immun... TSEKAP_TBL_PROFILE" />
+            <marker date="1558667249366" expanded="true" signature="242536:242556" ph="/*PATIENTS D... " />
+            <marker date="1558667249366" expanded="true" signature="243816:244556" ph="SELECT diagn... TSEKAP_TBL_PROFILE" />
+            <marker date="1558667249366" expanded="true" signature="244038:244058" ph="/*PATIENTS D... " />
+            <marker date="1558667249366" expanded="true" signature="245328:246068" ph="SELECT manag... TSEKAP_TBL_PROFILE" />
+            <marker date="1558667249366" expanded="true" signature="245550:245570" ph="/*PATIENTS D... " />
+            <marker date="1558667249366" expanded="true" signature="246822:247099" ph="SELECT *, so... TSEKAP_TBL_SOAP" />
+            <marker date="1558667249366" expanded="true" signature="247811:249099" ph="SELECT *, so... TSEKAP_TBL_SOAP" />
+            <marker date="1558667249366" expanded="true" signature="247811:249166" ph="SELECT *, so... TSEKAP_TBL_SOAP" />
+            <marker date="1558667249366" expanded="true" signature="248055:248083" ph="/*PLAN/MANAG... " />
+            <marker date="1558667249366" expanded="true" signature="248219:248253" ph="/*PHYSICAL E... " />
+            <marker date="1558667249366" expanded="true" signature="248401:248451" ph="/*PERTINENT " />
+            <marker date="1558667249366" expanded="true" signature="248599:248618" ph="/*CHIEF COMP... " />
+            <marker date="1558667249366" expanded="true" signature="249941:250530" ph="SELECT diagn... TSEKAP_TBL_SOAP" />
+            <marker date="1558667249366" expanded="true" signature="251294:251848" ph="SELECT icd.*... TSEKAP_TBL_SOAP" />
+            <marker date="1558667249366" expanded="true" signature="252626:253215" ph="SELECT manag... TSEKAP_TBL_SOAP" />
+            <marker date="1558667249366" expanded="true" signature="254008:254621" ph="SELECT pemis... TSEKAP_TBL_SOAP" />
+            <marker date="1558667249366" expanded="true" signature="255368:255891" ph="SELECT * FRO... TSEKAP_TBL_MEDICINE" />
+            <marker date="1558667249366" expanded="true" signature="255368:256025" ph="SELECT * FRO... TSEKAP_TBL_MEDICINE" />
+            <marker date="1558667249366" expanded="true" signature="255368:256038" ph="SELECT * FRO... TSEKAP_TBL_MEDICINE" />
+            <marker date="1558667249366" expanded="true" signature="255368:256081" ph="SELECT * FRO... " />
+            <marker date="1558667249366" expanded="true" signature="255368:256716" ph="SELECT * FRO... " />
+            <marker date="1558667249366" expanded="true" signature="255368:256775" ph="SELECT meds.... " />
+            <marker date="1558667249366" expanded="true" signature="256119:256716" ph="SELECT * FRO... TSEKAP_TBL_MEDICINE" />
+            <marker date="1558667249366" expanded="true" signature="257483:257999" ph="SELECT * FRO... TSEKAP_TBL_ENLIST" />
+            <marker date="1558667249366" expanded="true" signature="257483:258080" ph="SELECT * FRO... TSEKAP_TBL_ENLIST" />
+            <marker date="1558667249366" expanded="true" signature="257483:258156" ph="SELECT * FRO... TSEKAP_TBL_ENLIST" />
+            <marker date="1558667249366" expanded="true" signature="258871:259265" ph="SELECT *, en... TSEKAP_TBL_ENLIST" />
+            <marker date="1558667249366" expanded="true" signature="258871:259267" ph="SELECT *, en... " />
+            <marker date="1558667249366" expanded="true" signature="258871:259318" ph="SELECT *, en... TSEKAP_TBL_ENLIST" />
+            <marker date="1558667249366" expanded="true" signature="258871:259327" ph="SELECT *, en... TSEKAP_TBL_ENLIST" />
+            <marker date="1558667249366" expanded="true" signature="258871:259331" ph="SELECT *, en... TSEKAP_TBL_ENLIST" />
+            <marker date="1558667249366" expanded="true" signature="258871:259338" ph="SELECT *, en... TSEKAP_TBL_ENLIST" />
+            <marker date="1558667249366" expanded="true" signature="260003:260417" ph="SELECT *, en... TSEKAP_TBL_ENLIST" />
+            <marker date="1558667249366" expanded="true" signature="260003:260502" ph="SELECT *, en... TSEKAP_TBL_ENLIST" />
+            <marker date="1558667249366" expanded="true" signature="261171:261582" ph="SELECT *, en... TSEKAP_TBL_ENLIST" />
+            <marker date="1558667249366" expanded="true" signature="261171:261661" ph="SELECT *, en... TSEKAP_TBL_ENLIST" />
+            <marker date="1558667249366" expanded="true" signature="262330:262741" ph="SELECT *, en... TSEKAP_TBL_ENLIST" />
+            <marker date="1558667249366" expanded="true" signature="262330:262819" ph="SELECT *, en... TSEKAP_TBL_ENLIST" />
+            <marker date="1558667249366" expanded="true" signature="263485:263888" ph="SELECT *, en... TSEKAP_TBL_ENLIST" />
+            <marker date="1558667249366" expanded="true" signature="263485:263965" ph="SELECT *, en... TSEKAP_TBL_ENLIST" />
+            <marker date="1558667249366" expanded="true" signature="264634:265046" ph="SELECT *, en... TSEKAP_TBL_ENLIST" />
+            <marker date="1558667249366" expanded="true" signature="264634:265127" ph="SELECT *, en... TSEKAP_TBL_ENLIST" />
+            <marker date="1558667249366" expanded="true" signature="265790:266183" ph="SELECT *, en... TSEKAP_TBL_ENLIST" />
+            <marker date="1558667249366" expanded="true" signature="265790:266262" ph="SELECT *, en... TSEKAP_TBL_ENLIST" />
+            <marker date="1558667249366" expanded="true" signature="266925:267318" ph="SELECT *, en... TSEKAP_TBL_ENLIST" />
+            <marker date="1558667249366" expanded="true" signature="266925:267390" ph="SELECT *, en... TSEKAP_TBL_ENLIST" />
+            <marker date="1558667249366" expanded="true" signature="268054:268450" ph="SELECT *, en... TSEKAP_TBL_ENLIST" />
+            <marker date="1558667249366" expanded="true" signature="268054:268529" ph="SELECT *, en... TSEKAP_TBL_ENLIST" />
+            <marker date="1558667249366" expanded="true" signature="269198:269600" ph="SELECT *, en... TSEKAP_TBL_ENLIST" />
+            <marker date="1558667249366" expanded="true" signature="269198:269665" ph="SELECT *, en... TSEKAP_TBL_ENLIST" />
+            <marker date="1558667249366" expanded="true" signature="269198:269672" ph="SELECT *, en... TSEKAP_TBL_ENLIST" />
+            <marker date="1558667249366" expanded="true" signature="270349:270789" ph="SELECT *, CA... TSEKAP_TBL_ASSIGN" />
+            <marker date="1558667249366" expanded="true" signature="271378:271859" ph="SELECT soap.... TSEKAP_TBL_SOAP" />
+            <marker date="1558667249366" expanded="true" signature="271378:271913" ph="SELECT soap.... TSEKAP_TBL_SOAP" />
+            <marker date="1558667249366" expanded="true" signature="271378:271940" ph="SELECT soap.... TSEKAP_TBL_SOAP" />
+            <marker date="1558667249366" expanded="true" signature="272638:272780" ph="SELECT * FRO... TSEKAP_TBL_ENLIST" />
+            <marker date="1558667249366" expanded="true" signature="272638:272826" ph="SELECT * FRO... TSEKAP_TBL_ENLIST" />
+            <marker date="1558667249366" expanded="true" signature="272638:272846" ph="SELECT * FRO... TSEKAP_TBL_ENLIST" />
+            <marker date="1558667249366" expanded="true" signature="312121:312732" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_PROF_DIAGNOSTIC... " />
+            <marker date="1558667249366" expanded="true" signature="313787:314173" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_PROF_MANAGEMENT... " />
+            <marker date="1558667249366" expanded="true" signature="315072:315436" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_PROF_ADVICE... " />
+            <marker date="1558667249366" expanded="true" signature="316360:317117" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_PROFILE... " />
+            <marker date="1558667249366" expanded="true" signature="318547:319735" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_PROF_OINFO... " />
+            <marker date="1558667249366" expanded="true" signature="321364:321710" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_PROF_MEDHIST... " />
+            <marker date="1558667249366" expanded="true" signature="322612:323023" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_PROF_MHSPECIFIC... " />
+            <marker date="1558667249366" expanded="true" signature="323977:324370" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_PROF_SURGHIST... " />
+            <marker date="1558667249366" expanded="true" signature="325302:325648" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_PROF_FAMHIST... " />
+            <marker date="1558667249366" expanded="true" signature="326552:326963" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_PROF_FHSPECIFIC... " />
+            <marker date="1558667249366" expanded="true" signature="327949:328516" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_PROF_SOCHIST... " />
+            <marker date="1558667249366" expanded="true" signature="329638:330237" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_PROF_IMMUNIZATION... " />
+            <marker date="1558667249366" expanded="true" signature="331475:332386" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_PROF_MENSHIST... " />
+            <marker date="1558667249366" expanded="true" signature="333911:334734" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_PROF_PREGHIST... " />
+            <marker date="1558667249366" expanded="true" signature="336162:336948" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_PROF_PEPERT... " />
+            <marker date="1558667249366" expanded="true" signature="338227:338587" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_PROF_PEGENSURVEY... " />
+            <marker date="1558667249366" expanded="true" signature="339474:339874" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_COURSE_WARD... " />
+            <marker date="1558667249366" expanded="true" signature="340824:341220" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_PROF_BLOODTYPE... " />
+            <marker date="1558667249366" expanded="true" signature="342214:342930" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_PROF_PEMISC... " />
+            <marker date="1558667249366" expanded="true" signature="344262:345100" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_PROF_PESPECIFIC... " />
+            <marker date="1558667249366" expanded="true" signature="346630:349177" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_PROF_NCDQANS... " />
+            <marker date="1558667249366" expanded="true" signature="351586:351744" ph="SELECT MAX(U... TSEKAP_TBL_ENLIST" />
+            <marker date="1558667249366" expanded="true" signature="352377:352538" ph="SELECT MAX(U... TSEKAP_TBL_PROFILE" />
+            <marker date="1558667249366" expanded="true" signature="353179:353332" ph="SELECT UPD_C... TSEKAP_TBL_SOAP" />
+            <marker date="1558667249366" expanded="true" signature="353957:354216" ph="SELECT * FRO... TSEKAP_LIB_PACKAGE_TYPE" />
+            <marker date="1558667249366" expanded="true" signature="355609:355988" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_UPLOAD... " />
+            <marker date="1558667249366" expanded="true" signature="356414:358614" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_ASSIGN... " />
+            <marker date="1558667249366" expanded="true" signature="358615:360679" ph="UPDATE MEM_P... " />
+            <marker date="1558667249366" expanded="true" signature="363634:364014" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_UPLOAD... " />
+            <marker date="1558667249366" expanded="true" signature="365187:365602" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_REPORTS... " />
+            <marker date="1558667249366" expanded="true" signature="366460:366655" ph="SELECT * FRO... TSEKAP_LIB_MDISEASES" />
+            <marker date="1558667249366" expanded="true" signature="367228:367362" ph="SELECT * FRO... TSEKAP_SEQNO" />
+            <marker date="1558667249366" expanded="true" signature="367996:368267" ph="SELECT LAST_... TSEKAP_SEQNO_DET" />
+            <marker date="1558667249366" expanded="true" signature="369470:369662" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_SEQNO_DET... " />
+            <marker date="1558667249366" expanded="true" signature="371102:371239" ph="SELECT * FRO... TSEKAP_TBL_ENLIST" />
+            <marker date="1558667249366" expanded="true" signature="371900:374375" ph="SELECT *, en... TSEKAP_TBL_ENLIST" />
+            <marker date="1558667249366" expanded="true" signature="372007:372028" ph="/*ENLISTMENT... " />
+            <marker date="1558667249366" expanded="true" signature="372155:372175" ph="/*PATIENTS D... " />
+            <marker date="1558667249366" expanded="true" signature="372303:372334" ph="/*PATIENTS D... " />
+            <marker date="1558667249366" expanded="true" signature="372468:372495" ph="/*PERSONAL/S... " />
+            <marker date="1558667249366" expanded="true" signature="372632:372663" ph="/*OB-GYNE HI... " />
+            <marker date="1558667249366" expanded="true" signature="372800:372831" ph="/*OB-GYNE HI... " />
+            <marker date="1558667249366" expanded="true" signature="372962:373005" ph="/*PERTINENT " />
+            <marker date="1558667249366" expanded="true" signature="373145:373201" ph="/*PERTINENT " />
+            <marker date="1558667249366" expanded="true" signature="373344:373397" ph="/*PERTINENT " />
+            <marker date="1558667249366" expanded="true" signature="373531:373559" ph="/*NCD HIGH-R... " />
+            <marker date="1558667249366" expanded="true" signature="373701:373729" ph="/*NCD HIGH-R... " />
+            <marker date="1558667249366" expanded="true" signature="375079:375554" ph="SELECT * FRO... TSEKAP_TBL_PROFILE" />
+            <marker date="1558667249366" expanded="true" signature="375172:375192" ph="/*PATIENTS D... " />
+            <marker date="1558667249366" expanded="true" signature="375326:375360" ph="/*PAST MEDIC... " />
+            <marker date="1558667249366" expanded="true" signature="376259:376744" ph="SELECT * FRO... TSEKAP_TBL_PROFILE" />
+            <marker date="1558667249366" expanded="true" signature="376352:376372" ph="/*PATIENTS D... " />
+            <marker date="1558667249366" expanded="true" signature="376515:376547" ph="/*PAST MEDIC... " />
+            <marker date="1558667249366" expanded="true" signature="377439:378155" ph="SELECT * FRO... TSEKAP_TBL_PROFILE" />
+            <marker date="1558667249366" expanded="true" signature="377532:377552" ph="/*PATIENTS D... " />
+            <marker date="1558667249366" expanded="true" signature="377686:377714" ph="/*FAMILY HIS... " />
+            <marker date="1558667249366" expanded="true" signature="377857:377894" ph="/*FAMILY HIS... " />
+            <marker date="1558667249366" expanded="true" signature="378857:379347" ph="SELECT * FRO... TSEKAP_TBL_PROFILE" />
+            <marker date="1558667249366" expanded="true" signature="378950:378970" ph="/*PATIENTS D... " />
+            <marker date="1558667249366" expanded="true" signature="379113:379150" ph="/*FAMILY HIS... " />
+            <marker date="1558667249366" expanded="true" signature="380039:380510" ph="SELECT * FRO... TSEKAP_TBL_PROFILE" />
+            <marker date="1558667249366" expanded="true" signature="380132:380152" ph="/*PATIENTS D... " />
+            <marker date="1558667249366" expanded="true" signature="380289:380317" ph="/*FAMILY HIS... " />
+            <marker date="1558667249366" expanded="true" signature="381214:381679" ph="SELECT * FRO... TSEKAP_TBL_PROFILE" />
+            <marker date="1558667249366" expanded="true" signature="381307:381327" ph="/*PATIENTS D... " />
+            <marker date="1558667249366" expanded="true" signature="381458:381486" ph="/*FAMILY HIS... " />
+            <marker date="1558667249366" expanded="true" signature="382338:382841" ph="SELECT * FRO... TSEKAP_TBL_PROFILE" />
+            <marker date="1558667249366" expanded="true" signature="382431:382451" ph="/*PATIENTS D... " />
+            <marker date="1558667249366" expanded="true" signature="383547:384020" ph="SELECT * FRO... TSEKAP_TBL_PROFILE" />
+            <marker date="1558667249366" expanded="true" signature="383640:383660" ph="/*PATIENTS D... " />
+            <marker date="1558667249366" expanded="true" signature="383797:383825" ph="/*FAMILY HIS... " />
+            <marker date="1558667249366" expanded="true" signature="384654:384842" ph="SELECT * FRO... TSEKAP_LIB_IMMCHILD" />
+            <marker date="1558667249366" expanded="true" signature="385370:385559" ph="SELECT * FRO... TSEKAP_LIB_IMMYOUNGW" />
+            <marker date="1558667249366" expanded="true" signature="386090:386278" ph="SELECT * FRO... TSEKAP_LIB_IMMPREGW" />
+            <marker date="1558667249366" expanded="true" signature="386808:386998" ph="SELECT * FRO... TSEKAP_LIB_IMMELDERLY" />
+            <marker date="1558667249366" expanded="true" signature="387548:387662" ph="SELECT * FRO... TSEKAP_TBL_ENLIST" />
+            <marker date="1558667249366" expanded="true" signature="388864:389645" ph="INSERT INTO ${$ini['EPCB']}.TSEKAP_TBL_ENLIST... " />
+            <marker date="1558667249366" expanded="true" signature="400145:400326" ph="SELECT * FRO... TSEKAP_TBL_ENLIST" />
+            <marker date="1558667249366" expanded="true" signature="400145:400478" ph="SELECT * FRO... TSEKAP_TBL_ENLIST" />
+            <marker date="1558667249366" expanded="true" signature="400387:400409" ph="SELECT MAX(T... " />
+            <marker date="1558667249366" expanded="true" signature="400387:400414" ph="SELECT MAX(T... " />
+            <marker date="1558667249366" expanded="true" signature="400387:400477" ph="SELECT MAX(T... TSEKAP_TBL_ENLIST" />
+            <marker date="1558667249366" expanded="true" signature="401076:402497" ph="SELECT *, pr... TSEKAP_TBL_PROFILE" />
+            <marker date="1558667249366" expanded="true" signature="401076:402660" ph="SELECT *, pr... TSEKAP_TBL_PROFILE" />
+            <marker date="1558667249366" expanded="true" signature="401203:401222" ph="/*PATIENT DE... " />
+            <marker date="1558667249366" expanded="true" signature="401500:401531" ph="/*OB-GYNE HI... " />
+            <marker date="1558667249366" expanded="true" signature="401676:401707" ph="/*OB-GYNE HI... " />
+            <marker date="1558667249366" expanded="true" signature="401846:401889" ph="/*PERTINENT " />
+            <marker date="1558667249366" expanded="true" signature="402040:402093" ph="/*PERTINENT " />
+            <marker date="1558667249366" expanded="true" signature="402237:402265" ph="/*PLAN/MANAG... " />
+            <marker date="1558667249366" expanded="true" signature="402569:402659" ph="SELECT MAX(T... TSEKAP_TBL_ENLIST" />
+            <marker date="1558667249366" expanded="true" signature="403306:403737" ph="SELECT *, en... TSEKAP_TBL_ENLIST" />
+            <marker date="1558667249366" expanded="true" signature="403306:403900" ph="SELECT *, en... TSEKAP_TBL_ENLIST" />
+            <marker date="1558667249366" expanded="true" signature="403430:403449" ph="/*PATIENT DE... " />
+            <marker date="1558667249366" expanded="true" signature="403809:403899" ph="SELECT MAX(T... TSEKAP_TBL_ENLIST" />
+            <marker date="1558667249366" expanded="true" signature="404546:405353" ph="SELECT medhi... TSEKAP_TBL_PROFILE" />
+            <marker date="1558667249366" expanded="true" signature="404546:405520" ph="SELECT medhi... TSEKAP_TBL_PROFILE" />
+            <marker date="1558667249366" expanded="true" signature="404802:404822" ph="/*PATIENTS D... " />
+            <marker date="1558667249366" expanded="true" signature="405429:405519" ph="SELECT MAX(T... TSEKAP_TBL_ENLIST" />
+            <marker date="1558667249366" expanded="true" signature="406170:406965" ph="SELECT mhspe... TSEKAP_TBL_PROFILE" />
+            <marker date="1558667249366" expanded="true" signature="406170:407128" ph="SELECT mhspe... TSEKAP_TBL_PROFILE" />
+            <marker date="1558667249366" expanded="true" signature="406425:406445" ph="/*PATIENTS D... " />
+            <marker date="1558667249366" expanded="true" signature="407037:407127" ph="SELECT MAX(T... TSEKAP_TBL_ENLIST" />
+            <marker date="1558667249366" expanded="true" signature="407770:408549" ph="SELECT pemis... TSEKAP_TBL_PROFILE" />
+            <marker date="1558667249366" expanded="true" signature="407770:408712" ph="SELECT pemis... TSEKAP_TBL_PROFILE" />
+            <marker date="1558667249366" expanded="true" signature="408021:408041" ph="/*PATIENTS D... " />
+            <marker date="1558667249366" expanded="true" signature="408621:408711" ph="SELECT MAX(T... TSEKAP_TBL_ENLIST" />
+            <marker date="1558667249366" expanded="true" signature="409356:410143" ph="SELECT surgh... TSEKAP_TBL_PROFILE" />
+            <marker date="1558667249366" expanded="true" signature="409356:410306" ph="SELECT surgh... TSEKAP_TBL_PROFILE" />
+            <marker date="1558667249366" expanded="true" signature="409609:409629" ph="/*PATIENTS D... " />
+            <marker date="1558667249366" expanded="true" signature="410215:410305" ph="SELECT MAX(T... TSEKAP_TBL_ENLIST" />
+            <marker date="1558667249366" expanded="true" signature="410946:411461" ph="SELECT * FRO... TSEKAP_TBL_SOAP" />
+            <marker date="1558667249366" expanded="true" signature="410946:411620" ph="SELECT * FRO... TSEKAP_TBL_SOAP" />
+            <marker date="1558667249366" expanded="true" signature="411529:411619" ph="SELECT MAX(T... TSEKAP_TBL_ENLIST" />
+            <marker date="1558667249366" expanded="true" signature="412258:412668" ph="SELECT * FRO... TSEKAP_TBL_MEDICINE" />
+            <marker date="1558667249366" expanded="true" signature="412258:412827" ph="SELECT * FRO... TSEKAP_TBL_MEDICINE" />
+            <marker date="1558667249366" expanded="true" signature="412736:412826" ph="SELECT MAX(T... TSEKAP_TBL_ENLIST" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
