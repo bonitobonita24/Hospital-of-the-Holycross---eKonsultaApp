@@ -1491,18 +1491,7 @@ function generateKonsultaBatchXML($vGetCaseNo, $vGetConsultation) {
             $subjective->addAttribute("pIllnessHistory", $vIllnestHist);
             $subjective->addAttribute("pSignsSymptoms", $vGetConsult['SIGNS_SYMPTOMS']);
                 $chiefComplaintList = explode (";", $vGetConsult['SIGNS_SYMPTOMS']);
-                /*foreach ($chiefComplaintList as $chiefComplaint) {
-                    if ($chiefComplaint == "X") {
-                        if ($vGetConsult['OTHER_COMPLAINT'] == null || $vGetConsult['OTHER_COMPLAINT'] == "") {
-                            $vOtherComplaintStr = "NOT APPLICABLE";
-                            break;
-                        } else {
-                            $vOtherComplaintStr = $vGetConsult['OTHER_COMPLAINT'];
-                            break;
-                        }
-                    } 
-
-                } */
+                
                 // X is not added but with chief complaint
                 if(strpos($vGetConsult['SIGNS_SYMPTOMS'], "X") !== false){
                     //echo "Found!";
@@ -1515,19 +1504,6 @@ function generateKonsultaBatchXML($vGetCaseNo, $vGetConsultation) {
                     $vOtherComplaintStr = "";
                 }
 
-                /*
-                foreach ($chiefComplaintList as $chiefComplaint) {
-                    if ($chiefComplaint == "38") {
-                        if ($vGetConsult['PAIN_SITE'] == null || $vGetConsult['PAIN_SITE'] == "") {
-                            $vPainSiteStr = "-";
-                            break;
-                        } else {
-                            $vPainSiteStr = $vGetConsult['PAIN_SITE'];
-                            break;
-                        }
-                    } 
-                } */
-
                 // 38 is not added but with chief complaint
                 if(strpos($vGetConsult['SIGNS_SYMPTOMS'], "38") !== false){
                     //echo "Found!";
@@ -1539,23 +1515,6 @@ function generateKonsultaBatchXML($vGetCaseNo, $vGetConsultation) {
                 } else {
                     $vPainSiteStr = "";
                 }
-
-                /*
-                if ($vGetConsult['SIGNS_SYMPTOMS'] == "X") {
-                    if ($vGetConsult['OTHER_COMPLAINT'] == null || $vGetConsult['OTHER_COMPLAINT'] == "") {
-                        $vOtherComplaintStr = "NOT APPLICABLE";
-                    } else {
-                        $vOtherComplaintStr = $vGetConsult['OTHER_COMPLAINT'];
-                    }
-                }
-
-                if ($vGetConsult['SIGNS_SYMPTOMS'] == "38") {
-                    if ($vGetConsult['PAIN_SITE'] == null || $vGetConsult['PAIN_SITE'] == "") {
-                        $vPainSiteStr = "-";
-                    } else {
-                        $vPainSiteStr = $vGetConsult['PAIN_SITE'];
-                    }
-                } */
                 
             $subjective->addAttribute("pOtherComplaint", $vOtherComplaintStr);
             $subjective->addAttribute("pPainSite", $vPainSiteStr);
@@ -1595,8 +1554,9 @@ function generateKonsultaBatchXML($vGetCaseNo, $vGetConsultation) {
             $pepert->addAttribute("pDeficiencyRemarks", "");
 
             $vGetConsultationPEMISCS = getConsultationPEMISC($vGetConsult['TRANS_NO']);
-            $pemiscs = $consultation->addChild("PEMISCS");
             if (count ($vGetConsultationPEMISCS) > 0) {
+                $pemiscs = $consultation->addChild("PEMISCS");
+
                 foreach ($vGetConsultationPEMISCS as $vGetConsultationPEMISC) {
                     $pemisc = $pemiscs->addChild("PEMISC");
                     $pemisc->addAttribute("pSkinId", $vGetConsultationPEMISC['SKIN_ID']);
@@ -2568,8 +2528,10 @@ function generateXmlPerIndividual ($pCaseNo) {
             $peadmin->addAttribute("pDeficiencyRemarks", "");
 
             $vGetProfPEMISCS = getProfPEMISC($vGetProfiling['TRANS_NO']);
-            $pemiscs = $profile->addChild("PEMISCS");
+            
             if (count($vGetProfPEMISCS) > 0) {
+                $pemiscs = $profile->addChild("PEMISCS");
+
                 foreach ($vGetProfPEMISCS as $vGetProfPEMISC) {
                     $pemisc = $pemiscs->addChild("PEMISC");
                     $pemisc->addAttribute("pSkinId", $vGetProfPEMISC['SKIN_ID']);
@@ -2584,6 +2546,8 @@ function generateXmlPerIndividual ($pCaseNo) {
                     $pemisc->addAttribute("pDeficiencyRemarks", "");
                 }
             } else {
+                $pemiscs = $profile->addChild("PEMISCS");
+                
                 $pemisc = $pemiscs->addChild("PEMISC");
                 $pemisc->addAttribute("pSkinId", "");
                 $pemisc->addAttribute("pHeentId", "");

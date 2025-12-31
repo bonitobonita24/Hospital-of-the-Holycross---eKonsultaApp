@@ -274,19 +274,10 @@
                                             </tr>
                                             <tr>
                                                 <td>
-                                                    <select name="pPatientType" id="pPatientType" class="form-control" style="width: 160px; margin: 0px 10px 0px 0px;" onchange="enableDependentTypeMemInfo();selectCivilStatus(this.value)" required>
+                                                    <select name="pPatientType" id="pPatientType" class="form-control" style="width: 160px; margin: 0px 10px 0px 0px;" readonly required>
                                                         <?php if($pPxType != null){ ?>
                                                             <option value="<?php echo $pPxType;?>" selected="selected"><?php echo getPatientType(false, $pPxType);?></option>
-                                                        <?php } else{ ?>
-                                                            <option value="" selected="selected" readonly>Select Client Type</option>
-                                                        <?php }
-                                                        $patientType = getPatientType(true, '');
-                                                        foreach($patientType as $key => $value) {
-                                                            ?>
-                                                            <option value="<?php echo $key; ?>"><?php echo $value; ?></option>
-                                                            <?php
-                                                        }
-                                                        ?>
+                                                        <?php } ?>
                                                     </select>
                                                 </td>
                                                 <td>
@@ -324,6 +315,7 @@
                                                            autocomplete="off"
                                                            value="<?php echo strReplaceEnye($pPxLname); ?>"
                                                            required
+                                                           readonly
                                                     />
                                                 </td>
                                                 <td>
@@ -336,6 +328,7 @@
                                                            autocomplete="off"
                                                            value="<?php echo strReplaceEnye($pPxFname); ?>"
                                                            required
+                                                           readonly
                                                     />
                                                 </td>
                                                 <td>
@@ -346,6 +339,7 @@
                                                            style="width: 160px; color: #000; margin: 0px 10px 0px 0px; text-transform: uppercase"
                                                            maxlength="60"
                                                            autocomplete="off"
+                                                           readonly
                                                            value="<?php echo strReplaceEnye($pPxMname); ?>"
                                                     />
                                                 </td>
@@ -356,6 +350,7 @@
                                                            id="pPatientSuffix"
                                                            style="width: 100px; color: #000; margin: 0px 10px 0px 0px; text-transform: uppercase"
                                                            maxlength="4"
+                                                           readonly
                                                            autocomplete="off"
                                                            value="<?php echo strReplaceEnye($pPxExtname);?>"
                                                     />
@@ -380,26 +375,15 @@
                                                            autocomplete="off"
                                                            onkeydown="computeAge('value');"
                                                            required
+                                                           readonly
                                                            value="<?php if(isset($pPxDoB) && !empty($pPxDoB)){ echo date('m/d/Y', strtotime(($pPxDoB)));}?>"
                                                     />
                                                 </td>
                                                 <td>
-                                                    <select name="pPatientSexX" id="pPatientSexX" class="form-control" style="width: 160px; margin: 0px 10px 0px 0px;" required>
+                                                    <select name="pPatientSexX" id="pPatientSexX" class="form-control" style="width: 160px; margin: 0px 10px 0px 0px;" readonly required>
                                                         <?php if($pPxSex != null){ ?>
                                                             <option value="<?php echo $pPxSex;?>" selected="selected"><?php echo getSex(false, $pPxSex);?></option>
-                                                        <?php } else { ?>
-                                                            <option value="" selected="selected" disabled>Select Sex</option>
-                                                        <?php }
-                                                        $sexX = getSex(true, '');
-
-                                                        if($pPxSex == null){
-                                                            foreach($sexX as $key => $value) { ?>
-                                                              <option value="<?php echo $key; ?>"><?php echo $value; ?></option>
-                                                            }
-                                                            <?php
-                                                          }
-                                                        }
-                                                        ?>
+                                                        <?php } ?>
                                                     </select>
                                                 </td>
                                                 <td>
@@ -540,16 +524,7 @@
                                                     <select name="pMemberSex" id="pMemberSex" class="form-control" style="width: 160px; margin: 0px 10px 0px 0px;" readonly>
                                                         <?php if($pMemSex != null){ ?>
                                                             <option value="<?php echo $pMemSex;?>" selected="selected"><?php echo getSex(false, $pMemSex);?></option>
-                                                        <?php } else{ ?>
-                                                            <option value="" selected="selected" disabled>Select Sex</option>
-                                                        <?php }
-                                                        $sexX = getSex(true, '');
-                                                        foreach($sexX as $key => $value) {
-                                                            ?>
-                                                            <option value="<?php echo $key; ?>"><?php echo $value; ?></option>
-                                                            <?php
-                                                        }
-                                                        ?>
+                                                        <?php } ?>
                                                     </select>
                                                 </td>
                                             </tr>

@@ -47,6 +47,33 @@
                             </thead>
                             <tbody>
                                 <tr>
+                                    <td style="font-weight: bold;width:25%;">1.11.0<br/>[Released Date: 2025-10-06]</td>
+                                    <td>
+                                        <ul style="margin-left: 10px;text-align: left">
+                                            <li>Disabled the membership-related fields in the eKonsulta Registration module.</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="font-weight: bold;width:25%;">1.10.0<br/>[Accepted Date: 2025-04-23]</td>
+                                    <td>
+                                        <ul style="margin-left: 10px;text-align: left">
+                                            <li>Removed the Authorization Transaction Code (ATC) requirement when encoding and saving the First Patient Encounter (FPE) and Consultation data, in accordance with PhilHealth Circular No. 2024-0013, effective immediately starting May 16, 2024.</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="font-weight: bold;width:25%;">01.09.00.202501<br/>[Released Date: 2025-02-20]</td>
+                                    <td>
+                                        <ul style="margin-left: 10px;text-align: left">
+                                            <li>Removed the FBS/RBS as a requirement if the beneficiary has a Family History of Diabetes Mellitus</li>
+                                            <li>Fixed bugs and improved user experience</li>
+                                            1. Fixed issues with viewing the 2025 Uploaded Registration Masterlist. <br/>
+                                            2. Resolved the "There is no active transaction" error message in MySQL when saving a transaction. Note: This issue affected the network setup settings and multiple users.
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
                                     <td style="font-weight: bold;width:25%;">01.08.00.202401<br/>[Released Date: 2024-08-05]</td>
                                     <td>
                                         <ul style="margin-left: 10px;text-align: left">

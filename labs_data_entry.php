@@ -623,7 +623,6 @@
                                                                            id="<?php echo 'diagnostic_'.$pDiagnosticID.'_lab_exam_date'; ?>"
                                                                            class="datepicker form-control"
                                                                            style="width: 110px; color: #000; margin: 5px 10px 0px 28px; text-transform: uppercase"
-                                                                           onkeypress="formatDate('<?php echo "diagnostic_".$pDiagnosticID."_lab_exam_date"; ?>')"
                                                                            autocomplete="off"
                                                                            placeholder="mm/dd/yyyy"
                                                                            maxlength="10"

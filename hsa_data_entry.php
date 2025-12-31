@@ -32,8 +32,6 @@ if(isset($_GET['pHsaTransNo'])){
     $px_labsFBS = getPatientHsaLabsFbs($hsa_transNo, $getUpdCnt);
     $px_labsRBS = getPatientHsaLabsRbs($hsa_transNo, $getUpdCnt);
 
-    //$descMedicine = getPatientHsaMedicine($hsa_transNo, $getUpdCnt);
-
     $pPoB = wordwrap($px_data['PX_POB'], 2, " ", true);
     $pGetPoB = explode(" ",$pPoB);
     $descProvAdd = describeProvinceAddress($pGetPoB[0]);
@@ -121,7 +119,6 @@ if(isset($_POST['saveFinalizeHSA']) || isset($_POST['saveRecord'])){
     }
     $_POST["pObservation"] = $observation;
 
-
     if(true){
         saveProfilingInfo($_POST);
     } else{
@@ -181,71 +178,7 @@ if(isset($_POST['saveFinalizeHSA']) || isset($_POST['saveRecord'])){
                                     </div>
                                     <div class="panel-body">
                                         <fieldset style="margin: 0px 0px 10px 0px; padding: 20px; background-color: #EDFCF0;">
-                                            <table border="0" style="width: 100%;" class="table-condensed">
-                                                <col width="50%">
-                                                <col width="50%">
-                                                <tr>
-                                                    <td colspan="2">                                                        
-                                                        <input type="radio"
-                                                             name="walkedInChecker"
-                                                             id="walkedInChecker_true"
-                                                             value="N"   
-                                                             style="cursor: pointer; float: left;"
-                                                             onclick="setDisabled('<?php echo "txtPerHistOTP";?>', false);"
-                                                            <?php if($hsa_transNo != null && $px_data["WITH_ATC"] == 'N'){ ?>
-                                                                 checked="checked"
-                                                            <?php } else if($hsa_transNo == null) {?>     
-                                                                checked="checked"     
-                                                            <?php } ?>                               
-                                                        />
-                                                        <label for="walkedInChecker_true" style="font-size:14px;font-weight: bold; cursor: pointer; float: left; margin: 0px 10px 0px 5px; ">
-                                                        Walk-in clients with Authorization Transaction Code (ATC) 
-                                                        </label>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                <td>
-                                                    <!--Authorization Number/ PROFILE_OTP-->
-                                                    <label style="color:red;">*</label><label for="txtPerHistOTP">Authorization Transaction Code:</label>
-                                                    <br/>
-                                                    <input type="text"
-                                                           id="txtPerHistOTP"
-                                                           name="txtPerHistOTP"
-                                                           minlength="4"
-                                                           maxlength="10"
-                                                           class="form-control"
-                                                           style="width: 100%"
-                                                        <?php if($hsa_transNo != null && $px_data["WITH_ATC"] == 'N'){ ?>
-                                                            value="<?php echo $px_data["PROFILE_OTP"]; ?>"
-                                                        <?php } else{  ?>
-                                                            value=""
-                                                            placeholder="Authorization Transaction Code"
-                                                        <?php } ?>
-                                                    />                                                    
-                                                </td>                                                
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2"><label style="margin-top:15px;font-size: 11px;font-style: italic;color:red;">Note: ATC should be used within the Screening & Assessment Date.</label>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2">                                                        
-                                                        <input type="radio"
-                                                             name="walkedInChecker"
-                                                             id="walkedInChecker_false"
-                                                             value="Y"   
-                                                             style="cursor: pointer; float: left;"
-                                                             onclick="setDisabled('<?php echo "txtPerHistOTP";?>', true);"
-                                                             <?php if($hsa_transNo != null && $px_data["WITH_ATC"] == 'Y'){ ?>
-                                                                 checked="checked"
-                                                            <?php }  ?>                                                                       
-                                                        />
-                                                        <label for="walkedInChecker_false" style="font-size:14px;font-weight: bold; cursor: pointer; float: left; margin: 0px 10px 0px 5px; ">
-                                                        Walk-in clients without ATC
-                                                        </label>
-                                                    </td>
-                                                </tr>
-                                            </table>
+                                            <p style="font-size: 12px; font-weight: bold;">Note: Reminder to capture a photo of the beneficiary in lieu of the ATC requirement.</p>
                                         </fieldset>
 
                                         <fieldset style="margin: 0px 0px 10px 0px; padding: 20px; background-color: #EDFCF0;">
@@ -261,7 +194,6 @@ if(isset($_POST['saveFinalizeHSA']) || isset($_POST['saveRecord'])){
                                                            class="datepicker form-control"
                                                            style="width: 50%"
                                                            placeholder="mm/dd/yyyy"
-                                                           onkeypress="formatDate('txtPerHistProfDate')"
                                                     />                                                    
                                                 </td>
                                                 </tr>
@@ -2328,7 +2260,7 @@ if(isset($_POST['saveFinalizeHSA']) || isset($_POST['saveRecord'])){
                                                                                     <input type='text'
                                                                                            name='txtPhExLengthCm'
                                                                                            id="txtPhExLengthCm"
-                                                                                           maxlength="6"
+                                                                                           maxlength="3"
                                                                                            class='form-control'
                                                                                            value="<?php echo $px_data['LENGTH']; ?>"
                                                                                            placeholder='Length'
@@ -2347,7 +2279,7 @@ if(isset($_POST['saveFinalizeHSA']) || isset($_POST['saveRecord'])){
                                                                                     <input type='text'
                                                                                            name='txtPhExHeadCircCm'
                                                                                            id="txtPhExHeadCircCm"
-                                                                                           maxlength="6"
+                                                                                           maxlength="3"
                                                                                            class='form-control'
                                                                                            value="<?php echo $px_data['HEAD_CIRC']; ?>"
                                                                                            onkeypress="return isNumberWithDecimalKey(event);"
@@ -4218,7 +4150,6 @@ if(isset($_POST['saveFinalizeHSA']) || isset($_POST['saveRecord'])){
                                                                            id="diagnostic_7_lab_exam_date"
                                                                            class="datepicker form-control"
                                                                            style="width: 110px; color: #000; margin: 5px 10px 0px 28px; text-transform: uppercase"
-                                                                           onkeypress="formatDate('diagnostic_7_lab_exam_date')"
                                                                            autocomplete="off"
                                                                            placeholder="mm/dd/yyyy"
                                                                            maxlength="10"
@@ -4360,7 +4291,6 @@ if(isset($_POST['saveFinalizeHSA']) || isset($_POST['saveRecord'])){
                                                                            id="diagnostic_19_lab_exam_date"
                                                                            class="datepicker form-control"
                                                                            style="width: 110px; color: #000; margin: 5px 10px 0px 28px; text-transform: uppercase"
-                                                                           onkeypress="formatDate('diagnostic_19_lab_exam_date')"
                                                                            autocomplete="off"
                                                                            placeholder="mm/dd/yyyy"
                                                                            maxlength="10"
@@ -4596,13 +4526,7 @@ include('footer.php');
         } else{
             $("#txaFamHistOthers").attr("disabled", true);
         }
-
-        if ($("#chkFamHistDiseases_006").is(":checked")) {
-            // $("#list3").removeClass("active");
-            // $("#tab3").removeClass("active");
-            $("#list3_1").show();
-            // $("#tab3_1").addClass("active in");
-        } 
+        
     });
 
     $(function() {

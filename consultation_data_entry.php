@@ -133,18 +133,18 @@
         }
         $_POST["pChiefComplaint"] = $complaint;
 
-        $cntObservation = count($_POST["observation"]);
-        $x=1;
-        foreach($_POST["observation"] as $observations) {
-            if($x==$cntObservation) {
-                $observation .= $observations;
-            }
-            else {
-                $observation .= $observations.";";
-            }
-            $x++;
-        }
-        $_POST["pObservation"] = $observation;
+        // $cntObservation = count($_POST["observation"]);
+        // $x=1;
+        // foreach($_POST["observation"] as $observations) {
+        //     if($x==$cntObservation) {
+        //         $observation .= $observations;
+        //     }
+        //     else {
+        //         $observation .= $observations.";";
+        //     }
+        //     $x++;
+        // }
+        // $_POST["pObservation"] = $observation;
 
         $_POST['pUpdCntSoap'] = 0;
         saveConsultationInfo($_POST);
@@ -168,18 +168,18 @@
         }
         $_POST["pChiefComplaint"] = $complaint;
 
-        $cntObservation = count($_POST["observation"]);
-        $x=1;
-        foreach($_POST["observation"] as $observations) {
-            if($x==$cntObservation) {
-                $observation .= $observations;
-            }
-            else {
-                $observation .= $observations.";";
-            }
-            $x++;
-        }
-        $_POST["pObservation"] = $observation;
+        // $cntObservation = count($_POST["observation"]);
+        // $x=1;
+        // foreach($_POST["observation"] as $observations) {
+        //     if($x==$cntObservation) {
+        //         $observation .= $observations;
+        //     }
+        //     else {
+        //         $observation .= $observations.";";
+        //     }
+        //     $x++;
+        // }
+        // $_POST["pObservation"] = $observation;
         /*Get Updated Count in Profiling/HSA*/
         $getUpdCntSoap = getUpdCntConsultation($pSoapTransNo);
         $getUpdCnt = $getUpdCntSoap['UPD_CNT'] + 1;
@@ -232,64 +232,8 @@
                 <td>
                     <div class="panel panel-primary">
                         <div class="panel-body">
-                            <fieldset style="margin: 0px 0px 10px 0px; padding: 20px; background-color: #EDFCF0;text-align: left;">
-                              <table border="0" style="width: 100%;" class="table-condensed">
-                                <col width="50%">
-                                <col width="50%">
-                                <tr>
-                                    <td colspan="2">                                                        
-                                        <input type="radio"
-                                             name="walkedInChecker"
-                                             id="walkedInChecker_true"
-                                             value="N"   
-                                             style="cursor: pointer; float: left;"
-                                             onclick="setDisabled('<?php echo "pSoapOTP";?>', false);"
-                                             checked="checked"                                                         
-                                        />
-                                        <label for="walkedInChecker_true" style="font-size:14px;font-weight: bold; cursor: pointer; float: left; margin: 0px 10px 0px 5px; ">
-                                        Walk-in clients with Authorization Transaction Code (ATC)
-                                        </label>
-                                    </td>
-                                </tr>
-                                <tr>
-                                <td>
-                                  <label style="color:red;">*</label><label for="pSoapOTP">Authorization Transaction Code:</label>
-                                  <br/>
-                                  <input type="text"
-                                         name="pSoapOTP"
-                                         id="pSoapOTP"
-                                         class="form-control"
-                                         style="width: 15%; color: #000; margin: 0px 10px 0px 0px;width: 100%;"
-                                         minlength="4"
-                                         maxlength="10"
-                                         autocomplete="off"
-                                         placeholder="Authorization Transaction Code (ATC)"
-                                         <?php if($pSoapTransNo != null){ ?>
-                                         value="<?php echo $descPatientInfo["SOAP_OTP"]; ?>"
-                                         readonly
-                                         <?php } else{?>
-                                         value=""
-                                         autofocus
-                                         <?php } ?>
-                                  />
-                                  </td>
-                                  </tr>
-                                  <tr><td colspan="2"><label style="margin-top:15px;font-size: 11px;font-style: italic;color:red;">Note: ATC should be used within the Consultation Date.</label></td></tr>
-                                  <tr>
-                                      <td colspan="2">                                                        
-                                          <input type="radio"
-                                               name="walkedInChecker"
-                                               id="walkedInChecker_false"
-                                               value="Y"   
-                                               style="cursor: pointer; float: left;"
-                                               onclick="setDisabled('<?php echo "pSoapOTP";?>', true);"                                                         
-                                          />
-                                          <label for="walkedInChecker_false" style="font-size:14px;font-weight: bold; cursor: pointer; float: left; margin: 0px 10px 0px 5px; ">
-                                          Walk-in clients without ATC
-                                          </label>
-                                      </td>
-                                  </tr>
-                                </table>
+                            <fieldset style="margin: 0px 0px 10px 0px; padding: 20px; background-color: #EDFCF0;">
+                                <p style="font-size: 12px; font-weight: bold;">Note: Reminder to capture a photo of the beneficiary in lieu of the ATC requirement.</p>
                             </fieldset>
 
                             <fieldset style="margin: 0px 0px 10px 0px; padding: 20px; background-color: #EDFCF0;text-align: left;">
@@ -927,7 +871,7 @@
                                                     <input type='text'
                                                            name='txtPhExLengthCm'
                                                            id="txtPhExLengthCm"
-                                                           maxlength="6"
+                                                           maxlength="3"
                                                            class='form-control'
                                                            placeholder="Length"
                                                            value="<?php echo $px_data['LENGTH']; ?>"
@@ -946,7 +890,7 @@
                                                     <input type='text'
                                                            name='txtPhExHeadCircCm'
                                                            id="txtPhExHeadCircCm"
-                                                           maxlength="6"
+                                                           maxlength="3"
                                                            class='form-control'
                                                            placeholder="Head Circumference"
                                                             onkeypress="return isNumberWithDecimalKey(event);"

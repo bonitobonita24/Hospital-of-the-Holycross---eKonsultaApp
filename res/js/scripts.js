@@ -19,12 +19,12 @@ function validateChecksChiefComplaint() {
 /*20191212 for Next Button*/
 function showTabHSA(id){
     if(id == 'tab1') {
-         /*Individual Health Profile*/
-        var txtProfileOTP = $("#txtPerHistOTP").val();
-        var cntProfileOTP = $("#txtPerHistOTP").val().length;
+        /*Individual Health Profile*/
+        // var txtProfileOTP = $("#txtPerHistOTP").val();
+        // var cntProfileOTP = $("#txtPerHistOTP").val().length;
         var txtProfileDate = $("#txtPerHistProfDate").val();
 
-        var chkWalkedIn = $("#walkedInChecker_true").is(":checked");
+        // var chkWalkedIn = $("#walkedInChecker_true").is(":checked");
        
         /*Start Get date today*/
         var dateToday = new Date();
@@ -33,12 +33,12 @@ function showTabHSA(id){
         /*End Get date today*/
 
 
-        if(chkWalkedIn == true && (txtProfileOTP == "" || cntProfileOTP < 4)) {
-            alert("Authorization Transaction Code is required. It must be greater than or equal to 4 alphanumeric characters");
-            $("#txtPerHistOTP").focus();
-            return false;
-        }  
-        else if (txtProfileDate == "") {
+        // if(chkWalkedIn == true && (txtProfileOTP == "" || cntProfileOTP < 4)) {
+        //     alert("Authorization Transaction Code is required. It must be greater than or equal to 4 alphanumeric characters");
+        //     $("#txtPerHistOTP").focus();
+        //     return false;
+        // }  
+        if (txtProfileDate == "") {
             alert("Screening & Assessment Date is required");
             $("#txtPerHistProfDate").focus();
             return false;
@@ -2993,6 +2993,7 @@ function enDisSpecificFamHist(m_disease_code) {
     var checkbox = $("#chkFamHistDiseases_"+m_disease_code);
     var boolChecked = (checkbox.is(":checked")) ? false : true;
     var boolCheckedNone = (checkbox.is(":checked")) ? true : false;
+    var effYear = $("#txtPerHistEffYEar").val();
 
     if(m_disease_code == "001") {
         $("#txtFamHistAllergy").attr("disabled",boolChecked);
@@ -3027,17 +3028,17 @@ function enDisSpecificFamHist(m_disease_code) {
     }
 
     else if (m_disease_code == "006") {
-        if(!boolChecked){  
-            // $("#list3_1").addClass("active"); 
-            // $("#tab3_1").addClass("active in");
-            $("#list3_1").show();
-            // $("#tab3_1").show();
-        } else {
-            $("#list3_1").hide();
-            // $("#tab3_1").removeClass("active");
-            // $("#list3_1").removeClass("active"); 
-        }
-    } 
+            if(!boolChecked){ 
+                if (parseInt(effYear) >= 2025) {
+                    $("#list3_1").hide(); 
+                } else {
+                    $("#list3_1").show();
+                }
+            } else {
+                $("#list3_1").hide(); 
+            }
+        } 
+        
 
     else if (m_disease_code == "999") {
         for(x=1;x<=9;x++){
@@ -3159,11 +3160,13 @@ function acceptNumOnly(evt) {
 /*Validate Final Health Screening & Assessment Fields*/
 function saveFinalHsaTransaction() {
     /*Client Profile*/
-    var txtProfileOTP = $("#txtPerHistOTP").val();
-    var cntProfileOTP = $("#txtPerHistOTP").val().length;
+    // var txtProfileOTP = $("#txtPerHistOTP").val();
+    // var cntProfileOTP = $("#txtPerHistOTP").val().length;
     var txtProfileDate = $("#txtPerHistProfDate").val();
 
     var chkWalkedIn = $("#walkedInChecker_true").is(":checked");
+
+    var effYear = $("#txtPerHistEffYEar").val();
    
     /*Start Get date today*/
     var dateToday = new Date();
@@ -3262,12 +3265,12 @@ function saveFinalHsaTransaction() {
     var chkMHdone = $("#mhDone_Y").is(":checked");
     var chkPREGdone = $("#pregDone_Y").is(":checked");
   
-    if(chkWalkedIn == true && (txtProfileOTP == "" || cntProfileOTP < 4)) {
-        alert("Authorization Transaction Code is required. It must be greater than or equal to 4 alphanumeric characters");
-        // $("#txtPerHistOTP").focus();
-        return false;
-    }  
-    else if (txtProfileDate == "") {
+    // if(chkWalkedIn == true && (txtProfileOTP == "" || cntProfileOTP < 4)) {
+    //     alert("Authorization Transaction Code is required. It must be greater than or equal to 4 alphanumeric characters");
+    //     // $("#txtPerHistOTP").focus();
+    //     return false;
+    // }  
+    if (txtProfileDate == "") {
         alert("Screening & Assessment Date is required");
         // $("#txtPerHistProfDate").focus();
         return false;
@@ -3365,7 +3368,7 @@ function saveFinalHsaTransaction() {
         $("#txaFamHistOthers").focus();
         return false;
     }
-    else if(checkFamHistFBS() == true && checkFamHistRBS() == true) {       
+    else if(checkFamHistFBS() == true && checkFamHistRBS() == true && parseInt(effYear) < 2025) {       
         alert("Client has a family history of Diabetes Mellitus. Please fill out all fields in FBS or RBS (which is applicable).");
         return false;           
     }
@@ -4750,10 +4753,10 @@ function showTabConsultation(id){
     var whatAge = $("#valtxtPerHistPatAge").val();
     var whatMonths = $("#valtxtPerHistPatMonths").val();
 
-    var pSoapOTP = $("#pSoapOTP").val();
-    var cntSoapOTP = $("#pSoapOTP").val().length;
+    // var pSoapOTP = $("#pSoapOTP").val();
+    // var cntSoapOTP = $("#pSoapOTP").val().length;
     var pSoapCoPayment = $("#pCoPayment").val();
-    var chkWalkedIn = $("#walkedInChecker_true").is(":checked");
+    // var chkWalkedIn = $("#walkedInChecker_true").is(":checked");
 
     var pSoapdate = $("#pSOAPDate").val();
     var pChiefComplaint = $("#pChiefComplaint").text();
@@ -4924,12 +4927,12 @@ function showTabConsultation(id){
     /*END CONSULTATION ONLY*/
 
     if(id == 'tab2') {
-        if(chkWalkedIn == true && (pSoapOTP == "" || cntSoapOTP < 4)) {
-                alert("Authorization Transaction Code is required. It must be greater than or equal to 4 alphanumeric characters");
-                $("#pSoapOTP").focus();
-                return false;
-            }  
-        else if (pSoapCoPayment == "") {
+        // if(chkWalkedIn == true && (pSoapOTP == "" || cntSoapOTP < 4)) {
+        //         alert("Authorization Transaction Code is required. It must be greater than or equal to 4 alphanumeric characters");
+        //         $("#pSoapOTP").focus();
+        //         return false;
+        //     }  
+        if (pSoapCoPayment == "") {
             alert("Co-payment is required.");
             $("#pCoPayment").focus();
             return false;
@@ -5172,11 +5175,11 @@ function validateChecksChiefComplaint() {
 function showTabHSA(id){
     if(id == 'tab1') {
          /*Individual Health Profile*/
-        var txtProfileOTP = $("#txtPerHistOTP").val();
-        var cntProfileOTP = $("#txtPerHistOTP").val().length;
+        // var txtProfileOTP = $("#txtPerHistOTP").val();
+        // var cntProfileOTP = $("#txtPerHistOTP").val().length;
         var txtProfileDate = $("#txtPerHistProfDate").val();
 
-        var chkWalkedIn = $("#walkedInChecker_true").is(":checked");
+        // var chkWalkedIn = $("#walkedInChecker_true").is(":checked");
        
         /*Start Get date today*/
         var dateToday = new Date();
@@ -5185,12 +5188,12 @@ function showTabHSA(id){
         /*End Get date today*/
 
 
-        if(chkWalkedIn == true && (txtProfileOTP == "" || cntProfileOTP < 4)) {
-            alert("Authorization Transaction Code is required. It must be greater than or equal to 4 alphanumeric characters");
-            $("#txtPerHistOTP").focus();
-            return false;
-        }  
-        else if (txtProfileDate == "") {
+        // if(chkWalkedIn == true && (txtProfileOTP == "" || cntProfileOTP < 4)) {
+        //     alert("Authorization Transaction Code is required. It must be greater than or equal to 4 alphanumeric characters");
+        //     $("#txtPerHistOTP").focus();
+        //     return false;
+        // }  
+        if (txtProfileDate == "") {
             alert("Screening & Assessment Date is required");
             $("#txtPerHistProfDate").focus();
             return false;
@@ -5281,22 +5284,6 @@ function showTabHSA(id){
 
     else if(id == 'tab3') {
         /*Family & Personal History*/
-        // var chkAllergyFam = $("#chkFamHistDiseases_001").is(":checked");
-        // var chkCancerFam = $("#chkFamHistDiseases_003").is(":checked");
-        // var chkHepatitisFam = $("#chkFamHistDiseases_009").is(":checked");
-        // var chkHypertensionFam = $("#chkFamHistDiseases_011").is(":checked");
-        // var chkPTBfam = $("#chkFamHistDiseases_015").is(":checked");
-        // var chkExPTBfam = $("#chkFamHistDiseases_016").is(":checked");
-        // var chkOthersFam = $("#chkFamHistDiseases_998").is(":checked");
-
-        // var txtAllergyFam = $("#txtFamHistAllergy").val();
-        // var txtCancerFam = $("#txtFamHistCancer").val();
-        // var txtHepatitisFam = $("#txtFamHistHepatitis").val();
-        // var txtDiastolicFam = $("#txtFamHistBPDiastolic").val();
-        // var txtSystolicFam = $("#txtFamHistBPSystolic").val();
-        // var txtPTBfam = $("#txtFamHistPTB").val();
-        // var txtExPTBfam = $("#txtFamHistExPTB").val();
-        // var txaOthersFam = $("#txaFamHistOthers").val();
 
         /*Personal/Social History*/
         var chkFamHistSmokeY = $("#radFamHistSmokeY").is(":checked");
@@ -5310,80 +5297,27 @@ function showTabHSA(id){
         var chkFamHistDrugsN = $("#radFamHistDrugsN").is(":checked");
         var chkFamHistSexualHistY = $("#radFamHistSexualHistY").is(":checked");
         var chkFamHistSexualHistN = $("#radFamHistSexualHistN").is(":checked");
+        var effYear = $("#txtPerHistEffYEar").val();
 
-        /*CHECK IF TEXTBOXES HAS VALUE IF CHECKED IN FAMILY & PERSONAL HISTORY*/
-        // if(chkAllergyFam == true && txtAllergyFam == "") {
-        //     alert("Please specify allergy under FAMILY & PERSONAL HISTORY menu.");
-        //     return false;
-        // }
-        // else if(chkCancerFam == true && txtCancerFam == "") {
-        //     alert("Please specify organ with cancer under FAMILY & PERSONAL HISTORY menu.");
-        //     $("#txtFamHistCancer").focus();
-        //     return false;
-        // }
-        // else if(chkHepatitisFam == true && txtHepatitisFam == "") {
-        //     alert("Please specify hepatitis type under FAMILY & PERSONAL HISTORY menu.");
-        //     $("#txtFamHistHepatitis").focus();
-        //     return false;
-        // }
-        // else if(validateChecksFamHist() == false){
-        //     alert("Choose at least one Family History in FAMILY & PERSONAL HISTORY menu");
-        //     return false;
-        // }
-        // else if(chkHypertensionFam == true && (txtSystolicFam == "" || txtDiastolicFam == "")) {
-        //     alert("Please specify highest blood pressure under FAMILY & PERSONAL HISTORY menu.");
-        //     if(txtSystolic == "") {
-        //         $("#txtFamHistBPSystolic").focus();
-        //     }
-        //     else {
-        //         $("#txtFamHistBPDiastolic").focus();
-        //     }
-        //     return false;
-        // }
-        // else if(chkPTBfam == true && txtPTBfam == "") {
-        //     alert("Please specify Pulmonary Tuberculosis category under FAMILY & PERSONAL HISTORY menu.");
-        //     $("#txtFamHistPTB").focus();
-        //     return false;
-        // }
-        // else if(chkExPTBfam == true && txtExPTBfam == "") {
-        //     alert("Please specify Extrapulmonary Tuberculosis category under FAMILY & PERSONAL HISTORY menu.");
-        //     $("#txtFamHistExPTB").focus();
-        //     return false;
-        // }
-        // else if(chkOthersFam == true && txaOthersFam == "") {
-        //     alert("Please specify others.");
-        //     $("#txaFamHistOthers").focus();
-        //     return false;
-        // }
-        // if(chkFamHistSmokeY == false && chkFamHistSmokeN == false && chkFamHistSmokeX == false) {
-        //     alert("Fill up all the required fields of Personal/Social History in FAMILY & PERSONAL HISTORY menu.");
-        //     return false;
-        // }
-        // else if(chkFamHistAlcoholY == false && chkFamHistAlcoholN == false && chkFamHistAlcoholX == false) {
-        //     alert("Fill up all the required fields of Personal/Social History in FAMILY & PERSONAL HISTORY menu.");
-        //     return false;
-        // }
-        // else if(chkFamHistDrugsY == false && chkFamHistDrugsN == false) {
-        //     alert("Fill up all the required fields of Personal/Social History in FAMILY & PERSONAL HISTORY menu.");
-        //     return false;
-        // }
-        // else if(chkFamHistSexualHistY == false && chkFamHistSexualHistN == false) {
-        //     alert("Fill up all the required fields of Personal/Social History in FAMILY & PERSONAL HISTORY menu.");
-        //     return false;
-        // }
-        // else {
-            if ($("#chkFamHistDiseases_006").is(":checked")) {
-                $("#list3").removeClass("active");
+        if ($("#chkFamHistDiseases_006").is(":checked")) {
+            if (parseInt(effYear) < 2025) {
+                $("#list3").removeClass("active");
                 $("#tab3").removeClass("active");
                 $("#tab3_1").addClass("active in");
                 $("#list3_1").addClass("active");
-            } else {
-                $("#list3").removeClass("active");
-                $("#tab3").removeClass("active");
-                $("#tab4").addClass("active in");
-                $("#list4").addClass("active");
-            }
-        // }
+            } else {
+                    $("#list3").removeClass("active");
+                    $("#tab3").removeClass("active");
+                    $("#tab4").addClass("active in");
+                    $("#list4").addClass("active");
+                }
+            
+        } else {
+            $("#list3").removeClass("active");
+            $("#tab3").removeClass("active");
+            $("#tab4").addClass("active in");
+            $("#list4").addClass("active");
+        }
     }
 
     else if(id == 'tab3_1') {
@@ -7502,6 +7436,7 @@ function enDisSpecificFamHist(m_disease_code) {
     var checkbox = $("#chkFamHistDiseases_"+m_disease_code);
     var boolChecked = (checkbox.is(":checked")) ? false : true;
     var boolCheckedNone = (checkbox.is(":checked")) ? true : false;
+    var effYear = $("#txtPerHistEffYEar").val();
 
     if(m_disease_code == "001") {
         $("#txtFamHistAllergy").attr("disabled",boolChecked);
@@ -7536,15 +7471,14 @@ function enDisSpecificFamHist(m_disease_code) {
     }
 
     else if (m_disease_code == "006") {
-        if(!boolChecked){  
-            // $("#list3_1").addClass("active"); 
-            // $("#tab3_1").addClass("active in");
-            $("#list3_1").show();
-            // $("#tab3_1").show();
+        if(!boolChecked){ 
+            if (parseInt(effYear) >= 2025) {
+                $("#list3_1").hide(); 
+            } else {
+                $("#list3_1").show();
+            }
         } else {
-            $("#list3_1").hide();
-            // $("#tab3_1").removeClass("active");
-            // $("#list3_1").removeClass("active"); 
+            $("#list3_1").hide(); 
         }
     } 
 
@@ -7980,9 +7914,9 @@ function saveHSAWithOutValidation() {
 } /*END SAVE HSA FIRST ENCOUNTER WOUT COMPLETE VALIDATION*/
 
 function validateSoapForm() {
-    var pSoapOTP = $("#pSoapOTP").val();
-    var cntSoapOTP = $("#pSoapOTP").val().length;
-    var chkWalkedIn = $("#walkedInChecker_true").is(":checked");
+    // var pSoapOTP = $("#pSoapOTP").val();
+    // var cntSoapOTP = $("#pSoapOTP").val().length;
+    // var chkWalkedIn = $("#walkedInChecker_true").is(":checked");
 
     var pSoapCoPayment = $("#pCoPayment").val();
     var pSoapdate = $("#pSOAPDate").val();
@@ -8181,12 +8115,12 @@ function validateSoapForm() {
       }
 
 
-    if(chkWalkedIn == true && (pSoapOTP == "" || cntSoapOTP < 4)) {
-        alert("Authorization Transaction Code is required.");
-        $("#pSoapOTP").focus();
-        return false;
-    }  
-    else if (pSoapCoPayment == "") {
+    // if(chkWalkedIn == true && (pSoapOTP == "" || cntSoapOTP < 4)) {
+    //     alert("Authorization Transaction Code is required.");
+    //     $("#pSoapOTP").focus();
+    //     return false;
+    // }  
+    if (pSoapCoPayment == "") {
         alert("Co-payment is required.");
         $("#pCoPayment").focus();
         return false;

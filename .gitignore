@@ -1,0 +1,31 @@
+# Zone.Identifier files (Windows metadata)
+*:Zone.Identifier
+
+# IDE
+.idea/
+.vscode/
+
+# Temporary files
+tmp/
+*.tmp
+
+# Uploaded files
+files/*
+!files/.gitkeep
+
+# Docker volumes
+mysql-data/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# PHP
+*.log
+
+# Large database dumps
+*.sql
+
+# Windows uninstaller files
+unins*.dat
+unins*.exe

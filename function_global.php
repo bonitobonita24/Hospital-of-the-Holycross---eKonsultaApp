@@ -782,7 +782,12 @@ function generateXml($genResultEnlist, $genResultProfiling, $genProfilingMedHist
             $menshist->addAttribute("pBirthCtrlMethod", $genResultProfilings['BIRTH_CTRL_METHOD']);
             $menshist->addAttribute("pIsMenopause", $genResultProfilings['IS_MENOPAUSE']);
             $menshist->addAttribute("pMenopauseAge", $genResultProfilings['MENOPAUSE_AGE']);
-            $menshist->addAttribute("pIsApplicable", $genResultProfilings['IS_APPLICABLE']);
+            if ($genResultProfilings['MENS_IS_APPLICABLE'] != null) {
+                $menshist->addAttribute("pIsApplicable", $genResultProfilings['MENS_IS_APPLICABLE']);
+            } else {
+                $menshist->addAttribute("pIsApplicable", "N");
+            }
+           
             $menshist->addAttribute("pReportStatus", "U");
             $menshist->addAttribute("pDeficiencyRemarks", $genResultProfilings['DEFICIENCY_REMARKS']);
 
@@ -796,7 +801,11 @@ function generateXml($genResultEnlist, $genResultProfiling, $genProfilingMedHist
             $preghist->addAttribute("pLivChildrenCnt", $genResultProfilings['LIV_CHILDREN_CNT']);
             $preghist->addAttribute("pWPregIndhyp", $genResultProfilings['W_PREG_INDHYP']);
             $preghist->addAttribute("pWFamPlan", $genResultProfilings['W_FAM_PLAN']);
-            $preghist->addAttribute("pIsApplicable", $genResultProfilings['IS_APPLICABLE']);
+            if ($genResultProfilings['PREG_IS_APPLICABLE'] == null || ($genResultProfilings['PREG_CNT'] == 0)) {
+                $preghist->addAttribute("pIsApplicable", "N");
+            } else {
+                $preghist->addAttribute("pIsApplicable", $genResultProfilings['PREG_IS_APPLICABLE']);
+            }
             $preghist->addAttribute("pReportStatus", "U");
             $preghist->addAttribute("pDeficiencyRemarks", $genResultProfilings['DEFICIENCY_REMARKS']);
 

@@ -5,7 +5,7 @@
 
 <div class="footer">
     <div class="container">
-       <p class="text-muted">eKONSULTA System Version 01.08.00.202401 - Copyright 2020 - <?php echo date ('Y');?><br />Philippine Health Insurance Corporation | Citystate Centre, 709 Shaw Boulevard 1603 Pasig City | Call Center (+632) 441-7442</p>
+       <p class="text-muted">eKONSULTA System Version 1.11.0 Copyright 2020 - <?php echo date ('Y');?><br />Philippine Health Insurance Corporation | Citystate Centre, 709 Shaw Boulevard 1603 Pasig City | Call Center (+632) 441-7442</p>
     </div>
 </div>
 

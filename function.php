@@ -1,5 +1,5 @@
 <?php
-error_reporting(E_ALL);
+error_reporting(0);
 date_default_timezone_set("Asia/Manila");
 ini_set('max_execution_time', '0');
 
@@ -483,7 +483,7 @@ function saveLaboratoryResults($data){
         $pBasophils = $data['diagnostic_1_basophils'];
         $pPlatelet = $data['diagnostic_1_platelet'];
         if ($pIsApplicableCbc != "N") {
-            insertResultsCBC($pCaseNo,$pLabDate,$pLabFeeCBC,$pCoPayCBC, $pReferralFacilityCBC, $pHematocrit, $pHemoglobinG, $pHemoglobinMmol, $pMhcPg, $pMhcFmol, $pMchcGhb, $pMchcMmol, $pMcvUm, $pMcvFl, $pWbc1000, $pWbc10, 
+            insertResultsCBC($conn, $pCaseNo,$pLabDate,$pLabFeeCBC,$pCoPayCBC, $pReferralFacilityCBC, $pHematocrit, $pHemoglobinG, $pHemoglobinMmol, $pMhcPg, $pMhcFmol, $pMchcGhb, $pMchcMmol, $pMcvUm, $pMcvFl, $pWbc1000, $pWbc10, 
                 $pMyelocyte,$pNeutrophilsBnd, $pNeurophilsSeg, $pLymphocytes, $pMonocytes, $pEosinophils, $pBasophils, $pPlatelet, $pTransNo, $pUserId, $getUpdCnt, $pXPSmodule, $pIsApplicableCbc);
         }
         
@@ -521,7 +521,7 @@ function saveLaboratoryResults($data){
         $pAlbumin = $data['diagnostic_2_alb'];
         $pPusCells = $data['diagnostic_2_pus'];
         if ($pIsApplicableUrine != "N") {
-            insertResultsUrinalysis($pCaseNo,$pLabDateUrinalysis,$pLabFeeUrinalysis, $pCoPayUrinalysis, $pReferralFacilityUrinalysis, $pGravity, $pAppearance, $pColor, $pGlucose, $pProteins, $pKetones, $pPh, $pRbCells, $pWbCells, $pBacteria, $pCrystals,
+            insertResultsUrinalysis($conn, $pCaseNo,$pLabDateUrinalysis,$pLabFeeUrinalysis, $pCoPayUrinalysis, $pReferralFacilityUrinalysis, $pGravity, $pAppearance, $pColor, $pGlucose, $pProteins, $pKetones, $pPh, $pRbCells, $pWbCells, $pBacteria, $pCrystals,
             $pBladderCell, $pSquamousCell, $pTubularCell, $pBroadCasts, $pEpithelialCast, $pGranularCast, $pHyalineCast, $pRbcCast, $pWaxyCast, $pWcCast, $pAlbumin, $pPusCells, $pTransNo, $pUserId, $getUpdCnt, $pXPSmodule,$pIsApplicableUrine);
         }
 
@@ -545,7 +545,7 @@ function saveLaboratoryResults($data){
         $pOccultBlood = $data['diagnostic_3_occult_blood'];
         $pPusCell = $data['diagnostic_3_pus'];
         if ($pIsApplicableFeca != "N") {
-            insertResultsFecalysis($pCaseNo,$pLabDateFecalysis, $pLabFeeFecalysis, $pCoPayFecalysis, $pReferralFacilityFecalysis, $pColorFecalysis, $pConsistency, $pRBC, $pWBC, $pOva, $pParasite, $pBlood, $pOccultBlood, $pPusCell, $pTransNo, $pUserId, $getUpdCnt, $pXPSmodule,$pIsApplicableFeca);
+            insertResultsFecalysis($conn, $pCaseNo,$pLabDateFecalysis, $pLabFeeFecalysis, $pCoPayFecalysis, $pReferralFacilityFecalysis, $pColorFecalysis, $pConsistency, $pRBC, $pWBC, $pOva, $pParasite, $pBlood, $pOccultBlood, $pPusCell, $pTransNo, $pUserId, $getUpdCnt, $pXPSmodule,$pIsApplicableFeca);
         }
 
         /* Results - Chest X-Ray */
@@ -563,7 +563,7 @@ function saveLaboratoryResults($data){
         $pObservation = $data['pObservation'];
         $pRemarkObservation = $data['pObservationRemarks'];
         if ($pIsApplicableXray != "N") {
-            insertResultsChestXray($pCaseNo,$pLabDateXray, $pLabFeeXray, $pCoPayXray, $pReferralFacilityXray, $pFindingsXray, $pRemarkFindings, $pObservation, $pRemarkObservation, $pTransNo, $pUserId, $getUpdCnt, $pXPSmodule,$pIsApplicableXray);
+            insertResultsChestXray($conn, $pCaseNo,$pLabDateXray, $pLabFeeXray, $pCoPayXray, $pReferralFacilityXray, $pFindingsXray, $pRemarkFindings, $pObservation, $pRemarkObservation, $pTransNo, $pUserId, $getUpdCnt, $pXPSmodule,$pIsApplicableXray);
         }
 
         /* Results - Sputum */
@@ -582,7 +582,7 @@ function saveLaboratoryResults($data){
         $pRemarksSputum = $data['diagnostic_5_sputum_remarks'];
         $pNoPlusses = $data['diagnostic_5_plusses'];
         if ($pIsApplicableSputum != "N") {
-            insertResultsSputum($pCaseNo,$pLabDateSputum, $pLabFeeSputum, $pCoPaySputum, $pReferralFacilitySputum, $pFindingsSputum, $pRemarksSputum, $pNoPlusses, $pTransNo, $pUserId, $getUpdCnt, $pXPSmodule,$pIsApplicableSputum,$pDataCollect);
+            insertResultsSputum($conn, $pCaseNo,$pLabDateSputum, $pLabFeeSputum, $pCoPaySputum, $pReferralFacilitySputum, $pFindingsSputum, $pRemarksSputum, $pNoPlusses, $pTransNo, $pUserId, $getUpdCnt, $pXPSmodule,$pIsApplicableSputum,$pDataCollect);
         }
 
         /* Results - Lipid Profile */
@@ -601,7 +601,7 @@ function saveLaboratoryResults($data){
         $pCholesterol = $data['diagnostic_6_cholesterol'];
         $pTriglycerides = $data['diagnostic_6_triglycerides'];
         if ($pIsApplicableLipid != "N") {
-            insertResultsLipidProfile($pCaseNo,$pLabDateLipid, $pLabFeeLipid, $pCoPayLipid, $pReferralFacilityLipid, $pLdl, $pHdl, "", $pCholesterol, $pTriglycerides, $pTransNo, $pUserId, $getUpdCnt, $pXPSmodule,$pIsApplicableLipid);
+            insertResultsLipidProfile($conn, $pCaseNo,$pLabDateLipid, $pLabFeeLipid, $pCoPayLipid, $pReferralFacilityLipid, $pLdl, $pHdl, "", $pCholesterol, $pTriglycerides, $pTransNo, $pUserId, $getUpdCnt, $pXPSmodule,$pIsApplicableLipid);
         }
 
         /* Results - Fasting Blood Sugar (FBS) */
@@ -617,7 +617,7 @@ function saveLaboratoryResults($data){
         $pGlucoseMg = $data['diagnostic_7_glucose_mgdL'];
         $pGlucosemmol = $data['diagnostic_7_glucose_mmolL'];
         if ($pIsApplicableFbs != "N") {
-            insertResultsFBS($pCaseNo,$pLabDateFBS, $pLabFeeFBS, $pCoPayFBS, $pReferralFacilityFBS, $pGlucoseMg, $pGlucosemmol, $pTransNo, $pUserId, $getUpdCnt, $pXPSmodule,$pIsApplicableFbs);
+            insertResultsFBS($conn, $pCaseNo,$pLabDateFBS, $pLabFeeFBS, $pCoPayFBS, $pReferralFacilityFBS, $pGlucoseMg, $pGlucosemmol, $pTransNo, $pUserId, $getUpdCnt, $pXPSmodule,$pIsApplicableFbs);
         }
 
         /* Results - Random Blood Sugar (RBS) */
@@ -633,7 +633,7 @@ function saveLaboratoryResults($data){
         $pGlucoseMgRBS = $data['diagnostic_19_glucose_mgdL'];
         $pGlucosemmolRBS = $data['diagnostic_19_glucose_mmolL'];
         if ($pIsApplicableRbs != "N") {
-            insertResultsRBS($pCaseNo,$pLabDateRBS, $pLabFeeRBS, $pCoPayFBS, $pReferralFacilityRBS, $pGlucoseMgRBS, $pGlucosemmolRBS, $pTransNo, $pUserId, $getUpdCnt, $pXPSmodule,$pIsApplicableRbs);
+            insertResultsRBS($conn, $pCaseNo,$pLabDateRBS, $pLabFeeRBS, $pCoPayFBS, $pReferralFacilityRBS, $pGlucoseMgRBS, $pGlucosemmolRBS, $pTransNo, $pUserId, $getUpdCnt, $pXPSmodule,$pIsApplicableRbs);
         }
 
         /* Results - Electrocardiogram (ECG) */
@@ -649,7 +649,7 @@ function saveLaboratoryResults($data){
         $pFindingsECG = $data['diagnostic_9_ecg'];
         $pRemarksECG = $data['diagnostic_9_ecg_remarks'];
         if ($pIsApplicableEcg != "N") {
-            insertResultsECG($pCaseNo,$pLabDateECG, $pLabFeeECG, $pCoPayECG, $pReferralFacilityECG, $pFindingsECG, $pRemarksECG, $pTransNo, $pUserId, $getUpdCnt, $pXPSmodule,$pIsApplicableEcg);
+            insertResultsECG($conn, $pCaseNo,$pLabDateECG, $pLabFeeECG, $pCoPayECG, $pReferralFacilityECG, $pFindingsECG, $pRemarksECG, $pTransNo, $pUserId, $getUpdCnt, $pXPSmodule,$pIsApplicableEcg);
         }
         
         /* Results - Pap Smear */
@@ -665,7 +665,7 @@ function saveLaboratoryResults($data){
         $pFindingsPapsSmear = $data['diagnostic_13_papsSmearFindings'];
         $pImpressionPapsSmear = $data['diagnostic_13_papsSmearImpression'];
         if ($pIsApplicablePaps != "N") {
-            insertResultsPapsSmear($pCaseNo,$pLabDatePapsSmear,$pLabFeePapsSmear,$pCoPayPapsSmear,$pReferralFacilityPaps, $pFindingsPapsSmear,$pImpressionPapsSmear,$pTransNo, $pUserId, $getUpdCnt,$pXPSmodule,$pIsApplicablePaps);
+            insertResultsPapsSmear($conn, $pCaseNo,$pLabDatePapsSmear,$pLabFeePapsSmear,$pCoPayPapsSmear,$pReferralFacilityPaps, $pFindingsPapsSmear,$pImpressionPapsSmear,$pTransNo, $pUserId, $getUpdCnt,$pXPSmodule,$pIsApplicablePaps);
         }
         
         /* Results - Oral Glucose Tolerance Test (OGTT) */
@@ -685,7 +685,7 @@ function saveLaboratoryResults($data){
         $pOgttTwoHrsMg = $data['diagnostic_14_twoHr_mg'];
         $pOgttTwoHrsMmol = $data['diagnostic_14_twoHr_mmol'];
         if ($pIsApplicableOgtt != "N") {
-            insertResultsOGTT($pCaseNo, $pLabDateOGTT,$pLabFeeOGTT,$pCoPayOGTT,$pReferralFacilityOGTT,$pFastingMg,$pFastingMmol,$pOgttOneHrMg,$pOgttOneHrMmol,$pOgttTwoHrsMg,$pOgttTwoHrsMmol,$pTransNo, $pUserId, $getUpdCnt,$pXPSmodule, $pIsApplicableOgtt);
+            insertResultsOGTT($conn, $pCaseNo, $pLabDateOGTT,$pLabFeeOGTT,$pCoPayOGTT,$pReferralFacilityOGTT,$pFastingMg,$pFastingMmol,$pOgttOneHrMg,$pOgttOneHrMmol,$pOgttTwoHrsMg,$pOgttTwoHrsMmol,$pTransNo, $pUserId, $getUpdCnt,$pXPSmodule, $pIsApplicableOgtt);
         }
 
         /*Fecal Occult Blood Test (FOBT)*/  //ekonsulta
@@ -701,7 +701,7 @@ function saveLaboratoryResults($data){
         $pCoPayFobt = NULL;
         $pFindingsFobt = $data['diagnostic_15_fobt'];
         if ($pIsApplicableFobt != "N") {
-            insertResultsFOBT($pCaseNo, $pLabDateFobt, $pLabFeeFobt, $pCoPayFobt,$pReferralFacilityFobt,$pFindingsFobt,$pTransNo, $pUserId, $getUpdCnt,$pXPSmodule,$pIsApplicableFobt);
+            insertResultsFOBT($conn, $pCaseNo, $pLabDateFobt, $pLabFeeFobt, $pCoPayFobt,$pReferralFacilityFobt,$pFindingsFobt,$pTransNo, $pUserId, $getUpdCnt,$pXPSmodule,$pIsApplicableFobt);
         }
 
         /*HbA1c*/ //ekonsulta
@@ -716,7 +716,7 @@ function saveLaboratoryResults($data){
         $pCoPayHbA1c = NULL;
         $pFindingsHbA1c = $data['diagnostic_18_hba1c_mmol'];
         if ($pIsApplicableHbA1c != "N") {
-            insertResultsHbA1c($pCaseNo, $pLabDateHbA1c, $pLabFeeHbA1c, $pCoPayHbA1c,$pReferralFacilityHbA1c,$pFindingsHbA1c,$pTransNo, $pUserId, $getUpdCnt,$pXPSmodule,$pIsApplicableHbA1c);
+            insertResultsHbA1c($conn, $pCaseNo, $pLabDateHbA1c, $pLabFeeHbA1c, $pCoPayHbA1c,$pReferralFacilityHbA1c,$pFindingsHbA1c,$pTransNo, $pUserId, $getUpdCnt,$pXPSmodule,$pIsApplicableHbA1c);
         }
 
         /*Creatinine*/ //ekonsulta
@@ -731,7 +731,7 @@ function saveLaboratoryResults($data){
         $pCoPayCreatinine = NULL;
         $pFindingsCreatinine = $data['diagnostic_8_creatinine_mgdl'];
         if ($pIsApplicableCreatinine != "N") {
-            insertResultsCreatinine($pCaseNo, $pLabDateCreatinine, $pLabFeeCreatinine, $pCoPayCreatinine,$pReferralFacilityCreatinine,$pFindingsCreatinine,$pTransNo, $pUserId, $getUpdCnt,$pXPSmodule,$pIsApplicableCreatinine);
+            insertResultsCreatinine($conn, $pCaseNo, $pLabDateCreatinine, $pLabFeeCreatinine, $pCoPayCreatinine,$pReferralFacilityCreatinine,$pFindingsCreatinine,$pTransNo, $pUserId, $getUpdCnt,$pXPSmodule,$pIsApplicableCreatinine);
         }
 
         /*PPD Test (Tuberculosis)*/ 
@@ -746,7 +746,7 @@ function saveLaboratoryResults($data){
         $pCoPayPddt = NULL;
         $pFindingsPddt  = $data['diagnostic_17_ppdt'];
         if ($pIsApplicablePddt != "N") {
-            insertResultsPPDT($pCaseNo, $pLabDatePddt, $pLabFeePddt, $pCoPayPddt,$pReferralFacilityPddt,$pFindingsPddt,$pTransNo, $pUserId, $getUpdCnt,$pXPSmodule,$pIsApplicablePddt);
+            insertResultsPPDT($conn, $pCaseNo, $pLabDatePddt, $pLabFeePddt, $pCoPayPddt,$pReferralFacilityPddt,$pFindingsPddt,$pTransNo, $pUserId, $getUpdCnt,$pXPSmodule,$pIsApplicablePddt);
         }
 
         /*Others*/ 
@@ -762,7 +762,7 @@ function saveLaboratoryResults($data){
         $pFindingsOthExam  = $data['diagnostic_99_oth1'];
         $pOthDiagExam  = $data['diagnostic_oth_remarks'];
         if ($pIsApplicableOth != "N") {
-            insertResultsOthersDiagExam($pCaseNo, $pLabDateOth, $pLabFeeOth, $pCoPayOth,$pReferralFacilityOth,$pOthDiagExam,$pFindingsOthExam,$pTransNo, $pUserId, $getUpdCnt,$pXPSmodule,$pIsApplicableOth);
+            insertResultsOthersDiagExam($conn, $pCaseNo, $pLabDateOth, $pLabFeeOth, $pCoPayOth,$pReferralFacilityOth,$pOthDiagExam,$pFindingsOthExam,$pTransNo, $pUserId, $getUpdCnt,$pXPSmodule,$pIsApplicableOth);
         }
     /*End Laboratory Results*/
       
@@ -773,9 +773,10 @@ function saveLaboratoryResults($data){
         $conn->rollBack();
         echo "Error: Encountered error while saving Laboratory/ Imaging Results - " . $e->getMessage();
         echo '<script>alert("Error: Encountered error while saving Laboratory/ Imaging Results - '.$e->getMessage().'");</script>';
+    } finally {
+        $conn = null;
     }
 
-    //$conn = null;
 }
 
 /*Get Laboratory/ Imaging Status*/
@@ -6918,9 +6919,6 @@ function savePatientRegistration($enlistDetails){
             $stmt->execute();
             $conn->commit();
 
-            //if($checkMemberAssigned == true){
-                //echo '<script>alert("Successfully saved!");window.location="registered_view_list.php";</script>';
-            //}
             echo '<script>alert("Successfully saved!");window.location="registration_search.php?";</script>';
 
         }
@@ -7188,7 +7186,7 @@ function saveFollowUpMedicine($soapInfo){
         else{
             insertMedicine("NOMED0000000000000000000000000", "NOMED", "00000", "00000", "00000",
                 NULL, NULL, NULL,NULL, NULL, "N/A", "N/A",
-                $pCaseNo, $pTransNo, $pUserId, $getUpdCnt, $pXPSmodule, NULL, $pApplicable, "","00000", "00000", "", "N",NULL,NULL,"-","");
+                $pCaseNo, $pTransNo, $pUserId, $getUpdCnt, $pXPSmodule, NULL, "N", "","00000", "00000", "", "N",NULL,NULL,"-","");
         }
         /*End Medicine*/
 
@@ -7199,8 +7197,8 @@ function saveFollowUpMedicine($soapInfo){
 
     } catch (PDOException $e) {
         $conn->rollBack();
-        echo "Error: saveFollowupMeds - " . $e->getMessage();
-        echo '<script>alert("Error: saveFollowupMeds - ' . $e->getMessage() . '");</script>';
+        echo "Error: FollowUpMeds - " . $e->getMessage();
+        echo '<script>alert("Error: FollowUpMeds - ' . $e->getMessage() . '");</script>';
     }
 }
 
@@ -7211,96 +7209,110 @@ function saveMedicines($soapInfo){
     try {
         $conn = new PDO("mysql:host=" . $ini["DBSERVER"] . ";dbname=" . $ini["EPCB"], $ini['APPUSERNAME'], $ini['APPPASSWORD']);
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $conn->setAttribute(PDO::ATTR_AUTOCOMMIT, false);
 
-        $conn->begintransaction();
-
-        session_start();
-        $pUserId = $_SESSION['pUserID'];
-        $pHciNo = $_SESSION['pHciNum'];
-        $pXPSmodule = "SOAP"; /*SOAP - Consultation*/
-
-        /*Start Consultation Patient Details*/
-        $pCaseNo = $soapInfo['pCaseNo'];
-        $pTransNo = $soapInfo['pConsultTransNo'];
-        $pPatientPin = $soapInfo['pPatientPIN'];
-        $pPatientType = $soapInfo['pPatientType'];
-        $pMemPin = $soapInfo['pMemPin'];
-        $pEffYear = $soapInfo['pEffYear'];
-        $pSoapDate = $soapInfo['pSOAPDate'];
-        $pSoapOtp = $soapInfo['pSoapOTP'];
-        $pwithOtp=$soapInfo['walkedInChecker'];
-
-        $getUpdCnt = 0;
-        $pSoapCoPay = 0;
-
-        /*Start Medicine*/
-        /*Medicine*/
-        $pDoctorName = $soapInfo['pPrescDoctor'];
-        $pDrugCodeMeds = $soapInfo['pDrugCodeMeds'];
-        $pGenCodeMeds = $soapInfo['pGenCodeMeds'];
-        $pSaltMed = $soapInfo['pSaltCodeMeds'];
-        $pStrengthMeds = $soapInfo['pStrengthCodeMeds'];
-        $pFormMeds = $soapInfo['pFormCodeMeds'];
-        $pUnitMed = $soapInfo['pUnitCodeMeds'];
-        $pPackageMeds = $soapInfo['pPackageCodeMeds'];
-        $pQuantityMeds = $soapInfo['pQtyMeds'];
-        $pUnitPriceMeds = $soapInfo['pUnitPriceMeds'];
-        $pCopayMeds = "";
-        $pTotalAmtPriceMeds = $soapInfo['pTotalPriceMeds'];
-        $pInsQtyMeds = $soapInfo['pQtyInsMeds'];
-        $pInsStrengthMeds = $soapInfo['pStrengthInsMeds'];
-        $pInsFreqMeds = $soapInfo['pFrequencyInsMeds'];
-        $pGenericOtherMeds = $soapInfo['pOtherMeds'];
-
-        //Dispensing
-        $pIsMedsDispensed = $soapInfo['pIsDispensed'];
-        $pChkMedsDispensedDate = $soapInfo['pDispensedDate'];       
-        $pMedsDispensingPersonnel = $soapInfo['pDispensingPersonnel'];
-
-        $pMedsCategory = "";
-
-        $pOthMedDrugGroup = $soapInfo['pOthMedDrugGrouping[]']; //v01.04.00.202201
-
-        //processing
-        $pApplicable = $soapInfo['medsStatus'];
-
-        /*Advice */        
-        if ($soapInfo['advice_remarks'] != NULL || $soapInfo['advice_remarks'] != ""){
-            $pAdviceRemarks = $soapInfo['advice_remarks'];
-        } else {
-            $pAdviceRemarks = "NOT APPLICABLE";
+        // Begin transaction
+        if (!$conn->inTransaction()) {
+            $conn->beginTransaction();
         }
-        insertAdvice($pAdviceRemarks, $pUserId, $pTransNo, $getUpdCnt);
 
-        if($pApplicable == "Y") {    
-            for ($i = 0; $i < count($pIsMedsDispensed); $i++) {
-                if($pChkMedsDispensedDate[$i] != ""){
-                    $pMedsDispensedDate = date('Y-m-d', strtotime($pChkMedsDispensedDate[$i]));
-                } else {
-                    $pMedsDispensedDate = NULL;
-                }          
+         // Confirm transaction is active
+        if ($conn->inTransaction()) {
 
-                insertMedicine($pDrugCodeMeds[$i], $pGenCodeMeds[$i], $pStrengthMeds[$i], $pFormMeds[$i], $pPackageMeds[$i],
-                    $pQuantityMeds[$i], $pUnitPriceMeds[$i], $pCopayMeds, $pTotalAmtPriceMeds[$i], $pInsQtyMeds[$i], $pInsStrengthMeds[$i], $pInsFreqMeds[$i],
-                    $pCaseNo, $pTransNo, $pUserId, $getUpdCnt, $pXPSmodule, $pDoctorName, $pApplicable,$pGenericOtherMeds[$i], $pSaltMed[$i], $pUnitMed[$i],"", $pIsMedsDispensed[$i], $pMedsDispensedDate,$pMedsDispensingPersonnel,$pMedsCategory,$pOthMedDrugGroup);
+            session_start();
+            $pUserId = $_SESSION['pUserID'];
+            $pHciNo = $_SESSION['pHciNum'];
+            $pXPSmodule = "SOAP"; /*SOAP - Consultation*/
+
+            /*Start Consultation Patient Details*/
+            $pCaseNo = $soapInfo['pCaseNo'];
+            $pTransNo = $soapInfo['pConsultTransNo'];
+            $pPatientPin = $soapInfo['pPatientPIN'];
+            $pPatientType = $soapInfo['pPatientType'];
+            $pMemPin = $soapInfo['pMemPin'];
+            $pEffYear = $soapInfo['pEffYear'];
+            $pSoapDate = $soapInfo['pSOAPDate'];
+            $pSoapOtp = $soapInfo['pSoapOTP'];
+            $pwithOtp=$soapInfo['walkedInChecker'];
+
+            $getUpdCnt = 0;
+            $pSoapCoPay = 0;
+
+            /*Start Medicine*/
+            /*Medicine*/
+            $pDoctorName = $soapInfo['pPrescDoctor'];
+            $pDrugCodeMeds = $soapInfo['pDrugCodeMeds'];
+            $pGenCodeMeds = $soapInfo['pGenCodeMeds'];
+            $pSaltMed = $soapInfo['pSaltCodeMeds'];
+            $pStrengthMeds = $soapInfo['pStrengthCodeMeds'];
+            $pFormMeds = $soapInfo['pFormCodeMeds'];
+            $pUnitMed = $soapInfo['pUnitCodeMeds'];
+            $pPackageMeds = $soapInfo['pPackageCodeMeds'];
+            $pQuantityMeds = $soapInfo['pQtyMeds'];
+            $pUnitPriceMeds = $soapInfo['pUnitPriceMeds'];
+            $pCopayMeds = "";
+            $pTotalAmtPriceMeds = $soapInfo['pTotalPriceMeds'];
+            $pInsQtyMeds = $soapInfo['pQtyInsMeds'];
+            $pInsStrengthMeds = $soapInfo['pStrengthInsMeds'];
+            $pInsFreqMeds = $soapInfo['pFrequencyInsMeds'];
+            $pGenericOtherMeds = $soapInfo['pOtherMeds'];
+
+            //Dispensing
+            $pIsMedsDispensed = $soapInfo['pIsDispensed'];
+            $pChkMedsDispensedDate = $soapInfo['pDispensedDate'];       
+            $pMedsDispensingPersonnel = $soapInfo['pDispensingPersonnel'];
+
+            $pMedsCategory = "";
+
+            $pOthMedDrugGroup = $soapInfo['pOthMedDrugGrouping[]']; //v01.04.00.202201
+
+            //processing
+            $pApplicable = $soapInfo['medsStatus'];
+
+            /*Advice */        
+            if ($soapInfo['advice_remarks'] != NULL || $soapInfo['advice_remarks'] != ""){
+                $pAdviceRemarks = $soapInfo['advice_remarks'];
+            } else {
+                $pAdviceRemarks = "NOT APPLICABLE";
             }
-        }
-        else{
-            insertMedicine("NOMED0000000000000000000000000", "NOMED", "00000", "00000", "00000",
-                NULL, NULL, NULL,NULL, NULL, "N/A", "N/A",
-                $pCaseNo, $pTransNo, $pUserId, $getUpdCnt, $pXPSmodule, NULL, $pApplicable, "","00000", "00000", "", "N",NULL,NULL,"-","");
-        }
-        /*End Medicine*/
+            insertAdvice($conn, $pAdviceRemarks, $pUserId, $pTransNo, $getUpdCnt);
 
-        $conn->commit();
+            if($pApplicable == "Y") {    
+                for ($i = 0; $i < count($pIsMedsDispensed); $i++) {
+                    if($pChkMedsDispensedDate[$i] != ""){
+                        $pMedsDispensedDate = date('Y-m-d', strtotime($pChkMedsDispensedDate[$i]));
+                    } else {
+                        $pMedsDispensedDate = NULL;
+                    }          
 
-        echo '<script>alert("Successfully saved!");window.location="medicine_search.php";</script>';
+                    insertMedicine($conn, $pDrugCodeMeds[$i], $pGenCodeMeds[$i], $pStrengthMeds[$i], $pFormMeds[$i], $pPackageMeds[$i],
+                        $pQuantityMeds[$i], $pUnitPriceMeds[$i], $pCopayMeds, $pTotalAmtPriceMeds[$i], $pInsQtyMeds[$i], $pInsStrengthMeds[$i], $pInsFreqMeds[$i],
+                        $pCaseNo, $pTransNo, $pUserId, $getUpdCnt, $pXPSmodule, $pDoctorName, $pApplicable,$pGenericOtherMeds[$i], $pSaltMed[$i], $pUnitMed[$i],"", $pIsMedsDispensed[$i], $pMedsDispensedDate,$pMedsDispensingPersonnel,$pMedsCategory,$pOthMedDrugGroup);
+                }
+            }
+            else{
+                insertMedicine($conn, "NOMED0000000000000000000000000", "NOMED", "00000", "00000", "00000",
+                    NULL, NULL, NULL,NULL, NULL, "N/A", "N/A",
+                    $pCaseNo, $pTransNo, $pUserId, $getUpdCnt, $pXPSmodule, NULL, "N", "","00000", "00000", "", "N",NULL,NULL,"-","");
+            }
+            /*End Medicine*/
+
+            $conn->commit();
+
+            echo '<script>alert("Successfully saved!");window.location="medicine_search.php";</script>';
+        } else {
+            throw new Exception("Medicines : Failed to start transaction.");
+        }
 
 
     } catch (PDOException $e) {
-        $conn->rollBack();
-        echo "Error: saveFollowupMeds - " . $e->getMessage();
-        echo '<script>alert("Error: saveFollowupMeds - ' . $e->getMessage() . '");</script>';
+        if ($conn->inTransaction()) {
+            $conn->rollBack();
+        }
+        //echo "Error: saveMedicines - " . $e->getMessage();
+        echo '<script>alert("Error in Medicines : ' . $e->getMessage() . '");</script>';
+    } finally {
+        $conn = null;
     }
 }
 
@@ -7313,849 +7325,539 @@ function saveConsultationInfo($soapInfo){
         $conn = new PDO("mysql:host=".$ini["DBSERVER"].";dbname=".$ini["EPCB"], $ini['APPUSERNAME'], $ini['APPPASSWORD']);
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        $conn->begintransaction();
+        // Begin transaction
+        if (!$conn->inTransaction()) {
+            $conn->beginTransaction();
+        }
 
-        session_start();
-        $pUserId = $_SESSION['pUserID'];
-        $pHciNo = $_SESSION['pHciNum'];
-        $pXPSmodule = "SOAP"; /*SOAP - Consultation*/
+        // Confirm transaction is active
+        if ($conn->inTransaction()) {
+            session_start();
+            $pUserId = $_SESSION['pUserID'];
+            $pHciNo = $_SESSION['pHciNum'];
+            $pXPSmodule = "SOAP"; /*SOAP - Consultation*/
 
-        /*Start Consultation Patient Details*/
-        $pCaseNo=$soapInfo['pCaseNo'];
-        $pPatientPin=$soapInfo['pPatientPIN'];
-        $pPatientType=$soapInfo['pPatientType'];
-        $pMemPin=$soapInfo['pMemPin'];
-        $pEffYear=$soapInfo['pEffYear'];
-        $pSoapDate=$soapInfo['pSOAPDate'];
-        $pSoapCoPay=$soapInfo['pCoPayment'];
-        
-        $pwithOtp=$soapInfo['walkedInChecker']; //pIsWalkedIn in DTD
+            /*Start Consultation Patient Details*/
+            $pCaseNo=$soapInfo['pCaseNo'];
+            $pPatientPin=$soapInfo['pPatientPIN'];
+            $pPatientType=$soapInfo['pPatientType'];
+            $pMemPin=$soapInfo['pMemPin'];
+            $pEffYear=$soapInfo['pEffYear'];
+            $pSoapDate=$soapInfo['pSOAPDate'];
+            $pSoapCoPay=$soapInfo['pCoPayment'];
+            
+            // $pwithOtp=$soapInfo['walkedInChecker']; //pIsWalkedIn in DTD
 
-        if($pwithOtp == "N"){
-            $pSoapOtp=$soapInfo['pSoapOTP'];
-        } else {
+            $pwithOtp = "Y";
             $pSoapOtp = "WALKEDIN";
-        }
 
-        if(isset($soapInfo['saveClientSoap'])){
-            $getUpdCnt = $soapInfo['pUpdCntSoap'];
-            $pTransNo =generateTransNo('SOAP_NO'); //automatically generated
-            insertConsultationPatientInfo($pCaseNo, $pTransNo, $pHciNo, $pPatientPin, $pPatientType, $pMemPin, $pSoapDate, $pUserId, $pEffYear, $pSoapOtp, $getUpdCnt, $pXPSmodule,$pwithOtp,$pSoapCoPay);
-        }
-
-        if(isset($soapInfo['updateClientSoap'])){
-            $getUpdCnt = $soapInfo['pUpdCntSoap'];
-            $pTransNo = $soapInfo['pSoapTransNum'];
-
-            updateConsultationPatientInfo($pCaseNo, $pTransNo, $pHciNo, $pPatientPin, $pPatientType, $pMemPin, $pSoapDate, $pUserId, $pEffYear, $pSoapOtp, $getUpdCnt);
-        }
-        /*End Consultation Patient Details*/
-
-        /*Start Subjective/ History of Illness*/
-        $pChiefComplaint=NULL;
-        $pSymptoms=$soapInfo['pChiefComplaint'];
-        $pIllnessHist=$soapInfo['pIllnessHistory'];
-        $pOtherComplaint=$soapInfo['pOtherChiefComplaint'];
-        $pPainSite=$soapInfo['pPainSite'];
-        
-        insertSubjectiveHistory($pUserId, $pTransNo, $pChiefComplaint, $pIllnessHist, $pOtherComplaint, $getUpdCnt,$pSymptoms,$pPainSite);
-        /*End Subjective/ History of Illness*/
-
-        /*Start Objective/Physical Examination*/
-        /*Part 1: Pertinent Examination*/
-        $pSystolic=$soapInfo['pe_bp_u'];
-        $pDiastolic=$soapInfo['pe_bp_l'];
-        $pHr=$soapInfo['pe_hr'];
-        $pRr=$soapInfo['pe_rr'];
-        
-        if ($soapInfo['txtPhExHeightCm'] != null) {
-            $pHeight = $soapInfo['txtPhExHeightCm'];
-        } else {
-            $pHeight = 0;
-        }
-        $pWeight=$soapInfo['txtPhExWeightKg'];
-        //$pWaist=$soapInfo['pe_waist_cm'];
-        $pTemp = $soapInfo['pe_temp'];
-        $pVision=NULL;
-        $pLength=$soapInfo['txtPhExLengthCm'];
-        $pHeadCirc=$soapInfo['txtPhExHeadCircCm'];
-        //konsulta
-        $pLeftEyeVision=$soapInfo['pe_visual_acuityL'];
-        $pRightEyeVision=$soapInfo['pe_visual_acuityR'];
-        $pWaist=$soapInfo['txtPhExBodyCircWaistCm'];
-        $pHip=$soapInfo['txtPhExBodyCircHipsCm'];
-        $pLimbs=$soapInfo['txtPhExBodyCircLimbsCm'];
-        $pBMI=$soapInfo['txtPhExBMI'];
-        //pZScore=$soapInfo['txtPhExZscoreCm'];
-        $pZScore="";
-        $pSkinThickness=$soapInfo['txtPhExSkinfoldCm'];
-
-        insertObjectivePhysicalExam($pSystolic, $pDiastolic, $pHr, $pRr, $pHeight, $pWeight, $pTemp, $pUserId, $pTransNo, $pVision, $pLength, $pHeadCirc, $getUpdCnt,$pLeftEyeVision,$pRightEyeVision,$pWaist,$pHip,$pLimbs,$pBMI,$pZScore,$pSkinThickness);
-
-        /*Part 2: Pertinent Findings per System*/
-        $pSkin = $soapInfo['skinExtremities'];
-        $pGenito = $soapInfo['genitourinary'];
-        $pRectal = $soapInfo['rectal'];
-        $pHeent = $soapInfo['heent'];
-        $pChest = $soapInfo['chest'];
-        $pHeart = $soapInfo['heart'];
-        $pAbdomen = $soapInfo['abdomen'];
-        $pNeuro = $soapInfo['neuro'];
-
-        /*A. Heent*/
-        for ($i = 0; $i < count($pHeent); $i++) {
-            if ($pHeent[$i] != '') {
-                insertPhysicalExamMisc(null, $pHeent[$i], null, null, null, null, null, null, $pTransNo, $pUserId, $getUpdCnt);
-            }
-        }
-
-        /*B. Chest/Lungs*/
-        for ($i = 0; $i < count($pChest); $i++) {
-            if ($pChest[$i] != '') {
-                insertPhysicalExamMisc(null, null, $pChest[$i], null, null, null, null, null, $pTransNo, $pUserId, $getUpdCnt);
-            }
-        }
-
-        /*C. Heart*/
-        for ($i = 0; $i < count($pHeart); $i++) {
-            if ($pHeart[$i] != '') {
-                insertPhysicalExamMisc(null, null, null, $pHeart[$i], null, null, null, null, $pTransNo, $pUserId, $getUpdCnt);
-            }
-        }
-
-        /*D. Abdomen*/
-        for ($i = 0; $i < count($pAbdomen); $i++) {
-            if ($pAbdomen[$i] != '') {
-                insertPhysicalExamMisc(null, null, null, null, $pAbdomen[$i], null, null, null, $pTransNo, $pUserId, $getUpdCnt);
-            }
-        }
-
-        /*E. Genitourinary*/
-        for ($i = 0; $i < count($pGenito); $i++) {
-            if ($pGenito[$i] != '') {
-                insertPhysicalExamMisc(null, null, null, null, null, null, $pGenito[$i], null, $pTransNo, $pUserId, $getUpdCnt);
-            }
-        }
-
-        /*F. Digital Rectal Examination*/
-        for ($i = 0; $i < count($pRectal); $i++) {
-            if ($pRectal[$i] != '') {
-                insertPhysicalExamMisc(null, null, null, null, null, null, null, $pRectal[$i], $pTransNo, $pUserId, $getUpdCnt);
-            }
-        }
-
-        /*G. Skin/Extremities*/
-        for ($i = 0; $i < count($pSkin); $i++) {
-            if ($pSkin[$i] != '') {
-                insertPhysicalExamMisc($pSkin[$i], null, null, null, null, null, null, null, $pTransNo, $pUserId, $getUpdCnt);
-            }
-        }
-
-        /*H. Neurological*/
-        for ($i = 0; $i < count($pNeuro); $i++) {
-            if ($pNeuro[$i] != '') {
-                insertPhysicalExamMisc(null, null, null, null, null, $pNeuro[$i], null, null, $pTransNo, $pUserId, $getUpdCnt);
-            }
-        }
-
-        /*Part 3 Remarks*/
-        $pHeentRemarks = $soapInfo['heent_remarks'];
-        $pChestRemarks = $soapInfo['chest_lungs_remarks'];
-        $pHeartRemarks = $soapInfo['heart_remarks'];
-        $pAbdomenRemarks = $soapInfo['abdomen_remarks'];
-        $pGenitoRemarks = $soapInfo['gu_remarks'];
-        $pRectalRemarks = $soapInfo['rectal_remarks'];
-        $pSkinExtremitiesRemarks = $soapInfo['skinExtremities_remarks'];
-        $pNeuroRemarks = $soapInfo['neuro_remarks'];
-
-        insertPhysicalExamMiscRemarks($pHeentRemarks, $pChestRemarks, $pHeartRemarks, $pAbdomenRemarks, $pGenitoRemarks, $pRectalRemarks, $pSkinExtremitiesRemarks, $pNeuroRemarks, $pTransNo, $pUserId, $getUpdCnt);
-        /*End Objective/Physical Examination*/
-
-        /*Start Assessment/Diagnosis*/
-        $pDiagnosis = $soapInfo['diagnosis'];
-        for ($i = 0; $i < count($pDiagnosis); $i++) {
-            insertAssessmentDiagnosis($pUserId, $pTransNo, $pDiagnosis[$i], ($i+1), $getUpdCnt);
-        }
-        /*End Assessment/Diagnosis*/
-
-        /*Start Plan/Management*/
-        /*Diagnosis Examination*/
-        $pDiagnostic = $soapInfo['diagnostic'];
-        // if($pDiagnostic != NULL) {
-            for  ($i = 0; $i < count($soapInfo['diagnostic']); $i++) {
-
-                //cbc
-                if($pDiagnostic[$i] == "1"){
-                    if($soapInfo['diagnostic_1_doctor'] != null) {
-                        $pIsDrRecommended=$soapInfo['diagnostic_1_doctor'];
-                    } else {
-                        $pIsDrRecommended="X";
-                    }
-                   
-                    if($soapInfo['diagnostic_1_patient'] != null) {
-                        $pIsPxRemarks=$soapInfo['diagnostic_1_patient'];
-                    } else {
-                        $pIsPxRemarks="XX";
-                    }
-
-                    $pOthRemarks="";
-                }
-
-                //xray
-                if($pDiagnostic[$i] == "4"){
-                    if($soapInfo['diagnostic_4_doctor'] != null) {
-                        $pIsDrRecommended=$soapInfo['diagnostic_4_doctor'];
-                    } else {
-                        $pIsDrRecommended="X";
-                    }
-                   
-                    if($soapInfo['diagnostic_4_patient'] != null) {
-                        $pIsPxRemarks=$soapInfo['diagnostic_4_patient'];
-                    } else {
-                        $pIsPxRemarks="XX";
-                    }
-
-                    $pOthRemarks="";
-                }
-
-                //creatinine
-                if($pDiagnostic[$i] == "8"){
-                    if($soapInfo['diagnostic_8_doctor'] != null) {
-                        $pIsDrRecommended=$soapInfo['diagnostic_8_doctor'];
-                    } else {
-                        $pIsDrRecommended="X";
-                    }
-                   
-                    if($soapInfo['diagnostic_8_patient'] != null) {
-                        $pIsPxRemarks=$soapInfo['diagnostic_8_patient'];
-                    } else {
-                        $pIsPxRemarks="XX";
-                    }
-
-                    $pOthRemarks="";
-                }
-
-                //ecg
-                if($pDiagnostic[$i] == "9"){
-                    if($soapInfo['diagnostic_9_doctor'] != null) {
-                        $pIsDrRecommended=$soapInfo['diagnostic_9_doctor'];
-                    } else {
-                        $pIsDrRecommended="X";
-                    }
-                   
-                    if($soapInfo['diagnostic_9_patient'] != null) {
-                        $pIsPxRemarks=$soapInfo['diagnostic_9_patient'];
-                    } else {
-                        $pIsPxRemarks="XX";
-                    }
-
-                    $pOthRemarks="";
-                }
-
-                //fbs
-                if($pDiagnostic[$i] == "7"){
-                    if($soapInfo['diagnostic_7_doctor'] != null) {
-                        $pIsDrRecommended=$soapInfo['diagnostic_7_doctor'];
-                    } else {
-                        $pIsDrRecommended="X";
-                    }
-                   
-                    if($soapInfo['diagnostic_7_patient'] != null) {
-                        $pIsPxRemarks=$soapInfo['diagnostic_7_patient'];
-                    } else {
-                        $pIsPxRemarks="XX";
-                    }
-
-                    $pOthRemarks="";
-                }
-
-                //rbs
-                if($pDiagnostic[$i] == "19"){
-                    if($soapInfo['diagnostic_19_doctor'] != null) {
-                        $pIsDrRecommended=$soapInfo['diagnostic_19_doctor'];
-                    } else {
-                        $pIsDrRecommended="X";
-                    }
-                   
-                    if($soapInfo['diagnostic_19_patient'] != null) {
-                        $pIsPxRemarks=$soapInfo['diagnostic_19_patient'];
-                    } else {
-                        $pIsPxRemarks="XX";
-                    }
-
-                    $pOthRemarks="";
-                }
-
-                //fobt
-                if($pDiagnostic[$i] == "15"){
-                    if($soapInfo['diagnostic_15_doctor'] != null) {
-                        $pIsDrRecommended=$soapInfo['diagnostic_15_doctor'];
-                    } else {
-                        $pIsDrRecommended="X";
-                    }
-                   
-                    if($soapInfo['diagnostic_15_patient'] != null) {
-                        $pIsPxRemarks=$soapInfo['diagnostic_15_patient'];
-                    } else {
-                        $pIsPxRemarks="XX";
-                    }
-
-                    $pOthRemarks="";
-                }
-
-                //fecalysis
-                if($pDiagnostic[$i] == "3"){
-                    if($soapInfo['diagnostic_3_doctor'] != null) {
-                        $pIsDrRecommended=$soapInfo['diagnostic_3_doctor'];
-                    } else {
-                        $pIsDrRecommended="X";
-                    }
-                   
-                    if($soapInfo['diagnostic_3_patient'] != null) {
-                        $pIsPxRemarks=$soapInfo['diagnostic_3_patient'];
-                    } else {
-                        $pIsPxRemarks="XX";
-                    }
-
-                    $pOthRemarks="";
-                }
-
-                //hba1c
-                if($pDiagnostic[$i] == "18"){
-                    if($soapInfo['diagnostic_18_doctor'] != null) {
-                        $pIsDrRecommended=$soapInfo['diagnostic_18_doctor'];
-                    } else {
-                        $pIsDrRecommended="X";
-                    }
-                   
-                    if($soapInfo['diagnostic_18_patient'] != null) {
-                        $pIsPxRemarks=$soapInfo['diagnostic_18_patient'];
-                    } else {
-                        $pIsPxRemarks="XX";
-                    }
-
-                    $pOthRemarks="";
-                }
-
-                //lipid profile
-                if($pDiagnostic[$i] == "6"){
-                    if($soapInfo['diagnostic_6_doctor'] != null) {
-                        $pIsDrRecommended=$soapInfo['diagnostic_6_doctor'];
-                    } else {
-                        $pIsDrRecommended="X";
-                    }
-                   
-                    if($soapInfo['diagnostic_6_patient'] != null) {
-                        $pIsPxRemarks=$soapInfo['diagnostic_6_patient'];
-                    } else {
-                        $pIsPxRemarks="XX";
-                    }
-
-                    $pOthRemarks="";
-                }
-
-                //ogtt
-                if($pDiagnostic[$i] == "14"){
-                    if($soapInfo['diagnostic_14_doctor'] != null) {
-                        $pIsDrRecommended=$soapInfo['diagnostic_14_doctor'];
-                    } else {
-                        $pIsDrRecommended="X";
-                    }
-                   
-                    if($soapInfo['diagnostic_14_patient'] != null) {
-                        $pIsPxRemarks=$soapInfo['diagnostic_14_patient'];
-                    } else {
-                        $pIsPxRemarks="XX";
-                    }
-
-                    $pOthRemarks="";
-                }
-
-                 //papsmear
-                if($pDiagnostic[$i] == "13"){
-                    if($soapInfo['diagnostic_13_doctor'] != null) {
-                        $pIsDrRecommended=$soapInfo['diagnostic_13_doctor'];
-                    } else {
-                        $pIsDrRecommended="X";
-                    }
-                   
-                    if($soapInfo['diagnostic_13_patient'] != null) {
-                        $pIsPxRemarks=$soapInfo['diagnostic_13_patient'];
-                    } else {
-                        $pIsPxRemarks="XX";
-                    }
-
-                    $pOthRemarks="";
-                }
-
-                 //ppdt
-                if($pDiagnostic[$i] == "17"){
-                    if($soapInfo['diagnostic_17_doctor'] != null) {
-                        $pIsDrRecommended=$soapInfo['diagnostic_17_doctor'];
-                    } else {
-                        $pIsDrRecommended="X";
-                    }
-                   
-                    if($soapInfo['diagnostic_17_patient'] != null) {
-                        $pIsPxRemarks=$soapInfo['diagnostic_17_patient'];
-                    } else {
-                        $pIsPxRemarks="XX";
-                    }
-
-                    $pOthRemarks="";
-                }
-
-                 //sputum
-                if($pDiagnostic[$i] == "5"){
-                    if($soapInfo['diagnostic_5_doctor'] != null) {
-                        $pIsDrRecommended=$soapInfo['diagnostic_5_doctor'];
-                    } else {
-                        $pIsDrRecommended="X";
-                    }
-                   
-                    if($soapInfo['diagnostic_5_patient'] != null) {
-                        $pIsPxRemarks=$soapInfo['diagnostic_5_patient'];
-                    } else {
-                        $pIsPxRemarks="XX";
-                    }
-
-                    $pOthRemarks="";
-                }
-
-                //urinalysis
-                if($pDiagnostic[$i] == "2"){
-                    if($soapInfo['diagnostic_2_doctor'] != null) {
-                        $pIsDrRecommended=$soapInfo['diagnostic_2_doctor'];
-                    } else {
-                        $pIsDrRecommended="X";
-                    }
-                   
-                    if($soapInfo['diagnostic_2_patient'] != null) {
-                        $pIsPxRemarks=$soapInfo['diagnostic_2_patient'];
-                    } else {
-                        $pIsPxRemarks="XX";
-                    }
-
-                    $pOthRemarks="";
-                }
-
-                //others
-                if($pDiagnostic[$i] == "99"){
-                    if($soapInfo['diagnostic_99_doctor'] != null) {
-                        $pIsDrRecommended=$soapInfo['diagnostic_99_doctor'];
-                    } else {
-                        $pIsDrRecommended="X";
-                    }
-                   
-                    if($soapInfo['diagnostic_99_patient'] != null) {
-                        $pIsPxRemarks=$soapInfo['diagnostic_99_patient'];
-                    } else {
-                        $pIsPxRemarks="XX";
-                    }
-
-                    $pOthRemarks=$soapInfo['diagnostic_oth_remarks'];
-                }
-
-                insertDiagnosticExamination($pDiagnostic[$i], $pOthRemarks, $pUserId, $pTransNo, $getUpdCnt,$pIsDrRecommended,$pIsPxRemarks);
+            if(isset($soapInfo['saveClientSoap'])){
+                $getUpdCnt = $soapInfo['pUpdCntSoap'];
+                $pTransNo =generateTransNo('SOAP_NO'); //automatically generated
+                insertConsultationPatientInfo($conn, $pCaseNo, $pTransNo, $pHciNo, $pPatientPin, $pPatientType, $pMemPin, $pSoapDate, $pUserId, $pEffYear, $pSoapOtp, $getUpdCnt, $pXPSmodule,$pwithOtp,$pSoapCoPay);
             }
 
-        /*Management */
-        $pManagement=$soapInfo['management'];
-        $pOthMgmtRemarks="";
+            if(isset($soapInfo['updateClientSoap'])){
+                $getUpdCnt = $soapInfo['pUpdCntSoap'];
+                $pTransNo = $soapInfo['pSoapTransNum'];
 
-        if($pManagement != NULL) {
-            for ($i = 0; $i < count($pManagement); $i++) {
+                updateConsultationPatientInfo($conn, $pCaseNo, $pTransNo, $pHciNo, $pPatientPin, $pPatientType, $pMemPin, $pSoapDate, $pUserId, $pEffYear, $pSoapOtp, $getUpdCnt);
+            }
+            /*End Consultation Patient Details*/
 
-                if ($pManagement[$i] == 'X') {
-                    $pOthMgmtRemarks=$soapInfo['management_oth_remarks'];
-                } else {
-                    $pOthMgmtRemarks="";
+            /*Start Subjective/ History of Illness*/
+            $pChiefComplaint=NULL;
+            $pSymptoms=$soapInfo['pChiefComplaint'];
+            $pIllnessHist=$soapInfo['pIllnessHistory'];
+            $pOtherComplaint=$soapInfo['pOtherChiefComplaint'];
+            $pPainSite=$soapInfo['pPainSite'];
+            
+            insertSubjectiveHistory($conn, $pUserId, $pTransNo, $pChiefComplaint, $pIllnessHist, $pOtherComplaint, $getUpdCnt,$pSymptoms,$pPainSite);
+            /*End Subjective/ History of Illness*/
+
+            /*Start Objective/Physical Examination*/
+            /*Part 1: Pertinent Examination*/
+            $pSystolic=$soapInfo['pe_bp_u'];
+            $pDiastolic=$soapInfo['pe_bp_l'];
+            $pHr=$soapInfo['pe_hr'];
+            $pRr=$soapInfo['pe_rr'];
+            
+            if ($soapInfo['txtPhExHeightCm'] != null) {
+                $pHeight = $soapInfo['txtPhExHeightCm'];
+            } else {
+                $pHeight = 0;
+            }
+            $pWeight=$soapInfo['txtPhExWeightKg'];
+            //$pWaist=$soapInfo['pe_waist_cm'];
+            $pTemp = $soapInfo['pe_temp'];
+            $pVision=NULL;
+            $pLength=$soapInfo['txtPhExLengthCm'];
+            $pHeadCirc=$soapInfo['txtPhExHeadCircCm'];
+            //konsulta
+            $pLeftEyeVision=$soapInfo['pe_visual_acuityL'];
+            $pRightEyeVision=$soapInfo['pe_visual_acuityR'];
+            $pWaist=$soapInfo['txtPhExBodyCircWaistCm'];
+            $pHip=$soapInfo['txtPhExBodyCircHipsCm'];
+            $pLimbs=$soapInfo['txtPhExBodyCircLimbsCm'];
+            $pBMI=$soapInfo['txtPhExBMI'];
+            //pZScore=$soapInfo['txtPhExZscoreCm'];
+            $pZScore="";
+            $pSkinThickness=$soapInfo['txtPhExSkinfoldCm'];
+
+            insertObjectivePhysicalExam($conn, $pSystolic, $pDiastolic, $pHr, $pRr, $pHeight, $pWeight, $pTemp, $pUserId, $pTransNo, $pVision, $pLength, $pHeadCirc, $getUpdCnt,$pLeftEyeVision,$pRightEyeVision,$pWaist,$pHip,$pLimbs,$pBMI,$pZScore,$pSkinThickness);
+
+            /*Part 2: Pertinent Findings per System*/
+            $pSkin = $soapInfo['skinExtremities'];
+            $pGenito = $soapInfo['genitourinary'];
+            $pRectal = $soapInfo['rectal'];
+            $pHeent = $soapInfo['heent'];
+            $pChest = $soapInfo['chest'];
+            $pHeart = $soapInfo['heart'];
+            $pAbdomen = $soapInfo['abdomen'];
+            $pNeuro = $soapInfo['neuro'];
+
+            /*A. Heent*/
+            for ($i = 0; $i < count($pHeent); $i++) {
+                if ($pHeent[$i] != '') {
+                    insertPhysicalExamMisc($conn, null, $pHeent[$i], null, null, null, null, null, null, $pTransNo, $pUserId, $getUpdCnt);
+                }
+            }
+
+            /*B. Chest/Lungs*/
+            for ($i = 0; $i < count($pChest); $i++) {
+                if ($pChest[$i] != '') {
+                    insertPhysicalExamMisc($conn, null, null, $pChest[$i], null, null, null, null, null, $pTransNo, $pUserId, $getUpdCnt);
+                }
+            }
+
+            /*C. Heart*/
+            for ($i = 0; $i < count($pHeart); $i++) {
+                if ($pHeart[$i] != '') {
+                    insertPhysicalExamMisc($conn, null, null, null, $pHeart[$i], null, null, null, null, $pTransNo, $pUserId, $getUpdCnt);
+                }
+            }
+
+            /*D. Abdomen*/
+            for ($i = 0; $i < count($pAbdomen); $i++) {
+                if ($pAbdomen[$i] != '') {
+                    insertPhysicalExamMisc($conn, null, null, null, null, $pAbdomen[$i], null, null, null, $pTransNo, $pUserId, $getUpdCnt);
+                }
+            }
+
+            /*E. Genitourinary*/
+            for ($i = 0; $i < count($pGenito); $i++) {
+                if ($pGenito[$i] != '') {
+                    insertPhysicalExamMisc($conn, null, null, null, null, null, null, $pGenito[$i], null, $pTransNo, $pUserId, $getUpdCnt);
+                }
+            }
+
+            /*F. Digital Rectal Examination*/
+            for ($i = 0; $i < count($pRectal); $i++) {
+                if ($pRectal[$i] != '') {
+                    insertPhysicalExamMisc($conn, null, null, null, null, null, null, null, $pRectal[$i], $pTransNo, $pUserId, $getUpdCnt);
+                }
+            }
+
+            /*G. Skin/Extremities*/
+            for ($i = 0; $i < count($pSkin); $i++) {
+                if ($pSkin[$i] != '') {
+                    insertPhysicalExamMisc($conn, $pSkin[$i], null, null, null, null, null, null, null, $pTransNo, $pUserId, $getUpdCnt);
+                }
+            }
+
+            /*H. Neurological*/
+            for ($i = 0; $i < count($pNeuro); $i++) {
+                if ($pNeuro[$i] != '') {
+                    insertPhysicalExamMisc($conn, null, null, null, null, null, $pNeuro[$i], null, null, $pTransNo, $pUserId, $getUpdCnt);
+                }
+            }
+
+            /*Part 3 Remarks*/
+            $pHeentRemarks = $soapInfo['heent_remarks'];
+            $pChestRemarks = $soapInfo['chest_lungs_remarks'];
+            $pHeartRemarks = $soapInfo['heart_remarks'];
+            $pAbdomenRemarks = $soapInfo['abdomen_remarks'];
+            $pGenitoRemarks = $soapInfo['gu_remarks'];
+            $pRectalRemarks = $soapInfo['rectal_remarks'];
+            $pSkinExtremitiesRemarks = $soapInfo['skinExtremities_remarks'];
+            $pNeuroRemarks = $soapInfo['neuro_remarks'];
+
+            insertPhysicalExamMiscRemarks($conn, $pHeentRemarks, $pChestRemarks, $pHeartRemarks, $pAbdomenRemarks, $pGenitoRemarks, $pRectalRemarks, $pSkinExtremitiesRemarks, $pNeuroRemarks, $pTransNo, $pUserId, $getUpdCnt);
+            /*End Objective/Physical Examination*/
+
+            /*Start Assessment/Diagnosis*/
+            $pDiagnosis = $soapInfo['diagnosis'];
+            for ($i = 0; $i < count($pDiagnosis); $i++) {
+                insertAssessmentDiagnosis($conn, $pUserId, $pTransNo, $pDiagnosis[$i], ($i+1), $getUpdCnt);
+            }
+            /*End Assessment/Diagnosis*/
+
+            /*Start Plan/Management*/
+            /*Diagnosis Examination*/
+            $pDiagnostic = $soapInfo['diagnostic'];
+            // if($pDiagnostic != NULL) {
+                for  ($i = 0; $i < count($soapInfo['diagnostic']); $i++) {
+
+                    //cbc
+                    if($pDiagnostic[$i] == "1"){
+                        if($soapInfo['diagnostic_1_doctor'] != null) {
+                            $pIsDrRecommended=$soapInfo['diagnostic_1_doctor'];
+                        } else {
+                            $pIsDrRecommended="X";
+                        }
+                    
+                        if($soapInfo['diagnostic_1_patient'] != null) {
+                            $pIsPxRemarks=$soapInfo['diagnostic_1_patient'];
+                        } else {
+                            $pIsPxRemarks="XX";
+                        }
+
+                        $pOthRemarks="";
+                    }
+
+                    //xray
+                    if($pDiagnostic[$i] == "4"){
+                        if($soapInfo['diagnostic_4_doctor'] != null) {
+                            $pIsDrRecommended=$soapInfo['diagnostic_4_doctor'];
+                        } else {
+                            $pIsDrRecommended="X";
+                        }
+                    
+                        if($soapInfo['diagnostic_4_patient'] != null) {
+                            $pIsPxRemarks=$soapInfo['diagnostic_4_patient'];
+                        } else {
+                            $pIsPxRemarks="XX";
+                        }
+
+                        $pOthRemarks="";
+                    }
+
+                    //creatinine
+                    if($pDiagnostic[$i] == "8"){
+                        if($soapInfo['diagnostic_8_doctor'] != null) {
+                            $pIsDrRecommended=$soapInfo['diagnostic_8_doctor'];
+                        } else {
+                            $pIsDrRecommended="X";
+                        }
+                    
+                        if($soapInfo['diagnostic_8_patient'] != null) {
+                            $pIsPxRemarks=$soapInfo['diagnostic_8_patient'];
+                        } else {
+                            $pIsPxRemarks="XX";
+                        }
+
+                        $pOthRemarks="";
+                    }
+
+                    //ecg
+                    if($pDiagnostic[$i] == "9"){
+                        if($soapInfo['diagnostic_9_doctor'] != null) {
+                            $pIsDrRecommended=$soapInfo['diagnostic_9_doctor'];
+                        } else {
+                            $pIsDrRecommended="X";
+                        }
+                    
+                        if($soapInfo['diagnostic_9_patient'] != null) {
+                            $pIsPxRemarks=$soapInfo['diagnostic_9_patient'];
+                        } else {
+                            $pIsPxRemarks="XX";
+                        }
+
+                        $pOthRemarks="";
+                    }
+
+                    //fbs
+                    if($pDiagnostic[$i] == "7"){
+                        if($soapInfo['diagnostic_7_doctor'] != null) {
+                            $pIsDrRecommended=$soapInfo['diagnostic_7_doctor'];
+                        } else {
+                            $pIsDrRecommended="X";
+                        }
+                    
+                        if($soapInfo['diagnostic_7_patient'] != null) {
+                            $pIsPxRemarks=$soapInfo['diagnostic_7_patient'];
+                        } else {
+                            $pIsPxRemarks="XX";
+                        }
+
+                        $pOthRemarks="";
+                    }
+
+                    //rbs
+                    if($pDiagnostic[$i] == "19"){
+                        if($soapInfo['diagnostic_19_doctor'] != null) {
+                            $pIsDrRecommended=$soapInfo['diagnostic_19_doctor'];
+                        } else {
+                            $pIsDrRecommended="X";
+                        }
+                    
+                        if($soapInfo['diagnostic_19_patient'] != null) {
+                            $pIsPxRemarks=$soapInfo['diagnostic_19_patient'];
+                        } else {
+                            $pIsPxRemarks="XX";
+                        }
+
+                        $pOthRemarks="";
+                    }
+
+                    //fobt
+                    if($pDiagnostic[$i] == "15"){
+                        if($soapInfo['diagnostic_15_doctor'] != null) {
+                            $pIsDrRecommended=$soapInfo['diagnostic_15_doctor'];
+                        } else {
+                            $pIsDrRecommended="X";
+                        }
+                    
+                        if($soapInfo['diagnostic_15_patient'] != null) {
+                            $pIsPxRemarks=$soapInfo['diagnostic_15_patient'];
+                        } else {
+                            $pIsPxRemarks="XX";
+                        }
+
+                        $pOthRemarks="";
+                    }
+
+                    //fecalysis
+                    if($pDiagnostic[$i] == "3"){
+                        if($soapInfo['diagnostic_3_doctor'] != null) {
+                            $pIsDrRecommended=$soapInfo['diagnostic_3_doctor'];
+                        } else {
+                            $pIsDrRecommended="X";
+                        }
+                    
+                        if($soapInfo['diagnostic_3_patient'] != null) {
+                            $pIsPxRemarks=$soapInfo['diagnostic_3_patient'];
+                        } else {
+                            $pIsPxRemarks="XX";
+                        }
+
+                        $pOthRemarks="";
+                    }
+
+                    //hba1c
+                    if($pDiagnostic[$i] == "18"){
+                        if($soapInfo['diagnostic_18_doctor'] != null) {
+                            $pIsDrRecommended=$soapInfo['diagnostic_18_doctor'];
+                        } else {
+                            $pIsDrRecommended="X";
+                        }
+                    
+                        if($soapInfo['diagnostic_18_patient'] != null) {
+                            $pIsPxRemarks=$soapInfo['diagnostic_18_patient'];
+                        } else {
+                            $pIsPxRemarks="XX";
+                        }
+
+                        $pOthRemarks="";
+                    }
+
+                    //lipid profile
+                    if($pDiagnostic[$i] == "6"){
+                        if($soapInfo['diagnostic_6_doctor'] != null) {
+                            $pIsDrRecommended=$soapInfo['diagnostic_6_doctor'];
+                        } else {
+                            $pIsDrRecommended="X";
+                        }
+                    
+                        if($soapInfo['diagnostic_6_patient'] != null) {
+                            $pIsPxRemarks=$soapInfo['diagnostic_6_patient'];
+                        } else {
+                            $pIsPxRemarks="XX";
+                        }
+
+                        $pOthRemarks="";
+                    }
+
+                    //ogtt
+                    if($pDiagnostic[$i] == "14"){
+                        if($soapInfo['diagnostic_14_doctor'] != null) {
+                            $pIsDrRecommended=$soapInfo['diagnostic_14_doctor'];
+                        } else {
+                            $pIsDrRecommended="X";
+                        }
+                    
+                        if($soapInfo['diagnostic_14_patient'] != null) {
+                            $pIsPxRemarks=$soapInfo['diagnostic_14_patient'];
+                        } else {
+                            $pIsPxRemarks="XX";
+                        }
+
+                        $pOthRemarks="";
+                    }
+
+                    //papsmear
+                    if($pDiagnostic[$i] == "13"){
+                        if($soapInfo['diagnostic_13_doctor'] != null) {
+                            $pIsDrRecommended=$soapInfo['diagnostic_13_doctor'];
+                        } else {
+                            $pIsDrRecommended="X";
+                        }
+                    
+                        if($soapInfo['diagnostic_13_patient'] != null) {
+                            $pIsPxRemarks=$soapInfo['diagnostic_13_patient'];
+                        } else {
+                            $pIsPxRemarks="XX";
+                        }
+
+                        $pOthRemarks="";
+                    }
+
+                    //ppdt
+                    if($pDiagnostic[$i] == "17"){
+                        if($soapInfo['diagnostic_17_doctor'] != null) {
+                            $pIsDrRecommended=$soapInfo['diagnostic_17_doctor'];
+                        } else {
+                            $pIsDrRecommended="X";
+                        }
+                    
+                        if($soapInfo['diagnostic_17_patient'] != null) {
+                            $pIsPxRemarks=$soapInfo['diagnostic_17_patient'];
+                        } else {
+                            $pIsPxRemarks="XX";
+                        }
+
+                        $pOthRemarks="";
+                    }
+
+                    //sputum
+                    if($pDiagnostic[$i] == "5"){
+                        if($soapInfo['diagnostic_5_doctor'] != null) {
+                            $pIsDrRecommended=$soapInfo['diagnostic_5_doctor'];
+                        } else {
+                            $pIsDrRecommended="X";
+                        }
+                    
+                        if($soapInfo['diagnostic_5_patient'] != null) {
+                            $pIsPxRemarks=$soapInfo['diagnostic_5_patient'];
+                        } else {
+                            $pIsPxRemarks="XX";
+                        }
+
+                        $pOthRemarks="";
+                    }
+
+                    //urinalysis
+                    if($pDiagnostic[$i] == "2"){
+                        if($soapInfo['diagnostic_2_doctor'] != null) {
+                            $pIsDrRecommended=$soapInfo['diagnostic_2_doctor'];
+                        } else {
+                            $pIsDrRecommended="X";
+                        }
+                    
+                        if($soapInfo['diagnostic_2_patient'] != null) {
+                            $pIsPxRemarks=$soapInfo['diagnostic_2_patient'];
+                        } else {
+                            $pIsPxRemarks="XX";
+                        }
+
+                        $pOthRemarks="";
+                    }
+
+                    //others
+                    if($pDiagnostic[$i] == "99"){
+                        if($soapInfo['diagnostic_99_doctor'] != null) {
+                            $pIsDrRecommended=$soapInfo['diagnostic_99_doctor'];
+                        } else {
+                            $pIsDrRecommended="X";
+                        }
+                    
+                        if($soapInfo['diagnostic_99_patient'] != null) {
+                            $pIsPxRemarks=$soapInfo['diagnostic_99_patient'];
+                        } else {
+                            $pIsPxRemarks="XX";
+                        }
+
+                        $pOthRemarks=$soapInfo['diagnostic_oth_remarks'];
+                    }
+
+                    insertDiagnosticExamination($conn, $pDiagnostic[$i], $pOthRemarks, $pUserId, $pTransNo, $getUpdCnt,$pIsDrRecommended,$pIsPxRemarks);
                 }
 
-                insertManagement($pManagement[$i], $pUserId, $pTransNo, $pOthMgmtRemarks, $getUpdCnt);
+            /*Management */
+            $pManagement=$soapInfo['management'];
+            $pOthMgmtRemarks="";
+
+            if($pManagement != NULL) {
+                for ($i = 0; $i < count($pManagement); $i++) {
+
+                    if ($pManagement[$i] == 'X') {
+                        $pOthMgmtRemarks=$soapInfo['management_oth_remarks'];
+                    } else {
+                        $pOthMgmtRemarks="";
+                    }
+
+                    insertManagement($conn, $pManagement[$i], $pUserId, $pTransNo, $pOthMgmtRemarks, $getUpdCnt);
+                }
             }
-        }
-        else{
-            insertManagement("0", $pUserId, $pTransNo, $pOthMgmtRemarks, $getUpdCnt);
-        }
+            else{
+                insertManagement($conn, "0", $pUserId, $pTransNo, $pOthMgmtRemarks, $getUpdCnt);
+            }
 
-        /*Advice */        
-        // if ($soapInfo['advice_remarks'] != NULL || $soapInfo['advice_remarks'] != ""){
-        //     $pAdviceRemarks=$soapInfo['advice_remarks'];
-        // } else {
-        //     $pAdviceRemarks="NOT APPLICABLE";
-        // }
+    /*=============================================================================*/
+            /*Start Medicine*/
+            /*Medicine*/
+            $pDoctorName = $soapInfo['pPrescDoctor'];
+            $pDrugCodeMeds = $soapInfo['pDrugCodeMeds'];
+            $pGenCodeMeds = $soapInfo['pGenCodeMeds'];
+            $pSaltMed = $soapInfo['pSaltCodeMeds'];
+            $pStrengthMeds = $soapInfo['pStrengthCodeMeds'];
+            $pFormMeds = $soapInfo['pFormCodeMeds'];
+            $pUnitMed = $soapInfo['pUnitCodeMeds'];
+            $pPackageMeds = $soapInfo['pPackageCodeMeds'];
+            $pQuantityMeds = $soapInfo['pQtyMeds'];
+            $pUnitPriceMeds = $soapInfo['pUnitPriceMeds'];
+            $pCopayMeds = "";
+            $pTotalAmtPriceMeds = $soapInfo['pTotalPriceMeds'];
+            $pInsQtyMeds = $soapInfo['pQtyInsMeds'];
+            $pInsStrengthMeds = $soapInfo['pStrengthInsMeds'];
+            $pInsFreqMeds = strtoupper($soapInfo['pFrequencyInsMeds']);
+            $pGenericOtherMeds = $soapInfo['pOtherMeds'];
 
-        // insertAdvice($pAdviceRemarks,$pUserId, $pTransNo, $getUpdCnt);
-        /*End Plan/Management*/
+            $pMedsCategory = $soapInfo['pDrugCategory']; //v1.2.1.1
 
-        /*Start Essential Services Laboratory Results*/
-        /*Results - Complete Blood Count (CBC)*/
-        $pIsApplicableCbc=$soapInfo['diagnostic_1_status'];
-        $pReferralFacilityCBC=$soapInfo['diagnostic_1_accre_diag_fac'];
-        if($soapInfo['diagnostic_1_lab_exam_date'] != NULL){
-            $pLabDate = date('Y-m-d',strtotime($soapInfo['diagnostic_1_lab_exam_date']));
-        } else{
-            $pLabDate = NULL;
-        }
-        $pLabFeeCBC = $soapInfo['diagnostic_1_lab_fee'];
-        $pCoPayCBC = NULL;
-        $pHematocrit = $soapInfo['diagnostic_1_hematocrit'];
-        $pHemoglobinG = $soapInfo['diagnostic_1_hemoglobin_gdL'];
-        $pHemoglobinMmol = $soapInfo['diagnostic_1_hemoglobin_mmolL'];
-        $pMhcPg = $soapInfo['diagnostic_1_mhc_pgcell'];
-        $pMhcFmol = $soapInfo['diagnostic_1_mhc_fmolcell'];
-        $pMchcGhb = $soapInfo['diagnostic_1_mchc_gHbdL'];
-        $pMchcMmol = $soapInfo['diagnostic_1_mchc_mmolHbL'];
-        $pMcvUm = $soapInfo['diagnostic_1_mcv_um'];
-        $pMcvFl = $soapInfo['diagnostic_1_mcv_fL'];
-        $pWbc1000 = $soapInfo['diagnostic_1_wbc_cellsmmuL'];
-        $pWbc10 = $soapInfo['diagnostic_1_wbc_cellsL'];
-        $pMyelocyte = $soapInfo['diagnostic_1_myelocyte'];
-        $pNeutrophilsBnd = $soapInfo['diagnostic_1_neutrophils_bands'];
-        $pNeurophilsSeg = $soapInfo['diagnostic_1_neutrophils_segmenters'];
-        $pLymphocytes = $soapInfo['diagnostic_1_lymphocytes'];
-        $pMonocytes = $soapInfo['diagnostic_1_monocytes'];
-        $pEosinophils = $soapInfo['diagnostic_1_eosinophils'];
-        $pBasophils = $soapInfo['diagnostic_1_basophils'];
-        $pPlatelet = $soapInfo['diagnostic_1_platelet'];
-        // insertResultsCBC($pCaseNo,$pLabDate,$pLabFeeCBC,$pCoPayCBC, $pReferralFacilityCBC, $pHematocrit, $pHemoglobinG, $pHemoglobinMmol, $pMhcPg, $pMhcFmol, $pMchcGhb, $pMchcMmol, $pMcvUm, $pMcvFl, $pWbc1000, $pWbc10, $pMyelocyte,
-            // $pNeutrophilsBnd, $pNeurophilsSeg, $pLymphocytes, $pMonocytes, $pEosinophils, $pBasophils, $pPlatelet, $pTransNo, $pUserId, $getUpdCnt, $pXPSmodule, $pIsApplicableCbc);
-
-        /* Results - Urinalysis */
-        $pIsApplicableUrine=$soapInfo['diagnostic_2_status'];
-        $pReferralFacilityUrinalysis=$soapInfo['diagnostic_2_accre_diag_fac'];
-        if($soapInfo['diagnostic_2_lab_exam_date'] != NULL){
-            $pLabDateUrinalysis = date('Y-m-d',strtotime($soapInfo['diagnostic_2_lab_exam_date']));
-        } else{
-            $pLabDateUrinalysis = NULL;
-        }
-        $pLabFeeUrinalysis = $soapInfo['diagnostic_2_lab_fee'];
-        $pCoPayUrinalysis = NULL;
-        $pGravity = $soapInfo['diagnostic_2_sg'];
-        $pAppearance = $soapInfo['diagnostic_2_appearance'];
-        $pColor = $soapInfo['diagnostic_2_color'];
-        $pGlucose = $soapInfo['diagnostic_2_glucose'];
-        $pProteins = $soapInfo['diagnostic_2_proteins'];
-        $pKetones = $soapInfo['diagnostic_2_ketones'];
-        $pPh = $soapInfo['diagnostic_2_pH'];
-        $pRbCells = $soapInfo['diagnostic_2_rbc'];
-        $pWbCells = $soapInfo['diagnostic_2_wbc'];
-        $pBacteria = $soapInfo['diagnostic_2_bacteria'];
-        $pCrystals = $soapInfo['diagnostic_2_crystals'];
-        $pBladderCell = $soapInfo['diagnostic_2_bladder_cells'];
-        $pSquamousCell = $soapInfo['diagnostic_2_squamous_cells'];
-        $pTubularCell = $soapInfo['diagnostic_2_tubular_cells'];
-        $pBroadCasts = $soapInfo['diagnostic_2_broad_casts'];
-        $pEpithelialCast = $soapInfo['diagnostic_2_epithelial_cell_casts'];
-        $pGranularCast = $soapInfo['diagnostic_2_granular_casts'];
-        $pHyalineCast = $soapInfo['diagnostic_2_hyaline_casts'];
-        $pRbcCast = $soapInfo['diagnostic_2_rbc_casts'];
-        $pWaxyCast = $soapInfo['diagnostic_2_waxy_casts'];
-        $pWcCast = $soapInfo['diagnostic_2_wc_casts'];
-        $pAlbumin = $soapInfo['diagnostic_2_alb'];
-        $pPusCells = $soapInfo['diagnostic_2_pus'];
-        // insertResultsUrinalysis($pCaseNo,$pLabDateUrinalysis,$pLabFeeUrinalysis, $pCoPayUrinalysis, $pReferralFacilityUrinalysis, $pGravity, $pAppearance, $pColor, $pGlucose, $pProteins, $pKetones, $pPh, $pRbCells, $pWbCells, $pBacteria, $pCrystals,
-            // $pBladderCell, $pSquamousCell, $pTubularCell, $pBroadCasts, $pEpithelialCast, $pGranularCast, $pHyalineCast, $pRbcCast, $pWaxyCast, $pWcCast, $pAlbumin, $pPusCells, $pTransNo, $pUserId, $getUpdCnt, $pXPSmodule,$pIsApplicableUrine);
-
-        /* Results - Fecalysis */
-        $pIsApplicableFeca=$soapInfo['diagnostic_3_status'];
-        $pReferralFacilityFecalysis=$soapInfo['diagnostic_3_accre_diag_fac'];
-        if($soapInfo['diagnostic_3_lab_exam_date'] != NULL){
-            $pLabDateFecalysis = date('Y-m-d',strtotime($soapInfo['diagnostic_3_lab_exam_date']));
-        } else{
-            $pLabDateFecalysis = NULL;
-        }
-        $pLabFeeFecalysis = $soapInfo['diagnostic_3_lab_fee'];
-        $pCoPayFecalysis = NULL;
-        $pColorFecalysis = $soapInfo['diagnostic_3_color'];
-        $pConsistency = $soapInfo['diagnostic_3_consistency'];
-        $pRBC = $soapInfo['diagnostic_3_rbc'];
-        $pWBC = $soapInfo['diagnostic_3_wbc'];
-        $pOva = $soapInfo['diagnostic_3_ova'];
-        $pParasite = $soapInfo['diagnostic_3_parasite'];
-        $pBlood = $soapInfo['diagnostic_3_blood'];
-        $pOccultBlood = $soapInfo['diagnostic_3_occult_blood'];
-        $pPusCell = $soapInfo['diagnostic_3_pus'];
-        // insertResultsFecalysis($pCaseNo,$pLabDateFecalysis, $pLabFeeFecalysis, $pCoPayFecalysis, $pReferralFacilityFecalysis, $pColorFecalysis, $pConsistency, $pRBC, $pWBC, $pOva, $pParasite, $pBlood, $pOccultBlood, $pPusCell, $pTransNo, $pUserId, $getUpdCnt, $pXPSmodule,$pIsApplicableFeca);
-
-        /* Results - Chest X-Ray */
-        $pIsApplicableXray=$soapInfo['diagnostic_4_status'];
-        $pReferralFacilityXray=$soapInfo['diagnostic_4_accre_diag_fac'];
-        if($soapInfo['diagnostic_4_lab_exam_date'] != NULL){
-            $pLabDateXray = date('Y-m-d',strtotime($soapInfo['diagnostic_4_lab_exam_date']));
-        } else{
-            $pLabDateXray = NULL;
-        }
-        $pLabFeeXray = $soapInfo['diagnostic_4_lab_fee'];
-        $pCoPayXray = NULL;
-        $pFindingsXray = $soapInfo['diagnostic_4_chest_findings'];
-        $pRemarkFindings = $soapInfo['diagnostic_4_chest_findings_remarks'];
-        $pObservation = $soapInfo['pObservation'];
-        $pRemarkObservation = $soapInfo['pObservationRemarks'];
-        // insertResultsChestXray($pCaseNo,$pLabDateXray, $pLabFeeXray, $pCoPayXray, $pReferralFacilityXray, $pFindingsXray, $pRemarkFindings, $pObservation, $pRemarkObservation, $pTransNo, $pUserId, $getUpdCnt, $pXPSmodule,$pIsApplicableXray);
-
-        /* Results - Sputum */
-        $pIsApplicableSputum=$soapInfo['diagnostic_5_status'];
-        $pReferralFacilitySputum=$soapInfo['diagnostic_5_accre_diag_fac'];
-        if($soapInfo['diagnostic_5_lab_exam_date'] != NULL){
-            $pLabDateSputum = date('Y-m-d',strtotime($soapInfo['diagnostic_5_lab_exam_date']));
-            $pDataCollect = "1";
-        } else{
-            $pLabDateSputum = NULL;
-            $pDataCollect = "X";
-        }
-        $pLabFeeSputum = $soapInfo['diagnostic_5_lab_fee'];
-        $pCoPaySputum = NULL;
-        $pFindingsSputum = $soapInfo['diagnostic_5_sputum'];
-        $pRemarksSputum = $soapInfo['diagnostic_5_sputum_remarks'];
-        $pNoPlusses = $soapInfo['diagnostic_5_plusses'];
-        // insertResultsSputum($pCaseNo,$pLabDateSputum, $pLabFeeSputum, $pCoPaySputum, $pReferralFacilitySputum, $pFindingsSputum, $pRemarksSputum, $pNoPlusses, $pTransNo, $pUserId, $getUpdCnt, $pXPSmodule,$pIsApplicableSputum,$pDataCollect);
-
-        /* Results - Lipid Profile */
-        $pIsApplicableLipid=$soapInfo['diagnostic_6_status'];
-        $pReferralFacilityLipid=$soapInfo['diagnostic_6_accre_diag_fac'];
-        if($soapInfo['diagnostic_6_lab_exam_date'] != NULL){
-            $pLabDateLipid = date('Y-m-d',strtotime($soapInfo['diagnostic_6_lab_exam_date']));
-        } else{
-            $pLabDateLipid = NULL;
-        }
-        $pLabFeeLipid = $soapInfo['diagnostic_6_lab_fee'];
-        $pCoPayLipid = NULL;
-        $pLdl = $soapInfo['diagnostic_6_ldl'];
-        $pHdl = $soapInfo['diagnostic_6_hdl'];
-        $pTotal = NULL;
-        $pCholesterol = $soapInfo['diagnostic_6_cholesterol'];
-        $pTriglycerides = $soapInfo['diagnostic_6_triglycerides'];
-        // insertResultsLipidProfile($pCaseNo,$pLabDateLipid, $pLabFeeLipid, $pCoPayLipid, $pReferralFacilityLipid, $pLdl, $pHdl, "", $pCholesterol, $pTriglycerides, $pTransNo, $pUserId, $getUpdCnt, $pXPSmodule,$pIsApplicableLipid);
-
-        /* Results - Fasting Blood Sugar (FBS) */
-        $pIsApplicableFbs = $soapInfo['diagnostic_7_status'];
-        $pReferralFacilityFBS = $soapInfo['diagnostic_7_accre_diag_fac'];
-        if($soapInfo['diagnostic_7_lab_exam_date'] != NULL){
-            $pLabDateFBS = date('Y-m-d',strtotime($soapInfo['diagnostic_7_lab_exam_date']));
-        } else{
-            $pLabDateFBS = NULL;
-        }
-        $pLabFeeFBS = $soapInfo['diagnostic_7_lab_fee'];
-        $pCoPayFBS = NULL;
-        $pGlucoseMg = $soapInfo['diagnostic_7_glucose_mgdL'];
-        $pGlucosemmol = $soapInfo['diagnostic_7_glucose_mmolL'];
-        // insertResultsFBS($pCaseNo,$pLabDateFBS, $pLabFeeFBS, $pCoPayFBS, $pReferralFacilityFBS, $pGlucoseMg, $pGlucosemmol, $pTransNo, $pUserId, $getUpdCnt, $pXPSmodule,$pIsApplicableFbs);
+            $pOthMedDrugGroup = $soapInfo['pOthMedDrugGrouping']; //v01.04.00.202201
 
 
-        /* Results - Random Blood Sugar (RBS) */
-        $pIsApplicableRbs = $soapInfo['diagnostic_19_status'];
-        $pReferralFacilityRBS = $soapInfo['diagnostic_19_accre_diag_fac'];
-        if($soapInfo['diagnostic_19_lab_exam_date'] != NULL){
-            $pLabDateRBS = date('Y-m-d',strtotime($soapInfo['diagnostic_19_lab_exam_date']));
-        } else{
-            $pLabDateRBS = NULL;
-        }
-        $pLabFeeRBS = $soapInfo['diagnostic_19_lab_fee'];
-        $pCoPayRBS = NULL;
-        $pGlucoseMgRBS = $soapInfo['diagnostic_19_glucose_mgdL'];
-        $pGlucosemmolRBS = $soapInfo['diagnostic_19_glucose_mmolL'];
-        //insertResultsRBS($pCaseNo,$pLabDateRBS, $pLabFeeRBS, $pCoPayFBS, $pReferralFacilityRBS, $pGlucoseMgRBS, $pGlucosemmolRBS, $pTransNo, $pUserId, $getUpdCnt, $pXPSmodule,$pIsApplicableRbs);
-        
+            //Dispensing
+            $pIsMedsDispensed = $soapInfo['pIsDispensed'];
+            $pChkMedsDispensedDate = $soapInfo['pDispensedDate'];       
+            $pMedsDispensingPersonnel = $soapInfo['pDispensingPersonnel'];
 
-        /* Results - Electrocardiogram (ECG) */
-        $pIsApplicableEcg = strtoupper($soapInfo['diagnostic_9_status']);
-        $pReferralFacilityECG = strtoupper($soapInfo['diagnostic_9_accre_diag_fac']);
-        if($soapInfo['diagnostic_9_lab_exam_date'] != NULL){
-            $pLabDateECG = date('Y-m-d',strtotime($soapInfo['diagnostic_9_lab_exam_date']));
-        } else{
-            $pLabDateECG = NULL;
-        }
-        $pLabFeeECG = $soapInfo['diagnostic_9_lab_fee'];
-        $pCoPayECG = NULL;
-        $pFindingsECG = $soapInfo['diagnostic_9_ecg'];
-        $pRemarksECG = $soapInfo['diagnostic_9_ecg_remarks'];
-        //insertResultsECG($pCaseNo,$pLabDateECG, $pLabFeeECG, $pCoPayECG, $pReferralFacilityECG, $pFindingsECG, $pRemarksECG, $pTransNo, $pUserId, $getUpdCnt, $pXPSmodule,$pIsApplicableEcg);
+            //processing
+            $pApplicable = $soapInfo['medsStatus'];
 
-        /* Results - Pap Smear */
-        $pIsApplicablePaps = strtoupper($soapInfo['diagnostic_13_status']);
-        $pReferralFacilityPaps = strtoupper($soapInfo['diagnostic_13_accre_diag_fac']);
-        if($soapInfo['diagnostic_13_lab_exam_date'] != NULL){
-            $pLabDatePapsSmear = date('Y-m-d',strtotime($soapInfo['diagnostic_13_lab_exam_date']));
-        } else{
-            $pLabDatePapsSmear = NULL;
-        }
-        $pLabFeePapsSmear = $soapInfo['diagnostic_13_lab_fee'];
-        $pCoPayPapsSmear = NULL;
-        $pFindingsPapsSmear = $soapInfo['diagnostic_13_papsSmearFindings'];
-        $pImpressionPapsSmear = $soapInfo['diagnostic_13_papsSmearImpression'];
-        // insertResultsPapsSmear($pCaseNo,$pLabDatePapsSmear,$pLabFeePapsSmear,$pCoPayPapsSmear,$pReferralFacilityPaps, $pFindingsPapsSmear,$pImpressionPapsSmear,$pTransNo, $pUserId, $getUpdCnt,$pXPSmodule,$pIsApplicablePaps);
-
-        /* Results - Oral Glucose Tolerance Test (OGTT) */
-        $pIsApplicableOgtt = strtoupper($soapInfo['diagnostic_14_status']);
-        $pReferralFacilityOGTT = strtoupper($soapInfo['diagnostic_14_accre_diag_fac']);
-        if($soapInfo['diagnostic_14_lab_exam_date'] != NULL){
-            $pLabDateOGTT = date('Y-m-d',strtotime($soapInfo['diagnostic_14_lab_exam_date']));
-        } else{
-            $pLabDateOGTT = NULL;
-        }
-        $pLabFeeOGTT = $soapInfo['diagnostic_14_lab_fee'];
-        $pCoPayOGTT = NULL;
-        $pFastingMg = $soapInfo['diagnostic_14_fasting_mg'];
-        $pFastingMmol = $soapInfo['diagnostic_14_fasting_mmol'];
-        $pOgttOneHrMg= $soapInfo['diagnostic_14_oneHr_mg'];
-        $pOgttOneHrMmol = $soapInfo['diagnostic_14_oneHr_mmol'];
-        $pOgttTwoHrsMg = $soapInfo['diagnostic_14_twoHr_mg'];
-        $pOgttTwoHrsMmol = $soapInfo['diagnostic_14_twoHr_mmol'];
-        // insertResultsOGTT($pCaseNo, $pLabDateOGTT,$pLabFeeOGTT,$pCoPayOGTT,$pReferralFacilityOGTT,$pFastingMg,$pFastingMmol,$pOgttOneHrMg,$pOgttOneHrMmol,$pOgttTwoHrsMg,$pOgttTwoHrsMmol,$pTransNo, $pUserId, $getUpdCnt,$pXPSmodule, $pIsApplicableOgtt);
-        
-       
-
-        /*Fecal Occult Blood Test (FOBT)*/  //ekonsulta
-        $pIsApplicableFobt = strtoupper($soapInfo['diagnostic_15_status']);
-        $pReferralFacilityFobt = strtoupper($soapInfo['diagnostic_15_accre_diag_fac']);
-        if($soapInfo['diagnostic_15_lab_exam_date'] != NULL){
-            $pLabDateFobt = date('Y-m-d',strtotime($soapInfo['diagnostic_15_lab_exam_date']));
-        } else{
-            $pLabDateFobt = NULL;
-        }
-               
-        $pLabFeeFobt = $soapInfo['diagnostic_15_lab_fee'];
-        $pCoPayFobt = NULL;
-        $pFindingsFobt = $soapInfo['diagnostic_15_fobt'];
-        // insertResultsFOBT($pCaseNo, $pLabDateFobt, $pLabFeeFobt, $pCoPayFobt,$pReferralFacilityFobt,$pFindingsFobt,$pTransNo, $pUserId, $getUpdCnt,$pXPSmodule,$pIsApplicableFobt);
-
-        /*HbA1c*/ //ekonsulta
-        $pIsApplicableHbA1c = strtoupper($soapInfo['diagnostic_18_status']);
-        $pReferralFacilityHbA1c = strtoupper($soapInfo['diagnostic_18_accre_diag_fac']);
-        if($soapInfo['diagnostic_18_lab_exam_date'] != NULL){
-            $pLabDateHbA1c = date('Y-m-d',strtotime($soapInfo['diagnostic_18_lab_exam_date']));
-        } else{
-            $pLabDateHbA1c = NULL;
-        }
-              
-        $pLabFeeHbA1c = $soapInfo['diagnostic_18_lab_fee'];
-        $pCoPayHbA1c = NULL;
-        $pFindingsHbA1c = $soapInfo['diagnostic_18_hba1c_mmol'];
-        // insertResultsHbA1c($pCaseNo, $pLabDateHbA1c, $pLabFeeHbA1c, $pCoPayHbA1c,$pReferralFacilityHbA1c,$pFindingsHbA1c,$pTransNo, $pUserId, $getUpdCnt,$pXPSmodule,$pIsApplicableHbA1c);
-
-        /*Creatinine*/ //ekonsulta
-        $pIsApplicableCreatinine = strtoupper($soapInfo['diagnostic_8_status']);
-        $pReferralFacilityCreatinine = strtoupper($soapInfo['diagnostic_8_accre_diag_fac']);
-        if($soapInfo['diagnostic_8_lab_exam_date'] != NULL){
-            $pLabDateCreatinine = date('Y-m-d',strtotime($soapInfo['diagnostic_8_lab_exam_date']));
-        } else{
-            $pLabDateCreatinine = NULL;
-        }
-
-        $pLabFeeCreatinine = $soapInfo['diagnostic_8_lab_fee'];
-        $pCoPayCreatinine = NULL;
-        $pFindingsCreatinine = $soapInfo['diagnostic_8_creatinine_mgdl'];
-        // insertResultsCreatinine($pCaseNo, $pLabDateCreatinine, $pLabFeeCreatinine, $pCoPayCreatinine,$pReferralFacilityCreatinine,$pFindingsCreatinine,$pTransNo, $pUserId, $getUpdCnt,$pXPSmodule,$pIsApplicableCreatinine);
-
-
-        /*PPD Test (Tuberculosis)*/ //ekonsulta
-        $pIsApplicablePddt = strtoupper($soapInfo['diagnostic_17_status']);
-        $pReferralFacilityPddt = strtoupper($soapInfo['diagnostic_17_accre_diag_fac']);
-        if($soapInfo['diagnostic_17_lab_exam_date'] != NULL){
-            $pLabDatePddt = date('Y-m-d',strtotime($soapInfo['diagnostic_17_lab_exam_date']));
-        } else{
-            $pLabDatePddt = NULL;
-        }
-     
-        $pLabFeePddt  = $soapInfo['diagnostic_17_lab_fee'];
-        $pCoPayPddt = NULL;
-        $pFindingsPddt  = $soapInfo['diagnostic_17_ppdt'];
-        // insertResultsPPDT($pCaseNo, $pLabDatePddt, $pLabFeePddt, $pCoPayPddt,$pReferralFacilityPddt,$pFindingsPddt,$pTransNo, $pUserId, $getUpdCnt,$pXPSmodule,$pIsApplicablePddt);
-
-        /*Others*/ //ekonsulta
-        $pIsApplicableOth = strtoupper($soapInfo['diagnostic_99_status']);
-        $pReferralFacilityOth = strtoupper($soapInfo['diagnostic_99_accre_diag_fac']);
-        if($soapInfo['diagnostic_99_lab_exam_date'] != NULL){
-            $pLabDateOth = date('Y-m-d',strtotime($soapInfo['diagnostic_99_lab_exam_date']));
-        } else{
-            $pLabDateOth = NULL;
-        }
-     
-        $pLabFeeOth  = $soapInfo['diagnostic_99_lab_fee'];
-        $pCoPayOth = NULL;
-        $pFindingsOthExam  = $soapInfo['diagnostic_99_oth1'];
-        $pOthDiagExam  = $soapInfo['diagnostic_oth_remarks'];
-        // insertResultsOthersDiagExam($pCaseNo, $pLabDateOth, $pLabFeeOth, $pCoPayOth,$pReferralFacilityOth,$pOthDiagExam,$pFindingsOthExam,$pTransNo, $pUserId, $getUpdCnt,$pXPSmodule,$pIsApplicableOth);
-  /*End Laboratory Results*/
-      
-/*=============================================================================*/
-        /*Start Medicine*/
-        /*Medicine*/
-        $pDoctorName = $soapInfo['pPrescDoctor'];
-        $pDrugCodeMeds = $soapInfo['pDrugCodeMeds'];
-        $pGenCodeMeds = $soapInfo['pGenCodeMeds'];
-        $pSaltMed = $soapInfo['pSaltCodeMeds'];
-        $pStrengthMeds = $soapInfo['pStrengthCodeMeds'];
-        $pFormMeds = $soapInfo['pFormCodeMeds'];
-        $pUnitMed = $soapInfo['pUnitCodeMeds'];
-        $pPackageMeds = $soapInfo['pPackageCodeMeds'];
-        $pQuantityMeds = $soapInfo['pQtyMeds'];
-        $pUnitPriceMeds = $soapInfo['pUnitPriceMeds'];
-        $pCopayMeds = "";
-        $pTotalAmtPriceMeds = $soapInfo['pTotalPriceMeds'];
-        $pInsQtyMeds = $soapInfo['pQtyInsMeds'];
-        $pInsStrengthMeds = $soapInfo['pStrengthInsMeds'];
-        $pInsFreqMeds = strtoupper($soapInfo['pFrequencyInsMeds']);
-        $pGenericOtherMeds = $soapInfo['pOtherMeds'];
-
-        $pMedsCategory = $soapInfo['pDrugCategory']; //v1.2.1.1
-
-        $pOthMedDrugGroup = $soapInfo['pOthMedDrugGrouping']; //v01.04.00.202201
-
-
-        //Dispensing
-        $pIsMedsDispensed = $soapInfo['pIsDispensed'];
-        $pChkMedsDispensedDate = $soapInfo['pDispensedDate'];       
-        $pMedsDispensingPersonnel = $soapInfo['pDispensingPersonnel'];
-
-        //processing
-        $pApplicable = $soapInfo['medsStatus'];
-
-        // if($pApplicable == "Y") {    
-        //     for ($i = 0; $i < count($pIsMedsDispensed); $i++) {
-        //         if($pChkMedsDispensedDate[$i] != ""){
-        //             $pMedsDispensedDate = date('Y-m-d', strtotime($pChkMedsDispensedDate[$i]));
-        //         } else {
-        //             $pMedsDispensedDate = NULL;
-        //         }          
-
-        //         insertMedicine($pDrugCodeMeds[$i], $pGenCodeMeds[$i], $pStrengthMeds[$i], $pFormMeds[$i], $pPackageMeds[$i],
-        //             $pQuantityMeds[$i], $pUnitPriceMeds[$i], $pCopayMeds, $pTotalAmtPriceMeds[$i], $pInsQtyMeds[$i], $pInsStrengthMeds[$i], $pInsFreqMeds[$i],
-        //             $pCaseNo, $pTransNo, $pUserId, $getUpdCnt, $pXPSmodule, $pDoctorName, $pApplicable,$pGenericOtherMeds[$i], $pSaltMed[$i], $pUnitMed[$i],"", $pIsMedsDispensed[$i], $pMedsDispensedDate,$pMedsDispensingPersonnel, $pMedsCategory[$i], $pOthMedDrugGroup[$i]);
-        //     }
-        // }
-        // else{
-            insertMedicine("NOMED0000000000000000000000000", "NOMED", "00000", "00000", "00000",
+            insertMedicine($conn, "NOMED0000000000000000000000000", "NOMED", "00000", "00000", "00000",
                 NULL, NULL, NULL,NULL, NULL, "N/A", "N/A",
-                $pCaseNo, $pTransNo, $pUserId, $getUpdCnt, $pXPSmodule, NULL, $pApplicable, "","00000", "00000", "", "N",NULL,NULL,"-","");
-        // }
+                $pCaseNo, $pTransNo, $pUserId, $getUpdCnt, $pXPSmodule, NULL, "N", "","00000", "00000", "", "N",NULL,NULL,"-","");
 
        
-        /*End Medicine*/
+            /*End Medicine*/
 
-        $conn->commit();
+            $conn->commit();
 
-        echo '<script>alert("Successfully Saved the Record."); window.location="consultation_list_of_all_patients.php";</script>';
-
+            echo '<script>alert("Successfully Saved the Consultation Record."); window.location="consultation_list_of_all_patients.php";</script>';
+        } else {
+            throw new Exception("Consultation: Failed to start transaction.");
+        }
 
     } catch (PDOException $e) {
-        $conn->rollBack();
-        echo "Error: saveSOAP - " . $e->getMessage();
-        echo '<script>alert("Error: saveSOAP - '.$e->getMessage().'");</script>';
+        if ($conn->inTransaction()) {
+            $conn->rollBack();
+        } 
+        echo '<script>alert("Error in Consultation : '.$e->getMessage().'");</script>';
+    } finally {
+        $conn = null;
     }
 
-    $conn = null;
 }
 
 /*Update Consultation - Patient Information Sub-module*/
-function updateConsultationPatientInfo($pCaseNo, $pTransNo, $pHciNo, $pPatientPin, $pPatientType, $pMemPin, $pSoapDate, $pUserId, $pEffYear, $getUpdCnt){
+function updateConsultationPatientInfo($conn, $pCaseNo, $pTransNo, $pHciNo, $pPatientPin, $pPatientType, $pMemPin, $pSoapDate, $pUserId, $pEffYear, $getUpdCnt){
     $ini = parse_ini_file("config.ini");
 
     try {
-        $conn = new PDO("mysql:host=".$ini["DBSERVER"].";dbname=".$ini["EPCB"], $ini['APPUSERNAME'], $ini['APPPASSWORD']);
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        // $conn = new PDO("mysql:host=".$ini["DBSERVER"].";dbname=".$ini["EPCB"], $ini['APPUSERNAME'], $ini['APPPASSWORD']);
+        // $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         $stmt = $conn->prepare("UPDATE ".$ini['EPCB'].".TSEKAP_TBL_SOAP
                                     SET HCI_NO = :hciNo,
@@ -8183,21 +7885,19 @@ function updateConsultationPatientInfo($pCaseNo, $pTransNo, $pHciNo, $pPatientPi
         $stmt->execute();
 
     } catch (PDOException $e) {
-        $conn->rollBack();
-        echo "Error: C01" . $e->getMessage();
+        // $conn->rollBack();
+        // echo "Error: C01" . $e->getMessage();
         echo '<script>alert("Error: C01'.$e->getMessage().'");</script>';
     }
 
-    $conn = null;
+    // $conn = null;
 }
 
 /*Insert Consultation - Patient Information Sub-module*/
-function insertConsultationPatientInfo($pCaseNo, $pTransNo, $pHciNo, $pPatientPin, $pPatientType, $pMemPin, $pSoapDate, $pUserId, $pEffYear, $pSoapOtp, $getUpdCnt, $pXPSmodule,$pwithOtp,$pSoapCoPay){
+function insertConsultationPatientInfo($conn, $pCaseNo, $pTransNo, $pHciNo, $pPatientPin, $pPatientType, $pMemPin, $pSoapDate, $pUserId, $pEffYear, $pSoapOtp, $getUpdCnt, $pXPSmodule,$pwithOtp,$pSoapCoPay){
     $ini = parse_ini_file("config.ini");
 
     try {
-        $conn = new PDO("mysql:host=".$ini["DBSERVER"].";dbname=".$ini["EPCB"], $ini['APPUSERNAME'], $ini['APPPASSWORD']);
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         $stmt = $conn->prepare("INSERT INTO ".$ini['EPCB'].".TSEKAP_TBL_SOAP(
                         CASE_NO, TRANS_NO, HCI_NO, PX_PIN, PX_TYPE, MEM_PIN, SOAP_DATE, SOAP_BY,DATE_ADDED,EFF_YEAR,SOAP_OTP,UPD_CNT,XPS_MODULE,WITH_ATC,CO_PAY) 
@@ -8234,21 +7934,15 @@ function insertConsultationPatientInfo($pCaseNo, $pTransNo, $pHciNo, $pPatientPi
         $stmt->execute();
 
     } catch (PDOException $e) {
-        $conn->rollBack();
-        echo "Error: C01" . $e->getMessage();
         echo '<script>alert("Error: C01'.$e->getMessage().'");</script>';
     }
-
-    $conn = null;
 }
 
 /*Subjective/ History of Illness Sub-module*/
-function insertSubjectiveHistory($pUserId, $pTransNo, $pChiefComplaint, $pIllnessHist, $pOtherComplaint, $getUpdCnt, $pSymptoms, $pPainSite){
+function insertSubjectiveHistory($conn, $pUserId, $pTransNo, $pChiefComplaint, $pIllnessHist, $pOtherComplaint, $getUpdCnt, $pSymptoms, $pPainSite){
     $ini = parse_ini_file("config.ini");
 
     try {
-        $conn = new PDO("mysql:host=".$ini["DBSERVER"].";dbname=".$ini["EPCB"], $ini['APPUSERNAME'], $ini['APPPASSWORD']);
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         $stmt = $conn->prepare("INSERT INTO ".$ini['EPCB'].".TSEKAP_TBL_SOAP_SUBJECTIVE(
                                 DATE_ADDED, ADDED_BY, TRANS_NO, CHIEF_COMPLAINT, ILLNESS_HISTORY, OTHER_COMPLAINT, UPD_CNT, SIGNS_SYMPTOMS, PAIN_SITE) 
@@ -8273,12 +7967,9 @@ function insertSubjectiveHistory($pUserId, $pTransNo, $pChiefComplaint, $pIllnes
         $stmt->execute();
 
     } catch (PDOException $e) {
-        $conn->rollBack();
-        echo "Error: C02" . $e->getMessage();
         echo '<script>alert("Error: C02'.$e->getMessage().'");</script>';
     }
 
-    $conn = null;
 }
 
 /*Obligated Services*/
@@ -8323,13 +8014,11 @@ function insertObligatedServices($pUserId, $pTransNo, $pServiceID, $pReasonID, $
 
 /*Objective/Physical Examination Sub-module*/
 /*Part 1*/
-function insertObjectivePhysicalExam($pSystolic, $pDiastolic, $pHr, $pRr, $pHeight, $pWeight, $pTemperature, $pUserId, $pTransNo, $pVision, $pLength, $pHeadCirc, $getUpdCnt,
+function insertObjectivePhysicalExam($conn, $pSystolic, $pDiastolic, $pHr, $pRr, $pHeight, $pWeight, $pTemperature, $pUserId, $pTransNo, $pVision, $pLength, $pHeadCirc, $getUpdCnt,
                                     $pLeftEyeVision,$pRightEyeVision,$pWaist,$pHip,$pLimbs,$pBMI,$pZScore,$pSkinThickness){
     $ini = parse_ini_file("config.ini");
 
     try {
-        $conn = new PDO("mysql:host=".$ini["DBSERVER"].";dbname=".$ini["EPCB"], $ini['APPUSERNAME'], $ini['APPPASSWORD']);
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         $stmt = $conn->prepare("INSERT INTO ".$ini['EPCB'].".TSEKAP_TBL_SOAP_PEPERT(
                                 SYSTOLIC, DIASTOLIC, HR, RR, HEIGHT, WEIGHT, TEMPERATURE, DATE_ADDED, ADDED_BY, TRANS_NO, VISION, LENGTH, HEAD_CIRC, UPD_CNT,
@@ -8381,21 +8070,15 @@ function insertObjectivePhysicalExam($pSystolic, $pDiastolic, $pHr, $pRr, $pHeig
         $stmt->execute();
 
     } catch (PDOException $e) {
-        $conn->rollBack();
-        echo "Error: C04" . $e->getMessage();
         echo '<script>alert("Error: C04'.$e->getMessage().'");</script>';
     }
-
-    $conn = null;
 }
 
 /*Part 2*/
-function insertPhysicalExamMisc($pSkin, $pHeent, $pChest, $pHeart, $pAbdomen, $pNeuro, $pGU, $pRectal, $pTransNo, $pUserId,$getUpdCnt){
+function insertPhysicalExamMisc($conn, $pSkin, $pHeent, $pChest, $pHeart, $pAbdomen, $pNeuro, $pGU, $pRectal, $pTransNo, $pUserId,$getUpdCnt){
     $ini = parse_ini_file("config.ini");
 
     try {
-        $conn = new PDO("mysql:host=".$ini["DBSERVER"].";dbname=".$ini["EPCB"], $ini['APPUSERNAME'], $ini['APPPASSWORD']);
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 
         $stmt = $conn->prepare("INSERT INTO ".$ini['EPCB'].".TSEKAP_TBL_SOAP_PEMISC(
@@ -8427,21 +8110,16 @@ function insertPhysicalExamMisc($pSkin, $pHeent, $pChest, $pHeart, $pAbdomen, $p
         $stmt->execute();
 
     } catch (PDOException $e) {
-        $conn->rollBack();
-        echo "Error: C05" . $e->getMessage();
         echo '<script>alert("Error: C05'.$e->getMessage().'");</script>';
     }
 
-    $conn = null;
 }
 
 /*Part 3 Remarks*/
-function insertPhysicalExamMiscRemarks($pHeentRemarks, $pChestRemarks, $pHeartRemarks, $pAbdomenRemarks, $pGenitoRemarks, $pRectalRemarks, $pSkinExtremitiesRemarks, $pNeuroRemarks, $pTransNo, $pUserId, $getUpdCnt){
+function insertPhysicalExamMiscRemarks($conn, $pHeentRemarks, $pChestRemarks, $pHeartRemarks, $pAbdomenRemarks, $pGenitoRemarks, $pRectalRemarks, $pSkinExtremitiesRemarks, $pNeuroRemarks, $pTransNo, $pUserId, $getUpdCnt){
     $ini = parse_ini_file("config.ini");
 
     try {
-        $conn = new PDO("mysql:host=".$ini["DBSERVER"].";dbname=".$ini["EPCB"], $ini['APPUSERNAME'], $ini['APPPASSWORD']);
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         $stmt = $conn->prepare("INSERT INTO ".$ini['EPCB'].".TSEKAP_TBL_SOAP_PESPECIFIC(
                                 SKIN_REM,HEENT_REM,CHEST_REM,HEART_REM,ABDOMEN_REM,NEURO_REM,GU_REM,RECTAL_REM,TRANS_NO,DATE_ADDED,ADDED_BY,UPD_CNT) 
@@ -8473,21 +8151,15 @@ function insertPhysicalExamMiscRemarks($pHeentRemarks, $pChestRemarks, $pHeartRe
 
 
     } catch (PDOException $e) {
-        $conn->rollBack();
-        echo "Error: C06" . $e->getMessage();
         echo '<script>alert("Error: C06'.$e->getMessage().'");</script>';
     }
-
-    $conn = null;
 }
 
 /*Assessment/Diagnosis Sub-module*/
-function insertAssessmentDiagnosis($pUserId, $pTransNo, $pDiagnosis, $pSeqNo, $getUpdCnt){
+function insertAssessmentDiagnosis($conn, $pUserId, $pTransNo, $pDiagnosis, $pSeqNo, $getUpdCnt){
     $ini = parse_ini_file("config.ini");
 
     try {
-        $conn = new PDO("mysql:host=".$ini["DBSERVER"].";dbname=".$ini["EPCB"], $ini['APPUSERNAME'], $ini['APPPASSWORD']);
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         $stmt = $conn->prepare("INSERT INTO ".$ini['EPCB'].".TSEKAP_TBL_SOAP_ICD(
                     TRANS_NO, ICD_CODE, DATE_ADDED, ADDED_BY, SEQ_NO, UPD_CNT) 
@@ -8506,22 +8178,17 @@ function insertAssessmentDiagnosis($pUserId, $pTransNo, $pDiagnosis, $pSeqNo, $g
         $stmt->execute();
 
     } catch (PDOException $e) {
-        $conn->rollBack();
-        echo "Error: C07" . $e->getMessage();
         echo '<script>alert("Error: C07'.$e->getMessage().'");</script>';
     }
 
-    $conn = null;
 }
 
 /*Plan/Management Sub-module in Consultation*/
 /*Plan/Management - Diagnosis Examination*/
-function insertDiagnosticExamination($pDiagnostic, $pOthRemarks, $pUserId, $pTransNo, $getUpdCnt,$pIsDrRecommended,$pIsPxRemarks){
+function insertDiagnosticExamination($conn, $pDiagnostic, $pOthRemarks, $pUserId, $pTransNo, $getUpdCnt,$pIsDrRecommended,$pIsPxRemarks){
     $ini = parse_ini_file("config.ini");
 
     try {
-        $conn = new PDO("mysql:host=".$ini["DBSERVER"].";dbname=".$ini["EPCB"], $ini['APPUSERNAME'], $ini['APPPASSWORD']);
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         $stmt = $conn->prepare("INSERT INTO ".$ini['EPCB'].".TSEKAP_TBL_SOAP_DIAGNOSTIC(
                                 DIAGNOSTIC_ID, DATE_ADDED, ADDED_BY, TRANS_NO, OTH_REMARKS, UPD_CNT,
@@ -8545,21 +8212,15 @@ function insertDiagnosticExamination($pDiagnostic, $pOthRemarks, $pUserId, $pTra
         $stmt->execute();
 
     } catch (PDOException $e) {
-        $conn->rollBack();
-        echo "Error: C08" . $e->getMessage();
         echo '<script>alert("Error: C08'.$e->getMessage().'");</script>';
     }
-
-    $conn = null;
 }
 
 /* Plan/Management - Management */
-function insertManagement($pManagement, $pUserId, $pTransNo, $pOthMgmtRemarks,$getUpdCnt){
+function insertManagement($conn, $pManagement, $pUserId, $pTransNo, $pOthMgmtRemarks,$getUpdCnt){
     $ini = parse_ini_file("config.ini");
 
     try {
-        $conn = new PDO("mysql:host=".$ini["DBSERVER"].";dbname=".$ini["EPCB"], $ini['APPUSERNAME'], $ini['APPPASSWORD']);
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         $stmt = $conn->prepare("INSERT INTO ".$ini['EPCB'].".TSEKAP_TBL_SOAP_MANAGEMENT(
                    MANAGEMENT_ID, DATE_ADDED, ADDED_BY, TRANS_NO, OTH_REMARKS,UPD_CNT) 
@@ -8579,20 +8240,15 @@ function insertManagement($pManagement, $pUserId, $pTransNo, $pOthMgmtRemarks,$g
 
 
     } catch (PDOException $e) {
-        $conn->rollBack();
-        echo "Error: C09" . $e->getMessage();
         echo '<script>alert("Error: C09'.$e->getMessage().'");</script>';
     }
 
-    $conn = null;
 }
 /* Plan/Management - Management */
-function insertAdvice($pAdviceRemarks, $pUserId, $pTransNo, $getUpdCnt){
+function insertAdvice($conn, $pAdviceRemarks, $pUserId, $pTransNo, $getUpdCnt){
     $ini = parse_ini_file("config.ini");
 
     try {
-        $conn = new PDO("mysql:host=".$ini["DBSERVER"].";dbname=".$ini["EPCB"], $ini['APPUSERNAME'], $ini['APPPASSWORD']);
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         $stmt = $conn->prepare("INSERT INTO ".$ini['EPCB'].".TSEKAP_TBL_SOAP_ADVICE(
                            REMARKS, DATE_ADDED, ADDED_BY, TRANS_NO, UPD_CNT) 
@@ -8609,24 +8265,19 @@ function insertAdvice($pAdviceRemarks, $pUserId, $pTransNo, $getUpdCnt){
         $stmt->execute();
 
     } catch (PDOException $e) {
-        $conn->rollBack();
-        echo "Error: C10" . $e->getMessage();
-        echo '<script>alert("Error: C10'.$e->getMessage().'");</script>';
+        echo '<script>alert("Error: Error in insertAdvice: '.$e->getMessage().'");</script>';
     }
 
-    $conn = null;
 }
 
 /*Medicine*/
-function insertMedicine($pDrugCode, $pGenCodeMed, $pStrengthMed, $pFormMed, $pPackageMed,
+function insertMedicine($conn, $pDrugCode, $pGenCodeMed, $pStrengthMed, $pFormMed, $pPackageMed,
                         $pQuantityMed, $pUnitPriceMed, $pCopayMed, $pTotalAmtPriceMed,$pInsQtyMed,$pInsStrengthMed,$pInsFreqMed,
                         $pCaseNo, $pTransNo, $pUserId, $getUpdCnt, $pXPSmodule, $pPrescDoc, $pIsApplicable, $pGenericName, $pSaltMed, $pUnitMed, $pRouteMed,
                         $pIsMedsDispensed,$pMedsDispensedDate,$pMedsDispensingPersonnel, $pMedsCategory, $pOthMedDrugGroup){
     $ini = parse_ini_file("config.ini");
 
     try {
-        $conn = new PDO("mysql:host=".$ini["DBSERVER"].";dbname=".$ini["EPCB"], $ini['APPUSERNAME'], $ini['APPPASSWORD']);
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         $stmt = $conn->prepare("INSERT INTO ".$ini['EPCB'].".TSEKAP_TBL_MEDICINE(
                                CASE_NO, TRANS_NO, DRUG_CODE, GEN_CODE, STRENGTH_CODE, FORM_CODE, PACKAGE_CODE, INS_QUANTITY, INS_STRENGTH, INS_FREQUENCY,
@@ -8695,23 +8346,18 @@ function insertMedicine($pDrugCode, $pGenCodeMed, $pStrengthMed, $pFormMed, $pPa
 
 
     } catch (PDOException $e) {
-        $conn->rollBack();
-        echo "Error: Medicine" . $e->getMessage();
-        echo '<script>alert("Error: Medicine - '.$e->getMessage().'");</script>';
+        echo '<script>alert("Error in insertMedicine: - '.$e->getMessage().'");</script>';
     }
 
-    $conn = null;
 }
 
 /*Plan Management: Diagnostic Examination*/
 /*Results - Complete Blood Count */
-function insertResultsCBC($pCaseNo, $pLabDate, $pLabFee, $pCoPay, $pReferralFacility, $pHematocrit, $pHemoglobinG, $pHemoglobinMmol, $pMhcPg, $pMhcFmol, $pMchcGhb, $pMchcMmol, $pMcvUm, $pMcvFl, $pWbc1000, $pWbc10, $pMyelocyte,
+function insertResultsCBC($conn, $pCaseNo, $pLabDate, $pLabFee, $pCoPay, $pReferralFacility, $pHematocrit, $pHemoglobinG, $pHemoglobinMmol, $pMhcPg, $pMhcFmol, $pMchcGhb, $pMchcMmol, $pMcvUm, $pMcvFl, $pWbc1000, $pWbc10, $pMyelocyte,
                           $pNeutrophilsBnd, $pNeurophilsSeg, $pLymphocytes, $pMonocytes, $pEosinophils, $pBasophils, $pPlatelet, $pTransNo, $pUserId, $getUpdCnt, $pXpsModule, $pIsApplicableCbc){
     $ini = parse_ini_file("config.ini");
 
-    // try {
-        $conn = new PDO("mysql:host=".$ini["DBSERVER"].";dbname=".$ini["EPCB"], $ini['APPUSERNAME'], $ini['APPPASSWORD']);
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    try {
 
         $stmt = $conn->prepare("INSERT INTO ".$ini['EPCB'].".TSEKAP_TBL_DIAG_CBC(
                                CASE_NO, TRANS_NO, REFERRAL_FACILITY, LAB_DATE, HEMATOCRIT, HEMOGLOBIN_G, HEMOGLOBIN_MMOL, MHC_PG, MHC_FMOL, MCHC_GHB, MCHC_MMOL, MCV_UM, MCV_FL, WBC_1000, WBC_10, MYELOCYTE,
@@ -8778,24 +8424,19 @@ function insertResultsCBC($pCaseNo, $pLabDate, $pLabFee, $pCoPay, $pReferralFaci
         $stmt->bindParam(':isApplicable', $pIsApplicableCbc);
         $stmt->execute();
 
-    // } catch (PDOException $e) {
-    //     $conn->rollBack();
-    //     echo "Error: D01" . $e->getMessage();
-    //     echo '<script>alert("Error: D01'.$e->getMessage().'");</script>';
-    // }
+    } catch (PDOException $e) {
+        echo '<script>alert("Error: D01'.$e->getMessage().'");</script>';
+    }
 
-    // $conn = null;
 }
 
 /* Results - Urinalysis */
-function insertResultsUrinalysis($pCaseNo, $pLabDate, $pLabFee, $pCoPay, $pReferralFacility, $pGravity, $pAppearance, $pColor, $pGlucose, $pProteins, $pKetones, $pPh, $pRbCells, $pWbCells, $pBacteria, $pCrystals,
+function insertResultsUrinalysis($conn, $pCaseNo, $pLabDate, $pLabFee, $pCoPay, $pReferralFacility, $pGravity, $pAppearance, $pColor, $pGlucose, $pProteins, $pKetones, $pPh, $pRbCells, $pWbCells, $pBacteria, $pCrystals,
                                  $pBladderCell, $pSquamousCell, $pTubularCell, $pBroadCasts, $pEpithelialCast, $pGranularCast, $pHyalineCast, $pRbcCast, $pWaxyCast, $pWcCast,
                                  $pAlbumin, $pPusCells, $pTransNo, $pUserId, $getUpdCnt,$pXpsModule,$pIsApplicableUrine){
     $ini = parse_ini_file("config.ini");
 
-    // try {
-        $conn = new PDO("mysql:host=".$ini["DBSERVER"].";dbname=".$ini["EPCB"], $ini['APPUSERNAME'], $ini['APPPASSWORD']);
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    try {
 
         $stmt = $conn->prepare("INSERT INTO ".$ini['EPCB'].".TSEKAP_TBL_DIAG_URINALYSIS(
                        CASE_NO, TRANS_NO, LAB_DATE, REFERRAL_FACILITY, GRAVITY, APPEARANCE, COLOR, GLUCOSE, PROTEINS, KETONES, PH, RB_CELLS, WB_CELLS, BACTERIA, CRYSTALS, BLADDER_CELL,
@@ -8871,23 +8512,17 @@ function insertResultsUrinalysis($pCaseNo, $pLabDate, $pLabFee, $pCoPay, $pRefer
         $stmt->bindParam(':isApplicable', $pIsApplicableUrine);
         $stmt->execute();
 
-    // } catch (PDOException $e) {
-    //     $conn->rollBack();
-    //     echo "Error: D02" . $e->getMessage();
-    //     echo '<script>alert("Error: D02'.$e->getMessage().'");</script>';
-    // }
-
-    // $conn = null;
+    } catch (PDOException $e) {
+        echo '<script>alert("Error: D02'.$e->getMessage().'");</script>';
+    }
 }
 
 /* Results - Fecalysis */
-function  insertResultsFecalysis($pCaseNo, $pLabDate, $pLabFee, $pCoPay, $pReferralFacility, $pColorFecalysis, $pConsistency,$pRBC,$pWBC,$pOva,$pParasite,$pBlood,$pOccultBlood,$pPusCell,
+function  insertResultsFecalysis($conn, $pCaseNo, $pLabDate, $pLabFee, $pCoPay, $pReferralFacility, $pColorFecalysis, $pConsistency,$pRBC,$pWBC,$pOva,$pParasite,$pBlood,$pOccultBlood,$pPusCell,
                                  $pTransNo, $pUserId, $getUpdCnt,$pXpsModule,$pIsApplicableFecalysis){
     $ini = parse_ini_file("config.ini");
 
-    // try {
-        $conn = new PDO("mysql:host=".$ini["DBSERVER"].";dbname=".$ini["EPCB"], $ini['APPUSERNAME'], $ini['APPPASSWORD']);
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    try {
 
         $stmt = $conn->prepare("INSERT INTO ".$ini['EPCB'].".TSEKAP_TBL_DIAG_FECALYSIS(
                                CASE_NO, TRANS_NO, LAB_DATE, REFERRAL_FACILITY, COLOR, CONSISTENCY, RBC, WBC, OVA, PARASITE,BLOOD, OCCULT_BLOOD,PUS_CELLS, DATE_ADDED, ADDED_BY, 
@@ -8934,21 +8569,16 @@ function  insertResultsFecalysis($pCaseNo, $pLabDate, $pLabFee, $pCoPay, $pRefer
         $stmt->bindParam(':isApplicable', $pIsApplicableFecalysis);
         $stmt->execute();
 
-    // } catch (PDOException $e) {
-    //     $conn->rollBack();
-    //     echo "Error: D03" . $e->getMessage();
-    //     echo '<script>alert("Error: D03'.$e->getMessage().'");</script>';
-    // }
-
-    // $conn = null;
+    } catch (PDOException $e) {
+        echo '<script>alert("Error: D03'.$e->getMessage().'");</script>';
+    }
 }
 /* Results - Chest X-Ray */
-function  insertResultsChestXray($pCaseNo, $pLabDate, $pLabFee, $pCoPay, $pReferralFacility,$pFindingsXray,$pRemarkFindings,$pObservation,$pRemarkObservation,$pTransNo, $pUserId, $getUpdCnt,$pXPSmodule,$pIsApplicableXray){
+function  insertResultsChestXray($conn, $pCaseNo, $pLabDate, $pLabFee, $pCoPay, $pReferralFacility,$pFindingsXray,$pRemarkFindings,$pObservation,$pRemarkObservation,$pTransNo, $pUserId, $getUpdCnt,$pXPSmodule,$pIsApplicableXray){
     $ini = parse_ini_file("config.ini");
 
-    // try {
-        $conn = new PDO("mysql:host=".$ini["DBSERVER"].";dbname=".$ini["EPCB"], $ini['APPUSERNAME'], $ini['APPPASSWORD']);
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    try {
+        
 
         $stmt = $conn->prepare("INSERT INTO ".$ini['EPCB'].".TSEKAP_TBL_DIAG_CHESTXRAY(
                                CASE_NO, TRANS_NO, LAB_DATE, REFERRAL_FACILITY, FINDINGS, REMARKS_FINDINGS, OBSERVATION, REMARKS_OBSERVATION, DATE_ADDED, ADDED_BY, UPD_CNT,XPS_MODULE,DIAGNOSTIC_FEE,CO_PAYMENT,IS_APPLICABLE) 
@@ -8984,22 +8614,16 @@ function  insertResultsChestXray($pCaseNo, $pLabDate, $pLabFee, $pCoPay, $pRefer
         $stmt->bindParam(':isApplicable', $pIsApplicableXray);
         $stmt->execute();
 
-    // } catch (PDOException $e) {
-    //     $conn->rollBack();
-    //     echo "Error: D04" . $e->getMessage();
-    //     echo '<script>alert("Error: D04'.$e->getMessage().'");</script>';
-    // }
-
-    // $conn = null;
+    } catch (PDOException $e) {
+        echo '<script>alert("Error: D04'.$e->getMessage().'");</script>';
+    }
 }
 
 /* Results - Sputum */
-function  insertResultsSputum($pCaseNo, $pLabDate, $pLabFee, $pCoPay, $pReferralFacility,$pFindingsSputum,$pRemarksSputum,$pNoPlusses,$pTransNo, $pUserId, $getUpdCnt,$pXPSmodule,$pIsApplicableSputum,$pDataCollect){
+function  insertResultsSputum($conn, $pCaseNo, $pLabDate, $pLabFee, $pCoPay, $pReferralFacility,$pFindingsSputum,$pRemarksSputum,$pNoPlusses,$pTransNo, $pUserId, $getUpdCnt,$pXPSmodule,$pIsApplicableSputum,$pDataCollect){
     $ini = parse_ini_file("config.ini");
 
-    // try {
-        $conn = new PDO("mysql:host=".$ini["DBSERVER"].";dbname=".$ini["EPCB"], $ini['APPUSERNAME'], $ini['APPPASSWORD']);
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    try {
 
         $stmt = $conn->prepare("INSERT INTO ".$ini['EPCB'].".TSEKAP_TBL_DIAG_SPUTUM(
                                CASE_NO, TRANS_NO, LAB_DATE, REFERRAL_FACILITY, FINDINGS, REMARKS, NO_PLUSSES, DATE_ADDED, ADDED_BY, UPD_CNT,XPS_MODULE,DIAGNOSTIC_FEE,CO_PAYMENT,IS_APPLICABLE,DATA_COLLECTION) 
@@ -9035,22 +8659,17 @@ function  insertResultsSputum($pCaseNo, $pLabDate, $pLabFee, $pCoPay, $pReferral
         $stmt->bindParam(':dataCollect', $pDataCollect);
         $stmt->execute();
 
-    // } catch (PDOException $e) {
-    //     $conn->rollBack();
-    //     echo "Error: D05" . $e->getMessage();
-    //     echo '<script>alert("Error: D05'.$e->getMessage().'");</script>';
-    // }
+    } catch (PDOException $e) {
+        echo '<script>alert("Error: D05'.$e->getMessage().'");</script>';
+    }
 
-    // $conn = null;
 }
 
 /* Results - Lipid Profile */
-function  insertResultsLipidProfile($pCaseNo, $pLabDate, $pLabFee, $pCoPay, $pReferralFacility,$pLdl,$pHdl,$pTotal,$pCholesterol,$pTriglycerides,$pTransNo, $pUserId, $getUpdCnt,$pXPSmodule,$pIsApplicableLipid){
+function  insertResultsLipidProfile($conn, $pCaseNo, $pLabDate, $pLabFee, $pCoPay, $pReferralFacility,$pLdl,$pHdl,$pTotal,$pCholesterol,$pTriglycerides,$pTransNo, $pUserId, $getUpdCnt,$pXPSmodule,$pIsApplicableLipid){
     $ini = parse_ini_file("config.ini");
 
-    // try {
-        $conn = new PDO("mysql:host=".$ini["DBSERVER"].";dbname=".$ini["EPCB"], $ini['APPUSERNAME'], $ini['APPPASSWORD']);
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    try {
 
         $stmt = $conn->prepare("INSERT INTO ".$ini['EPCB'].".TSEKAP_TBL_DIAG_LIPIDPROF(
                                 CASE_NO, TRANS_NO, REFERRAL_FACILITY, LAB_DATE, LDL, HDL, TOTAL, CHOLESTEROL, TRIGLYCERIDES, DATE_ADDED, ADDED_BY, UPD_CNT, XPS_MODULE,DIAGNOSTIC_FEE,CO_PAYMENT,IS_APPLICABLE) 
@@ -9089,22 +8708,17 @@ function  insertResultsLipidProfile($pCaseNo, $pLabDate, $pLabFee, $pCoPay, $pRe
         $stmt->execute();
 
 
-    // } catch (PDOException $e) {
-    //     $conn->rollBack();
-    //     echo "Error: D06" . $e->getMessage();
-    //     echo '<script>alert("Error: D06'.$e->getMessage().'");</script>';
-    // }
+    } catch (PDOException $e) {
+        echo '<script>alert("Error: D06'.$e->getMessage().'");</script>';
+    }
 
-    // $conn = null;
 }
 
 /* Results - Fasting Blood Sugar */
-function  insertResultsFBS($pCaseNo, $pLabDate, $pLabFee, $pCoPay,$pReferralFacility,$pGlucoseMg,$pGlucosemmol,$pTransNo, $pUserId, $getUpdCnt,$pXPSmodule,$pIsApplicableFbs){
+function  insertResultsFBS($conn, $pCaseNo, $pLabDate, $pLabFee, $pCoPay,$pReferralFacility,$pGlucoseMg,$pGlucosemmol,$pTransNo, $pUserId, $getUpdCnt,$pXPSmodule,$pIsApplicableFbs){
     $ini = parse_ini_file("config.ini");
 
-    // try {
-        $conn = new PDO("mysql:host=".$ini["DBSERVER"].";dbname=".$ini["EPCB"], $ini['APPUSERNAME'], $ini['APPPASSWORD']);
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    try {
 
         $stmt = $conn->prepare("INSERT INTO ".$ini['EPCB'].".TSEKAP_TBL_DIAG_FBS(
                                CASE_NO,TRANS_NO, LAB_DATE, REFERRAL_FACILITY, GLUCOSE_MG, GLUCOSE_MMOL, DATE_ADDED, ADDED_BY, UPD_CNT, XPS_MODULE,DIAGNOSTIC_FEE,CO_PAYMENT,IS_APPLICABLE) 
@@ -9136,22 +8750,17 @@ function  insertResultsFBS($pCaseNo, $pLabDate, $pLabFee, $pCoPay,$pReferralFaci
         $stmt->bindParam(':isApplicable', $pIsApplicableFbs);
         $stmt->execute();
 
-    // } catch (PDOException $e) {
-    //     $conn->rollBack();
-    //     echo "Error: D07" . $e->getMessage();
-    //     echo '<script>alert("Error: D07'.$e->getMessage().'");</script>';
-    // }
+    } catch (PDOException $e) {
+        echo '<script>alert("Error: D07'.$e->getMessage().'");</script>';
+    }
 
-    // $conn = null;
 }
 
 /* Results - Random Blood Sugar */
-function  insertResultsRBS($pCaseNo, $pLabDate, $pLabFee, $pCoPay,$pReferralFacility,$pGlucoseMg,$pGlucosemmol,$pTransNo, $pUserId, $getUpdCnt,$pXPSmodule,$pIsApplicableFbs){
+function  insertResultsRBS($conn, $pCaseNo, $pLabDate, $pLabFee, $pCoPay,$pReferralFacility,$pGlucoseMg,$pGlucosemmol,$pTransNo, $pUserId, $getUpdCnt,$pXPSmodule,$pIsApplicableFbs){
     $ini = parse_ini_file("config.ini");
 
-    // try {
-        $conn = new PDO("mysql:host=".$ini["DBSERVER"].";dbname=".$ini["EPCB"], $ini['APPUSERNAME'], $ini['APPPASSWORD']);
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    try {
 
         $stmt = $conn->prepare("INSERT INTO ".$ini['EPCB'].".TSEKAP_TBL_DIAG_RBS(
                                CASE_NO,TRANS_NO, LAB_DATE, REFERRAL_FACILITY, GLUCOSE_MG, GLUCOSE_MMOL, DATE_ADDED, ADDED_BY, UPD_CNT, XPS_MODULE,DIAGNOSTIC_FEE,CO_PAYMENT,IS_APPLICABLE) 
@@ -9183,23 +8792,18 @@ function  insertResultsRBS($pCaseNo, $pLabDate, $pLabFee, $pCoPay,$pReferralFaci
         $stmt->bindParam(':isApplicable', $pIsApplicableFbs);
         $stmt->execute();
 
-    // } catch (PDOException $e) {
-    //     $conn->rollBack();
-    //     echo "Error: D07" . $e->getMessage();
-    //     echo '<script>alert("Error: RBS'.$e->getMessage().'");</script>';
-    // }
+    } catch (PDOException $e) {
+        echo '<script>alert("Error: RBS'.$e->getMessage().'");</script>';
+    }
 
-    // $conn = null;
 }
 
 
 /* Results - ECG */
-function  insertResultsECG($pCaseNo,$pLabDate, $pLabFee, $pCoPay,$pReferralFacility,$pFindingsECG,$pRemarksECG,$pTransNo, $pUserId, $getUpdCnt,$pXPSmodule,$pIsApplicableEcg){
+function  insertResultsECG($conn, $pCaseNo,$pLabDate, $pLabFee, $pCoPay,$pReferralFacility,$pFindingsECG,$pRemarksECG,$pTransNo, $pUserId, $getUpdCnt,$pXPSmodule,$pIsApplicableEcg){
     $ini = parse_ini_file("config.ini");
 
-    // try {
-        $conn = new PDO("mysql:host=".$ini["DBSERVER"].";dbname=".$ini["EPCB"], $ini['APPUSERNAME'], $ini['APPPASSWORD']);
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    try {
 
         $stmt = $conn->prepare("INSERT INTO ".$ini['EPCB'].".TSEKAP_TBL_DIAG_ECG(
                        CASE_NO, TRANS_NO, LAB_DATE, REFERRAL_FACILITY, FINDINGS, REMARKS, DATE_ADDED, ADDED_BY, UPD_CNT, XPS_MODULE,DIAGNOSTIC_FEE,CO_PAYMENT,IS_APPLICABLE) 
@@ -9231,21 +8835,17 @@ function  insertResultsECG($pCaseNo,$pLabDate, $pLabFee, $pCoPay,$pReferralFacil
         $stmt->bindParam(':isApplicable', $pIsApplicableEcg);
         $stmt->execute();
 
-    // } catch (PDOException $e) {
-    //     $conn->rollBack();
-    //     echo "Error: " . $e->getMessage();
-    // }
+    } catch (PDOException $e) {
+        echo "Error: " . $e->getMessage();
+    }
 
-    // $conn = null;
 }
 
 /* Results - Paps Smear */
-function  insertResultsPapsSmear($pCaseNo,$pLabDate, $pLabFee, $pCoPay,$pReferralFacility,$pFindingsPaps,$pImpressionPaps,$pTransNo, $pUserId, $getUpdCnt,$pXPSmodule,$pIsApplicablePaps){
+function  insertResultsPapsSmear($conn, $pCaseNo,$pLabDate, $pLabFee, $pCoPay,$pReferralFacility,$pFindingsPaps,$pImpressionPaps,$pTransNo, $pUserId, $getUpdCnt,$pXPSmodule,$pIsApplicablePaps){
     $ini = parse_ini_file("config.ini");
 
-    // try {
-        $conn = new PDO("mysql:host=".$ini["DBSERVER"].";dbname=".$ini["EPCB"], $ini['APPUSERNAME'], $ini['APPPASSWORD']);
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    try {
 
         $stmt = $conn->prepare("INSERT INTO ".$ini['EPCB'].".TSEKAP_TBL_DIAG_PAPSSMEAR(
                        CASE_NO,TRANS_NO, LAB_DATE, REFERRAL_FACILITY, FINDINGS, IMPRESSION, DATE_ADDED, ADDED_BY, UPD_CNT, XPS_MODULE,DIAGNOSTIC_FEE,CO_PAYMENT,IS_APPLICABLE) 
@@ -9277,21 +8877,17 @@ function  insertResultsPapsSmear($pCaseNo,$pLabDate, $pLabFee, $pCoPay,$pReferra
         $stmt->bindParam(':isApplicable', $pIsApplicablePaps);
         $stmt->execute();
 
-    // } catch (PDOException $e) {
-    //     $conn->rollBack();
-    //     echo "Error: " . $e->getMessage();
-    // }
+    } catch (PDOException $e) {
+        echo "Error: " . $e->getMessage();
+    }
 
-    // $conn = null;
 }
 
 /* Results - Oral Glucose Tolerance Test (OGTT)*/
-function  insertResultsOGTT($pCaseNo, $pLabDate, $pLabFee, $pCoPay,$pReferralFacility,$pFastingMg,$pFastingMmol,$pOgttOneHrMg,$pOgttOneHrMmol,$pOgttTwoHrsMg,$pOgttTwoHrsMmol,$pTransNo, $pUserId, $getUpdCnt,$pXPSmodule,$pIsApplicableOgtt){
+function  insertResultsOGTT($conn, $pCaseNo, $pLabDate, $pLabFee, $pCoPay,$pReferralFacility,$pFastingMg,$pFastingMmol,$pOgttOneHrMg,$pOgttOneHrMmol,$pOgttTwoHrsMg,$pOgttTwoHrsMmol,$pTransNo, $pUserId, $getUpdCnt,$pXPSmodule,$pIsApplicableOgtt){
     $ini = parse_ini_file("config.ini");
 
-    // try {
-        $conn = new PDO("mysql:host=".$ini["DBSERVER"].";dbname=".$ini["EPCB"], $ini['APPUSERNAME'], $ini['APPPASSWORD']);
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    try {
 
         $stmt = $conn->prepare("INSERT INTO ".$ini['EPCB'].".TSEKAP_TBL_DIAG_OGTT(
                        CASE_NO,TRANS_NO, LAB_DATE, REFERRAL_FACILITY, EXAM_FASTING_MG, EXAM_FASTING_MMOL, EXAM_OGTT_ONE_MG, EXAM_OGTT_ONE_MMOL, EXAM_OGTT_TWO_MG, EXAM_OGTT_TWO_MMOL, 
@@ -9332,21 +8928,17 @@ function  insertResultsOGTT($pCaseNo, $pLabDate, $pLabFee, $pCoPay,$pReferralFac
         $stmt->bindParam(':isApplicable', $pIsApplicableOgtt);
         $stmt->execute();
 
-    // } catch (PDOException $e) {
-    //     $conn->rollBack();
-    //     echo "Error: " . $e->getMessage();
-    // }
+    } catch (PDOException $e) {
+        echo "Error: " . $e->getMessage();
+    }
 
-    // $conn = null;
 }
 
 /* Results - Fecal Occult Blood Test (FOBT)*/
-function  insertResultsFOBT($pCaseNo, $pLabDateFobt, $pLabFeeFobt, $pCoPayFobt,$pReferralFacility,$pFindingsFobt,$pTransNo, $pUserId, $getUpdCnt,$pXPSmodule,$pIsApplicableFobt){
+function  insertResultsFOBT($conn, $pCaseNo, $pLabDateFobt, $pLabFeeFobt, $pCoPayFobt,$pReferralFacility,$pFindingsFobt,$pTransNo, $pUserId, $getUpdCnt,$pXPSmodule,$pIsApplicableFobt){
     $ini = parse_ini_file("config.ini");
 
-    // try {
-        $conn = new PDO("mysql:host=".$ini["DBSERVER"].";dbname=".$ini["EPCB"], $ini['APPUSERNAME'], $ini['APPPASSWORD']);
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    try {
 
         $stmt = $conn->prepare("INSERT INTO ".$ini['EPCB'].".TSEKAP_TBL_DIAG_FOBT(
                        CASE_NO,TRANS_NO, LAB_DATE, REFERRAL_FACILITY, FINDINGS,  
@@ -9377,21 +8969,17 @@ function  insertResultsFOBT($pCaseNo, $pLabDateFobt, $pLabFeeFobt, $pCoPayFobt,$
         $stmt->bindParam(':isApplicable', $pIsApplicableFobt);
         $stmt->execute();
 
-    // } catch (PDOException $e) {
-    //     $conn->rollBack();
-    //     echo "Error: " . $e->getMessage();
-    // }
+    } catch (PDOException $e) {
+        echo "Error: " . $e->getMessage();
+    }
 
-    // $conn = null;
 }
 
 /* Results - Platelet ekonsulta*/
-function insertResultsHbA1c($pCaseNo, $pLabDateHbA1c, $pLabFeeHbA1c, $pCoPayHbA1c,$pReferralFacility,$pFindingsHbA1c,$pTransNo, $pUserId, $getUpdCnt,$pXPSmodule,$pIsApplicableHbA1c){
+function insertResultsHbA1c($conn, $pCaseNo, $pLabDateHbA1c, $pLabFeeHbA1c, $pCoPayHbA1c,$pReferralFacility,$pFindingsHbA1c,$pTransNo, $pUserId, $getUpdCnt,$pXPSmodule,$pIsApplicableHbA1c){
     $ini = parse_ini_file("config.ini");
 
-    // try {
-        $conn = new PDO("mysql:host=".$ini["DBSERVER"].";dbname=".$ini["EPCB"], $ini['APPUSERNAME'], $ini['APPPASSWORD']);
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    try {
 
         $stmt = $conn->prepare("INSERT INTO ".$ini['EPCB'].".TSEKAP_TBL_DIAG_HBA1C(
                        CASE_NO,TRANS_NO, LAB_DATE, REFERRAL_FACILITY, FINDINGS,  
@@ -9422,22 +9010,17 @@ function insertResultsHbA1c($pCaseNo, $pLabDateHbA1c, $pLabFeeHbA1c, $pCoPayHbA1
         $stmt->bindParam(':isApplicable', $pIsApplicableHbA1c);
         $stmt->execute();
 
-    // } catch (PDOException $e) {
-    //     $conn->rollBack();
-    //     echo "Error: " . $e->getMessage();
-    // }
-
-    // $conn = null;
+    } catch (PDOException $e) {
+        echo "Error: " . $e->getMessage();
+    }
 
 }
 
 /* Results - Creatinine ekonsulta*/
-function insertResultsCreatinine($pCaseNo, $pLabDateCreatinine, $pLabFeeCreatinine, $pCoPayCreatinine,$pReferralFacility,$pFindingsCreatinine,$pTransNo, $pUserId, $getUpdCnt,$pXPSmodule,$pIsApplicableCreatinine){
+function insertResultsCreatinine($conn, $pCaseNo, $pLabDateCreatinine, $pLabFeeCreatinine, $pCoPayCreatinine,$pReferralFacility,$pFindingsCreatinine,$pTransNo, $pUserId, $getUpdCnt,$pXPSmodule,$pIsApplicableCreatinine){
     $ini = parse_ini_file("config.ini");
 
-    // try {
-        $conn = new PDO("mysql:host=".$ini["DBSERVER"].";dbname=".$ini["EPCB"], $ini['APPUSERNAME'], $ini['APPPASSWORD']);
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    try {
 
         $stmt = $conn->prepare("INSERT INTO ".$ini['EPCB'].".TSEKAP_TBL_DIAG_CREATININE(
                        CASE_NO,TRANS_NO, LAB_DATE, REFERRAL_FACILITY, FINDINGS,  
@@ -9468,22 +9051,17 @@ function insertResultsCreatinine($pCaseNo, $pLabDateCreatinine, $pLabFeeCreatini
         $stmt->bindParam(':isApplicable', $pIsApplicableCreatinine);
         $stmt->execute();
 
-    // } catch (PDOException $e) {
-    //     $conn->rollBack();
-    //     echo "Error: " . $e->getMessage();
-    // }
-
-    // $conn = null;
+    } catch (PDOException $e) {
+        echo "Error: " . $e->getMessage();
+    }
 
 }
 
 /* Results - PDDT ekonsulta*/
-function insertResultsPPDT($pCaseNo, $pLabDatePddt, $pLabFeePddt, $pCoPayPddt,$pReferralFacility,$pFindingsPddt,$pTransNo, $pUserId, $getUpdCnt,$pXPSmodule,$pIsApplicablePddt){
+function insertResultsPPDT($conn, $pCaseNo, $pLabDatePddt, $pLabFeePddt, $pCoPayPddt,$pReferralFacility,$pFindingsPddt,$pTransNo, $pUserId, $getUpdCnt,$pXPSmodule,$pIsApplicablePddt){
     $ini = parse_ini_file("config.ini");
 
-    // try {
-        $conn = new PDO("mysql:host=".$ini["DBSERVER"].";dbname=".$ini["EPCB"], $ini['APPUSERNAME'], $ini['APPPASSWORD']);
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    try {
 
         $stmt = $conn->prepare("INSERT INTO ".$ini['EPCB'].".TSEKAP_TBL_DIAG_PPD_TEST(
                        CASE_NO,TRANS_NO, LAB_DATE, REFERRAL_FACILITY, FINDINGS,  
@@ -9514,22 +9092,17 @@ function insertResultsPPDT($pCaseNo, $pLabDatePddt, $pLabFeePddt, $pCoPayPddt,$p
         $stmt->bindParam(':isApplicable', $pIsApplicablePddt);
         $stmt->execute();
 
-    // } catch (PDOException $e) {
-    //     $conn->rollBack();
-    //     echo "Error: " . $e->getMessage();
-    // }
-
-    // $conn = null;
+    } catch (PDOException $e) {
+        echo "Error: " . $e->getMessage();
+    }
 
 }
 
 /* Results - Others Diagnostic Exam ekonsulta*/
-function insertResultsOthersDiagExam($pCaseNo, $pLabDateOth, $pLabFeeOth, $pCoPayOth,$pReferralFacilityOth,$pOthDiagExam,$pFindingsOthExam,$pTransNo, $pUserId, $getUpdCnt,$pXPSmodule,$pIsApplicableOth){
+function insertResultsOthersDiagExam($conn, $pCaseNo, $pLabDateOth, $pLabFeeOth, $pCoPayOth,$pReferralFacilityOth,$pOthDiagExam,$pFindingsOthExam,$pTransNo, $pUserId, $getUpdCnt,$pXPSmodule,$pIsApplicableOth){
     $ini = parse_ini_file("config.ini");
 
-    // try {
-        $conn = new PDO("mysql:host=".$ini["DBSERVER"].";dbname=".$ini["EPCB"], $ini['APPUSERNAME'], $ini['APPPASSWORD']);
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    try {
 
         $stmt = $conn->prepare("INSERT INTO ".$ini['EPCB'].".TSEKAP_TBL_DIAG_OTHERS(
                        CASE_NO,TRANS_NO, LAB_DATE, REFERRAL_FACILITY, OTH_DIAG_EXAM, FINDINGS,  
@@ -9562,14 +9135,13 @@ function insertResultsOthersDiagExam($pCaseNo, $pLabDateOth, $pLabFeeOth, $pCoPa
         $stmt->bindParam(':isApplicable', $pIsApplicableOth);
         $stmt->execute();
 
-    // } catch (PDOException $e) {
-    //     $conn->rollBack();
-    //     echo "Error: " . $e->getMessage();
-    // }
+    } catch (PDOException $e) {
+        echo "Error: " . $e->getMessage();
+    }
 
-    // $conn = null;
+}
 
-}/*Generation of Report - HCI Profile Information*/
+/*Generation of Report - HCI Profile Information*/
 function getHciProfileInfo($pAccreNo, $pUserId){
     $ini = parse_ini_file("config.ini");
 
@@ -11100,8 +10672,6 @@ function saveProfilingInfo($profiling){
 
         session_start();
         $pUserId = $_SESSION['pUserID'];
-        // $pHciNo = $_SESSION['pHciNum'];
-        //$pXPSmodule = "HSA"; /*HSA - Health Screening & Assessment (Profiling in PCB)*/
         $pXPSmodule = "PROF"; /*HSA - Health Screening & Assessment (Profiling in PCB)*/
 
         /*Start Patient Details Sub-module*/
@@ -11113,14 +10683,10 @@ function saveProfilingInfo($profiling){
         
         $pFinalizedData=$profiling['pFinalize'];
         $pProfDate = date('Y-m-d', strtotime($profiling['txtPerHistProfDate']));
-        $pIsWithATC = $profiling['walkedInChecker']; //pIsWalkedIn in DTD
+        // $pIsWithATC = $profiling['walkedInChecker']; //pIsWalkedIn in DTD
 
-        if($pIsWithATC == "Y"){
-            $pOTP = "WALKEDIN";
-        }
-        if($pIsWithATC == "N"){
-            $pOTP=$profiling['txtPerHistOTP'];
-        }
+        $pIsWithATC = "Y";
+        $pOTP = "WALKEDIN";
 
         /*HSA OF PATIENT*/
         if ($_POST['pHsaTransNo'] == "" || $_POST['pHsaTransNo'] == NULL) {
@@ -11129,7 +10695,7 @@ function saveProfilingInfo($profiling){
                 $pTransNo = generateTransNo('PROF_NO'); //automatically generated
                 $getUpdCnt = $profiling['pUpdCntProfile'];
                 // Start Patient Details Sub-module
-                insertProfilingInfo($pCaseNo, $pTransNo, $pProfDate, $pHciNo, $pPatientPin, $pPatientType, $pMemPin, $pUserId, $pEffYear, $pOTP, $pFinalizedData, $pXPSmodule, $pIsWithATC);
+                insertProfilingInfo($conn, $pCaseNo, $pTransNo, $pProfDate, $pHciNo, $pPatientPin, $pPatientType, $pMemPin, $pUserId, $pEffYear, $pOTP, $pFinalizedData, $pXPSmodule, $pIsWithATC);
                 /*End Patient Details Sub-module*/
             }
            
@@ -11137,7 +10703,7 @@ function saveProfilingInfo($profiling){
                 $pTransNo = $profiling['pHsaTransNo'];
                 $getUpdCnt = $profiling['pUpdCntProfile'] + 1;
                 // Start Patient Details Sub-module
-                updateProfilingInfo($pTransNo, $pPatientPin, $pPatientType, $pMemPin, $pUserId, $pEffYear, $getUpdCnt, $pFinalizedData, $pProfDate);
+                updateProfilingInfo($conn, $pTransNo, $pPatientPin, $pPatientType, $pMemPin, $pUserId, $pEffYear, $getUpdCnt, $pFinalizedData, $pProfDate);
                 /*End Patient Details Sub-module*/
         }
 
@@ -11159,7 +10725,7 @@ function saveProfilingInfo($profiling){
         $pDadExtName = NULL;
         $pDadDob = NULL;
 
-        insertProfilingOtherInfo($pPxAge, $pPxOccupation, $pPxEducation, $pUserId, $pTransNo, $pPxPoB, $pPxReligion, $pMomMLastName, $pMomMMiddleName, $pMomFirstname, $pMomExtName, $pMomDob, $pDadLastName, $pDadMiddleName, $pDadFirstname, $pDadExtName, $pDadDob, $getUpdCnt);
+        insertProfilingOtherInfo($conn, $pPxAge, $pPxOccupation, $pPxEducation, $pUserId, $pTransNo, $pPxPoB, $pPxReligion, $pMomMLastName, $pMomMMiddleName, $pMomFirstname, $pMomExtName, $pMomDob, $pDadLastName, $pDadMiddleName, $pDadFirstname, $pDadExtName, $pDadDob, $getUpdCnt);
         /*End Patient Details Sub-module*/
 
         /*Start Medical & Surgical History Sub-module*/
@@ -11168,7 +10734,7 @@ function saveProfilingInfo($profiling){
 
         for ($i = 0; $i < count($pPastMedHistory); $i++) {
             if ($pPastMedHistory[$i] != '') {
-                insertPastMedicalHistory($pPastMedHistory[$i], $pUserId, $pTransNo, $getUpdCnt);
+                insertPastMedicalHistory($conn, $pPastMedHistory[$i], $pUserId, $pTransNo, $getUpdCnt);
 
                 /*Past Medical History - Specific Diseases*/
                 if ($pPastMedHistory[$i] == '001'):
@@ -11190,7 +10756,7 @@ function saveProfilingInfo($profiling){
                 endif;
 
                 if ($pSpecificDesc != "" ||  $pSpecificDesc != null) {
-                    insertPastMedicalHistorySpecific($pPastMedHistory[$i], strtoupper($pSpecificDesc), $pTransNo, $pUserId, $getUpdCnt);
+                    insertPastMedicalHistorySpecific($conn, $pPastMedHistory[$i], strtoupper($pSpecificDesc), $pTransNo, $pUserId, $getUpdCnt);
                 }
                 
             }
@@ -11206,12 +10772,9 @@ function saveProfilingInfo($profiling){
                 } else {
                     $pOperationDate[$i] = NULL;
                 }
-                insertPastSurgicalHistory($pOperation[$i], $pOperationDate[$i], $pUserId, $pTransNo, $getUpdCnt);
+                insertPastSurgicalHistory($conn, $pOperation[$i], $pOperationDate[$i], $pUserId, $pTransNo, $getUpdCnt);
             }
         } 
-        // else{
-        //     insertPastSurgicalHistory(NULL, NULL, $pUserId, $pTransNo, $getUpdCnt);
-        // }
         /*End Medical & Surgical History Sub-module*/
 
         /*Start Family & Personal History Sub-module*/
@@ -11220,7 +10783,7 @@ function saveProfilingInfo($profiling){
 
         for ($i = 0; $i < count($pFamMedHistory); $i++) {
             if ($pFamMedHistory[$i] != '') {
-                insertFamilyMedicalHistory($pFamMedHistory[$i], $pUserId, $pTransNo, $getUpdCnt);
+                insertFamilyMedicalHistory($conn, $pFamMedHistory[$i], $pUserId, $pTransNo, $getUpdCnt);
 
                 /*Past Medical History - Specific Diseases*/
                 if ($pFamMedHistory[$i] == '001'):
@@ -11242,7 +10805,7 @@ function saveProfilingInfo($profiling){
                 endif;
 
                 if ($pSpecificDesc != "" || $pSpecificDesc != null) {
-                    insertFamilyMedicalHistorySpecific($pFamMedHistory[$i], strtoupper($pSpecificDesc), $pTransNo, $pUserId, $getUpdCnt);
+                    insertFamilyMedicalHistorySpecific($conn, $pFamMedHistory[$i], strtoupper($pSpecificDesc), $pTransNo, $pUserId, $getUpdCnt);
                 }
                 
 
@@ -11258,7 +10821,7 @@ function saveProfilingInfo($profiling){
 
                     if($profiling['diagnostic_7_lab_exam_date'] != NULL && ($pGlucoseMg != NULL || $pGlucosemmol != NULL)){
                         $pLabDateFBS = date('Y-m-d',strtotime($profiling['diagnostic_7_lab_exam_date']));
-                        insertResultsFBS($pCaseNo,$pLabDateFBS, $pLabFeeFBS, $pCoPayFBS, $pReferralFacilityFBS, $pGlucoseMg, $pGlucosemmol, $pTransNo, $pUserId, $getUpdCnt, $pXPSmodule,$pIsApplicableFbs);
+                        insertResultsFBS($conn, $pCaseNo,$pLabDateFBS, $pLabFeeFBS, $pCoPayFBS, $pReferralFacilityFBS, $pGlucoseMg, $pGlucosemmol, $pTransNo, $pUserId, $getUpdCnt, $pXPSmodule,$pIsApplicableFbs);
                     }    
 
                     /* Results - Random Blood Sugar (RBS) */
@@ -11270,7 +10833,7 @@ function saveProfilingInfo($profiling){
                     $pGlucosemmolRBS = $profiling['diagnostic_19_glucose_mmolL'];
                     if($profiling['diagnostic_19_lab_exam_date'] != NULL && ($pGlucoseMgRBS != NULL || $pGlucosemmolRBS != NULL)){
                         $pLabDateRBS = date('Y-m-d',strtotime($profiling['diagnostic_19_lab_exam_date']));
-                        insertResultsRBS($pCaseNo,$pLabDateRBS, $pLabFeeRBS, $pCoPayRBS, $pReferralFacilityRBS, $pGlucoseMgRBS, $pGlucosemmolRBS, $pTransNo, $pUserId, $getUpdCnt, $pXPSmodule,$pIsApplicableRBS);
+                        insertResultsRBS($conn, $pCaseNo,$pLabDateRBS, $pLabFeeRBS, $pCoPayRBS, $pReferralFacilityRBS, $pGlucoseMgRBS, $pGlucosemmolRBS, $pTransNo, $pUserId, $getUpdCnt, $pXPSmodule,$pIsApplicableRBS);
                     }                    
                 }
             }
@@ -11292,7 +10855,7 @@ function saveProfilingInfo($profiling){
         }
 
 
-        insertPersonalSocialHistory($pIsSmoker, $pNoCigPack, $pIsAlcoholDrinker, $pNoBottles, $pIllDrugUser, $pUserId, $pTransNo, $getUpdCnt, $pIsSexuallyActive);
+        insertPersonalSocialHistory($conn, $pIsSmoker, $pNoCigPack, $pIsAlcoholDrinker, $pNoBottles, $pIllDrugUser, $pUserId, $pTransNo, $getUpdCnt, $pIsSexuallyActive);
         /*End Family & Personal History Sub-module*/
 
         /*Start Immunizations Sub-module*/
@@ -11304,51 +10867,54 @@ function saveProfilingInfo($profiling){
 
         /*No immunization*/
         if (count($pForChildren) == 0 && count($pForAdult) == 0 && count($pForPregWoman) == 0 && count($pForElderly) == 0) {
-            insertImmunizations('999', '999', '999', '999', $pUserId, $pTransNo, null, $getUpdCnt);
+            insertImmunizations($conn, '999', '999', '999', '999', $pUserId, $pTransNo, null, $getUpdCnt);
         }
 
         /*For Children*/
         for ($i = 0; $i < count($pForChildren); $i++) {
             if ($pForChildren[$i] != '') {
-                insertImmunizations($pForChildren[$i], null, null, null, $pUserId, $pTransNo, null, $getUpdCnt);
+                insertImmunizations($conn, $pForChildren[$i], null, null, null, $pUserId, $pTransNo, null, $getUpdCnt);
             } 
         }
 
         /*For Adult*/
         for ($i = 0; $i < count($pForAdult); $i++) {
             if ($pForAdult[$i] != '') {
-                insertImmunizations(null, $pForAdult[$i], null, null, $pUserId, $pTransNo, null, $getUpdCnt);
+                insertImmunizations($conn, null, $pForAdult[$i], null, null, $pUserId, $pTransNo, null, $getUpdCnt);
             } 
         }
 
         /*For Pregnant Woman*/
         for ($i = 0; $i < count($pForPregWoman); $i++) {
             if ($pForPregWoman[$i] != '') {
-                insertImmunizations(null, null, $pForPregWoman[$i], null, $pUserId, $pTransNo, null, $getUpdCnt);
+                insertImmunizations($conn, null, null, $pForPregWoman[$i], null, $pUserId, $pTransNo, null, $getUpdCnt);
             } 
         }
 
         /*For Elderly and Immunocompromised*/
         for ($i = 0; $i < count($pForElderly); $i++) {
             if ($pForElderly[$i] != '') {
-                insertImmunizations(null, null, null, $pForElderly[$i], $pUserId, $pTransNo, null, $getUpdCnt);
+                insertImmunizations($conn, null, null, null, $pForElderly[$i], $pUserId, $pTransNo, null, $getUpdCnt);
             } 
         }
 
         if (!empty($pOthersImm)) {
-            insertImmunizations(null, null, null, null, $pUserId, $pTransNo, $pOthersImm, $getUpdCnt);
+            insertImmunizations($conn, null, null, null, null, $pUserId, $pTransNo, $pOthersImm, $getUpdCnt);
         }
         /*End Immunizations Sub-module*/
 
         /*Start OB-Gyne History Sub-module*/
         /*Menstrual History*/
         $pMenarche = $profiling['txtOBHistMenarche'];
-        $pIsApplicable = $profiling['mhDone'];
 
         if($profiling['txtOBHistLastMens'] != NULL){
             $pLastMensPeriod = date('Y-m-d',strtotime($profiling['txtOBHistLastMens']));
+            $pIsMensApplicable = $profiling['mhDone'];
+            $pPregIsApplicable = $profiling['pregDone'];
         } else{
             $pLastMensPeriod = NULL;
+            $pIsMensApplicable = "N";
+            $pPregIsApplicable = "N";
         }
 
         $pPeriodDuration = $profiling['txtOBHistPeriodDuration'];
@@ -11359,10 +10925,10 @@ function saveProfilingInfo($profiling){
         $pIsMenopause = $profiling['radOBHistMenopause'];
         $pMenopauseAge = $profiling['txtOBHistMenopauseAge'];
 
-        insertMenstrualHistory($pMenarche, $pLastMensPeriod, $pPeriodDuration, $pMensInterval, $pPadsPerDay, $pOnsetSexIC, $pBirthControlMethod, $pIsMenopause, $pMenopauseAge, $pUserId, $pTransNo, $getUpdCnt,$pIsApplicable);
+        insertMenstrualHistory($conn, $pMenarche, $pLastMensPeriod, $pPeriodDuration, $pMensInterval, $pPadsPerDay, $pOnsetSexIC, $pBirthControlMethod, $pIsMenopause, $pMenopauseAge, $pUserId, $pTransNo, $getUpdCnt,$pIsMensApplicable);
 
         /*Pregnany History*/
-        $pPregIsApplicable = $profiling['pregDone'];
+        // $pPregIsApplicable = $profiling['pregDone'];
         $pPregCnt = $profiling['txtOBHistGravity'];
         $pDeliveryCnt = $profiling['txtOBHistParity'];
         $pDeliveryType = $profiling['optOBHistDelivery'];
@@ -11373,7 +10939,7 @@ function saveProfilingInfo($profiling){
         $pWithPregIndHyp = $profiling['chkOBHistPreEclampsiaValue'];
         /*Family Planning*/
         $pWithFamPlan = $profiling['radOBHistWFamPlan'];
-        insertPrenancyHistory($pPregCnt, $pDeliveryCnt, $pDeliveryType, $pFullTermCnt, $pPrematureCnt, $pAbortionCnt, $pLivChildrenCnt, $pWithPregIndHyp, $pUserId, $pTransNo, $pWithFamPlan, $getUpdCnt, $pPregIsApplicable);
+        insertPrenancyHistory($conn, $pPregCnt, $pDeliveryCnt, $pDeliveryType, $pFullTermCnt, $pPrematureCnt, $pAbortionCnt, $pLivChildrenCnt, $pWithPregIndHyp, $pUserId, $pTransNo, $pWithFamPlan, $getUpdCnt, $pPregIsApplicable);
         /*End OB-Gyne History Sub-module*/
 
         /*Start Pertinent Physical Examination Findings Sub-module*/
@@ -11403,18 +10969,18 @@ function saveProfilingInfo($profiling){
         //$pZScore = $profiling['txtPhExZscoreCm'];
         $pZScore = "";
         $pMidUpperArm = $profiling['txtPhExMidUpperArmCirc'];
-        insertPertinentPhysicalExam($pSystolic, $pDiastolic, $pHr, $pRr, $pHeight, $pWeight, $pVisionAquity, $pLength, $pHeadCirc, $pUserId, $pTransNo, $getUpdCnt, $pTemp, $pVisionAquityLeft, $pVisionAquityRight, $pSkinThickness, $pWaist, $pHip, $pLimbs,$pBMI,$pZScore,$pMidUpperArm);
+        insertPertinentPhysicalExam($conn, $pSystolic, $pDiastolic, $pHr, $pRr, $pHeight, $pWeight, $pVisionAquity, $pLength, $pHeadCirc, $pUserId, $pTransNo, $getUpdCnt, $pTemp, $pVisionAquityLeft, $pVisionAquityRight, $pSkinThickness, $pWaist, $pHip, $pLimbs,$pBMI,$pZScore,$pMidUpperArm);
 
 
         /*Blood Type and Blood Rhesus*/
         $pBloodType = $profiling['radPhExBloodType'];
         $pBloodRh = NULL;
-        insertBloodType($pBloodType, $pBloodRh, $pUserId, $pTransNo, $getUpdCnt);
+        insertBloodType($conn, $pBloodType, $pBloodRh, $pUserId, $pTransNo, $getUpdCnt);
 
         /*General Survey*/
         $pGenSurveyId = $profiling['pGenSurvey'];
         $pGenSurveyRem = $profiling['pGenSurveyRemarks'];
-        insertPeGeneralSurvey($pGenSurveyId, strtoupper($pGenSurveyRem), $pUserId, $pTransNo);
+        insertPeGeneralSurvey($conn, $pGenSurveyId, strtoupper($pGenSurveyRem), $pUserId, $pTransNo);
 
         /*Physical Exam Misc*/
         $pSkin = $profiling['skinExtremities'];
@@ -11428,62 +10994,62 @@ function saveProfilingInfo($profiling){
 
         /*No Physical Exam Misc*/
         if (count($pSkin) == 0 && count($pGenito) == 0 && count($pRectal) == 0 && count($pHeent) == 0 && count($pChest) == 0 && count($pHeart) == 0 && count($pAbdomen) == 0 && count($pNeuro) == 0) {
-            insertProfilePhysicalExamMisc(null, null, null, null, null, null, null, null, $pTransNo, $pUserId, $getUpdCnt);
+            insertProfilePhysicalExamMisc($conn, null, null, null, null, null, null, null, null, $pTransNo, $pUserId, $getUpdCnt);
         }
 
         /*A. Heent*/
         for ($i = 0; $i < count($pHeent); $i++) {
             if ($pHeent[$i] != '') {
-                insertProfilePhysicalExamMisc(null, $pHeent[$i], null, null, null, null, null, null, $pTransNo, $pUserId, $getUpdCnt);
+                insertProfilePhysicalExamMisc($conn, null, $pHeent[$i], null, null, null, null, null, null, $pTransNo, $pUserId, $getUpdCnt);
             }
         }
 
         /*B. Chest/Lungs*/
         for ($i = 0; $i < count($pChest); $i++) {
             if ($pChest[$i] != '') {
-                insertProfilePhysicalExamMisc(null, null, $pChest[$i], null, null, null, null, null, $pTransNo, $pUserId, $getUpdCnt);
+                insertProfilePhysicalExamMisc($conn, null, null, $pChest[$i], null, null, null, null, null, $pTransNo, $pUserId, $getUpdCnt);
             }
         }
 
         /*C. Heart*/
         for ($i = 0; $i < count($pHeart); $i++) {
             if ($pHeart[$i] != '') {
-                insertProfilePhysicalExamMisc(null, null, null, $pHeart[$i], null, null, null, null, $pTransNo, $pUserId, $getUpdCnt);
+                insertProfilePhysicalExamMisc($conn, null, null, null, $pHeart[$i], null, null, null, null, $pTransNo, $pUserId, $getUpdCnt);
             }
         }
 
         /*D. Abdomen*/
         for ($i = 0; $i < count($pAbdomen); $i++) {
             if ($pAbdomen[$i] != '') {
-                insertProfilePhysicalExamMisc(null, null, null, null, $pAbdomen[$i], null, null, null, $pTransNo, $pUserId, $getUpdCnt);
+                insertProfilePhysicalExamMisc($conn, null, null, null, null, $pAbdomen[$i], null, null, null, $pTransNo, $pUserId, $getUpdCnt);
             }
         }
 
         /*E. Genitourinary*/
         for ($i = 0; $i < count($pGenito); $i++) {
             if ($pGenito[$i] != '') {
-                insertProfilePhysicalExamMisc(null, null, null, null, null, null, $pGenito[$i], null, $pTransNo, $pUserId, $getUpdCnt);
+                insertProfilePhysicalExamMisc($conn, null, null, null, null, null, null, $pGenito[$i], null, $pTransNo, $pUserId, $getUpdCnt);
             }
         }
 
         /*F. Digital Rectal Examination*/
         for ($i = 0; $i < count($pRectal); $i++) {
             if ($pRectal[$i] != '') {
-                insertProfilePhysicalExamMisc(null, null, null, null, null, null, null, $pRectal[$i], $pTransNo, $pUserId, $getUpdCnt);
+                insertProfilePhysicalExamMisc($conn, null, null, null, null, null, null, null, $pRectal[$i], $pTransNo, $pUserId, $getUpdCnt);
             }
         }
 
         /*G. Skin/Extremities*/
         for ($i = 0; $i < count($pSkin); $i++) {
             if ($pSkin[$i] != '') {
-                insertProfilePhysicalExamMisc($pSkin[$i], null, null, null, null, null, null, null, $pTransNo, $pUserId, $getUpdCnt);
+                insertProfilePhysicalExamMisc($conn, $pSkin[$i], null, null, null, null, null, null, null, $pTransNo, $pUserId, $getUpdCnt);
             }
         }
 
         /*H. Neurological*/
         for ($i = 0; $i < count($pNeuro); $i++) {
             if ($pNeuro[$i] != '') {
-                insertProfilePhysicalExamMisc(null, null, null, null, null, $pNeuro[$i], null, null, $pTransNo, $pUserId, $getUpdCnt);
+                insertProfilePhysicalExamMisc($conn, null, null, null, null, null, $pNeuro[$i], null, null, $pTransNo, $pUserId, $getUpdCnt);
             }
         }
 
@@ -11496,7 +11062,7 @@ function saveProfilingInfo($profiling){
         $pRectalRemarks = strtoupper($profiling['rectal_remarks']);
         $pSkinExtremitiesRemarks = strtoupper($profiling['skinExtremities_remarks']);
         $pNeuroRemarks = strtoupper($profiling['neuro_remarks']);
-        insertProfilePhysicalExamMiscRemarks($pHeentRemarks, $pChestRemarks, $pHeartRemarks, $pAbdomenRemarks, $pGenitoRemarks, $pRectalRemarks, $pSkinExtremitiesRemarks, $pNeuroRemarks, $pTransNo, $pUserId, $getUpdCnt);
+        insertProfilePhysicalExamMiscRemarks($conn, $pHeentRemarks, $pChestRemarks, $pHeartRemarks, $pAbdomenRemarks, $pGenitoRemarks, $pRectalRemarks, $pSkinExtremitiesRemarks, $pNeuroRemarks, $pTransNo, $pUserId, $getUpdCnt);
         /*End Pertinent Physical Examination Findings Sub-module*/
 /*=============================================*/
         
@@ -11553,7 +11119,7 @@ function saveProfilingInfo($profiling){
         $pQ16 = $profiling['Q16'];
         $pQ17 = $profiling['Q17'];
 
-        insertNcdHighRiskAssessment($pQ1, $pQ2, $pQ3, $pQ4, $pQ5, $pQ511, $pQ6, $pQ7, $pQ8, $pQ67811, $pQ67812, $pQ67813, $pNcdRbgDate, $pQ67821, $pQ67822, $pNcdRblDate, $pQ67831, $pQ67832, $pNcdUkDate, $pQ67841, $pQ67842, $pNcdUpDate, $pQ23, $pQ9, $pQ10, $pQ11, $pQ12, $pQ13, $pQ14, $pQ15, $pQ24, $pQ16, $pQ17, $pTransNo, $pUserId, $getUpdCnt);
+        insertNcdHighRiskAssessment($conn, $pQ1, $pQ2, $pQ3, $pQ4, $pQ5, $pQ511, $pQ6, $pQ7, $pQ8, $pQ67811, $pQ67812, $pQ67813, $pNcdRbgDate, $pQ67821, $pQ67822, $pNcdRblDate, $pQ67831, $pQ67832, $pNcdUkDate, $pQ67841, $pQ67842, $pNcdUpDate, $pQ23, $pQ9, $pQ10, $pQ11, $pQ12, $pQ13, $pQ14, $pQ15, $pQ24, $pQ16, $pQ17, $pTransNo, $pUserId, $getUpdCnt);
         /*End NCD High-Risk Assessment Sub-module*/
 
         $conn->commit();
@@ -11575,12 +11141,12 @@ function saveProfilingInfo($profiling){
     $conn = null;
 }
 /*Update Patient Information*/
-function updateProfilingInfo($pTransNo,$pPatientPin,$pPatientType,$pMemPin,$pUserId,$pEffYear,$getUpdCnt,$pFinalizedData, $pProfDate){
+function updateProfilingInfo($conn, $pTransNo,$pPatientPin,$pPatientType,$pMemPin,$pUserId,$pEffYear,$getUpdCnt,$pFinalizedData, $pProfDate){
     $ini = parse_ini_file("config.ini");
 
     try {
-        $conn = new PDO("mysql:host=".$ini["DBSERVER"].";dbname=".$ini["EPCB"], $ini['APPUSERNAME'], $ini['APPPASSWORD']);
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        // $conn = new PDO("mysql:host=".$ini["DBSERVER"].";dbname=".$ini["EPCB"], $ini['APPUSERNAME'], $ini['APPPASSWORD']);
+        // $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         $stmt = $conn->prepare("UPDATE ".$ini['EPCB'].".TSEKAP_TBL_PROFILE
                                     SET PX_PIN = :pxPin, 
@@ -11605,12 +11171,12 @@ function updateProfilingInfo($pTransNo,$pPatientPin,$pPatientType,$pMemPin,$pUse
         $stmt->execute();
 
     } catch (PDOException $e) {
-        $conn->rollBack();
-        echo "Error: InsertUpdateHSA01-01 - " . $e->getMessage();
+        // $conn->rollBack();
+        // echo "Error: InsertUpdateHSA01-01 - " . $e->getMessage();
         echo '<script>alert("Error: InsertUpdateHSA01-01 - '.$e->getMessage().'");</script>';
     }
 
-    $conn = null;
+    // $conn = null;
 }
 
 /*Plan/Management Sub-module in HSA*/
@@ -11719,12 +11285,10 @@ function insertProfilingAdvice($pAdviceRemarks, $pUserId, $pTransNo, $getUpdCnt)
 }
 
 /*Insert Patient Information*/
-function insertProfilingInfo($pCaseNo,$pTransNo,$pProfDate, $pHciNo,$pPatientPin,$pPatientType,$pMemPin,$pUserId,$pEffYear,$pOTP,$pFinalizedData, $pXPSmodule, $pIsWithATC){
+function insertProfilingInfo($conn, $pCaseNo,$pTransNo,$pProfDate, $pHciNo,$pPatientPin,$pPatientType,$pMemPin,$pUserId,$pEffYear,$pOTP,$pFinalizedData, $pXPSmodule, $pIsWithATC){
     $ini = parse_ini_file("config.ini");
 
     try {
-        $conn = new PDO("mysql:host=".$ini["DBSERVER"].";dbname=".$ini["EPCB"], $ini['APPUSERNAME'], $ini['APPPASSWORD']);
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         $stmt = $conn->prepare("INSERT INTO ".$ini['EPCB'].".TSEKAP_TBL_PROFILE(
                         CASE_NO, TRANS_NO, HCI_NO, PX_PIN, PX_TYPE, MEM_PIN, PROF_DATE, PROF_BY, EFF_YEAR, DATE_ADDED, PROFILE_OTP, IS_FINALIZE, XPS_MODULE, WITH_ATC) 
@@ -11759,22 +11323,15 @@ function insertProfilingInfo($pCaseNo,$pTransNo,$pProfDate, $pHciNo,$pPatientPin
         $stmt->execute();
 
     } catch (PDOException $e) {
-        $conn->rollBack();
-        echo "Error: InsertHSA01-01 - " . $e->getMessage();
         echo '<script>alert("Error: InsertHSA01-01 - '.$e->getMessage().'");</script>';
     }
-
-    $conn = null;
 }
 
 /*Insert Other Info in Patient Tab */
-function insertProfilingOtherInfo($pPxAge,$pPxOccupation,$pPxEducation,$pUserId,$pTransNo,$pPxPoB,$pPxReligion,$pMomMLastName,$pMomMMiddleName,$pMomFirstname,$pMomExtName,$pMomDob,$pDadLastName,$pDadMiddleName,$pDadFirstname,$pDadExtName,$pDadDob,$getUpdCnt){
+function insertProfilingOtherInfo($conn, $pPxAge,$pPxOccupation,$pPxEducation,$pUserId,$pTransNo,$pPxPoB,$pPxReligion,$pMomMLastName,$pMomMMiddleName,$pMomFirstname,$pMomExtName,$pMomDob,$pDadLastName,$pDadMiddleName,$pDadFirstname,$pDadExtName,$pDadDob,$getUpdCnt){
     $ini = parse_ini_file("config.ini");
 
     try {
-        $conn = new PDO("mysql:host=".$ini["DBSERVER"].";dbname=".$ini["EPCB"], $ini['APPUSERNAME'], $ini['APPPASSWORD']);
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
 
         $stmt = $conn->prepare("INSERT INTO ".$ini['EPCB'].".TSEKAP_TBL_PROF_OINFO(
                         PX_AGE,PX_OCCUPATION,PX_EDUCATION,DATE_ADDED,ADDED_BY,TRANS_NO,PX_POB,PX_RELIGION,PX_MOTHER_MNLN,PX_MOTHER_MNMI,PX_MOTHER_FN,PX_MOTHER_EXTN,
@@ -11821,22 +11378,16 @@ function insertProfilingOtherInfo($pPxAge,$pPxOccupation,$pPxEducation,$pUserId,
 
 
     } catch (PDOException $e) {
-        $conn->rollBack();
-        echo "Error: InsertHSA01-02 - " . $e->getMessage();
         echo '<script>alert("Error: InsertHSA01-02 - '.$e->getMessage().'");</script>';
     }
 
-    $conn = null;
 }
 
 /*Insert Past Medical History*/
-function insertPastMedicalHistory($pPastMedHistory,$pUserId,$pTransNo,$getUpdCnt){
+function insertPastMedicalHistory($conn, $pPastMedHistory,$pUserId,$pTransNo,$getUpdCnt){
     $ini = parse_ini_file("config.ini");
 
     try {
-        $conn = new PDO("mysql:host=".$ini["DBSERVER"].";dbname=".$ini["EPCB"], $ini['APPUSERNAME'], $ini['APPPASSWORD']);
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
 
         $stmt = $conn->prepare("INSERT INTO ".$ini['EPCB'].".TSEKAP_TBL_PROF_MEDHIST(
                         MDISEASE_CODE,DATE_ADDED,ADDED_BY,TRANS_NO,UPD_CNT) 
@@ -11854,22 +11405,16 @@ function insertPastMedicalHistory($pPastMedHistory,$pUserId,$pTransNo,$getUpdCnt
 
 
     } catch (PDOException $e) {
-        $conn->rollBack();
-        echo "Error: InsertHSA02-01 - " . $e->getMessage();
         echo '<script>alert("Error: InsertHSA02-01 - '.$e->getMessage().'");</script>';
     }
 
-    $conn = null;
 }
 
 /*Insert Specific Past Medical History*/
-function insertPastMedicalHistorySpecific($pPastMedHistory,$pSpecificDesc,$pTransNo,$pUserId,$getUpdCnt){
+function insertPastMedicalHistorySpecific($conn, $pPastMedHistory,$pSpecificDesc,$pTransNo,$pUserId,$getUpdCnt){
     $ini = parse_ini_file("config.ini");
 
     try {
-        $conn = new PDO("mysql:host=".$ini["DBSERVER"].";dbname=".$ini["EPCB"], $ini['APPUSERNAME'], $ini['APPPASSWORD']);
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
         $stmt = $conn->prepare("INSERT INTO ".$ini['EPCB'].".TSEKAP_TBL_PROF_MHSPECIFIC(
                         MDISEASE_CODE,SPECIFIC_DESC,DATE_ADDED,ADDED_BY,TRANS_NO,UPD_CNT) 
                           VALUES(:mDiseaseCode,
@@ -11887,22 +11432,16 @@ function insertPastMedicalHistorySpecific($pPastMedHistory,$pSpecificDesc,$pTran
         $stmt->execute();
 
     } catch (PDOException $e) {
-        $conn->rollBack();
-        echo "Error: InsertHSA02-02 - " . $e->getMessage();
         echo '<script>alert("Error: InsertHSA02-02 - '.$e->getMessage().'");</script>';
     }
 
-    $conn = null;
 }
 
 /*Insert Past Surgical History*/
-function insertPastSurgicalHistory($pOperation,$pOperationDate,$pUserId,$pTransNo,$getUpdCnt){
+function insertPastSurgicalHistory($conn, $pOperation,$pOperationDate,$pUserId,$pTransNo,$getUpdCnt){
     $ini = parse_ini_file("config.ini");
 
     try {
-        $conn = new PDO("mysql:host=".$ini["DBSERVER"].";dbname=".$ini["EPCB"], $ini['APPUSERNAME'], $ini['APPPASSWORD']);
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
 
         $stmt = $conn->prepare("INSERT INTO ".$ini['EPCB'].".TSEKAP_TBL_PROF_SURGHIST(
                         SURG_DESC,SURG_DATE,DATE_ADDED,ADDED_BY,TRANS_NO,UPD_CNT) 
@@ -11922,21 +11461,15 @@ function insertPastSurgicalHistory($pOperation,$pOperationDate,$pUserId,$pTransN
 
 
     } catch (PDOException $e) {
-        $conn->rollBack();
-        echo "Error: InsertHSA02-03 - " . $e->getMessage();
         echo '<script>alert("Error: InsertHSA02-03 - '.$e->getMessage().'");</script>';
     }
-
-    $conn = null;
 }
 
 /*Insert Family Medical History*/
-function insertFamilyMedicalHistory($pFamMedHistory,$pUserId,$pTransNo,$getUpdCnt){
+function insertFamilyMedicalHistory($conn, $pFamMedHistory,$pUserId,$pTransNo,$getUpdCnt){
     $ini = parse_ini_file("config.ini");
 
     try {
-        $conn = new PDO("mysql:host=".$ini["DBSERVER"].";dbname=".$ini["EPCB"], $ini['APPUSERNAME'], $ini['APPPASSWORD']);
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         $stmt = $conn->prepare("INSERT INTO ".$ini['EPCB'].".TSEKAP_TBL_PROF_FAMHIST(
                         MDISEASE_CODE,DATE_ADDED,ADDED_BY,TRANS_NO,UPD_CNT) 
@@ -11953,22 +11486,15 @@ function insertFamilyMedicalHistory($pFamMedHistory,$pUserId,$pTransNo,$getUpdCn
         $stmt->execute();
 
     } catch (PDOException $e) {
-        $conn->rollBack();
-        echo "Error: InsertHSA03-01 - " . $e->getMessage();
         echo '<script>alert("Error: InsertHSA03-01 - '.$e->getMessage().'");</script>';
     }
-
-    $conn = null;
 }
 
 /*Insert Specific Family Medical History*/
-function insertFamilyMedicalHistorySpecific($pFamMedHistory,$pSpecificDesc,$pTransNo,$pUserId,$getUpdCnt){
+function insertFamilyMedicalHistorySpecific($conn, $pFamMedHistory,$pSpecificDesc,$pTransNo,$pUserId,$getUpdCnt){
     $ini = parse_ini_file("config.ini");
 
     try {
-        $conn = new PDO("mysql:host=".$ini["DBSERVER"].";dbname=".$ini["EPCB"], $ini['APPUSERNAME'], $ini['APPPASSWORD']);
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
 
         $stmt = $conn->prepare("INSERT INTO ".$ini['EPCB'].".TSEKAP_TBL_PROF_FHSPECIFIC(
                         MDISEASE_CODE,SPECIFIC_DESC,DATE_ADDED,ADDED_BY,TRANS_NO,UPD_CNT) 
@@ -11988,21 +11514,14 @@ function insertFamilyMedicalHistorySpecific($pFamMedHistory,$pSpecificDesc,$pTra
 
 
     } catch (PDOException $e) {
-        $conn->rollBack();
-        echo "Error: InsertHSA03-02 - " . $e->getMessage();
         echo '<script>alert("Error: InsertHSA03-02 - '.$e->getMessage().'");</script>';
     }
-
-    $conn = null;
 }
 /*Insert Personal/ Social History*/
-function insertPersonalSocialHistory($pIsSmoker,$pNoCigPack,$pIsAlcoholDrinker,$pNoBottles,$pIllDrugUser,$pUserId,$pTransNo,$getUpdCnt, $pIsSexuallyActive){
+function insertPersonalSocialHistory($conn, $pIsSmoker,$pNoCigPack,$pIsAlcoholDrinker,$pNoBottles,$pIllDrugUser,$pUserId,$pTransNo,$getUpdCnt, $pIsSexuallyActive){
     $ini = parse_ini_file("config.ini");
 
     try {
-        $conn = new PDO("mysql:host=".$ini["DBSERVER"].";dbname=".$ini["EPCB"], $ini['APPUSERNAME'], $ini['APPPASSWORD']);
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
 
         $stmt = $conn->prepare("INSERT INTO ".$ini['EPCB'].".TSEKAP_TBL_PROF_SOCHIST(
                         IS_SMOKER, NO_CIGPK, IS_ADRINKER, NO_BOTTLES, ILL_DRUG_USER, DATE_ADDED, ADDED_BY, TRANS_NO, UPD_CNT, IS_SEXUALLY_ACTIVE)
@@ -12030,22 +11549,15 @@ function insertPersonalSocialHistory($pIsSmoker,$pNoCigPack,$pIsAlcoholDrinker,$
 
 
     } catch (PDOException $e) {
-        $conn->rollBack();
-        echo "Error: InsertHSA03-03 - " . $e->getMessage();
         echo '<script>alert("Error: InsertHSA03-03 - '.$e->getMessage().'");</script>';
     }
-
-    $conn = null;
 }
 
 /*Insert Immunizations*/
-function insertImmunizations($pForChildren,$pForAdult,$pForPregWoman,$pForElderly,$pUserId,$pTransNo,$pOthersImm,$getUpdCnt){
+function insertImmunizations($conn, $pForChildren,$pForAdult,$pForPregWoman,$pForElderly,$pUserId,$pTransNo,$pOthersImm,$getUpdCnt){
     $ini = parse_ini_file("config.ini");
 
     try {
-        $conn = new PDO("mysql:host=".$ini["DBSERVER"].";dbname=".$ini["EPCB"], $ini['APPUSERNAME'], $ini['APPPASSWORD']);
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
 
         $stmt = $conn->prepare("INSERT INTO ".$ini['EPCB'].".TSEKAP_TBL_PROF_IMMUNIZATION(
                         CHILD_IMMCODE,YOUNGW_IMMCODE,PREGW_IMMCODE,ELDERLY_IMMCODE,DATE_ADDED,ADDED_BY,TRANS_NO,OTHER_IMM,UPD_CNT)
@@ -12071,21 +11583,15 @@ function insertImmunizations($pForChildren,$pForAdult,$pForPregWoman,$pForElderl
 
 
     } catch (PDOException $e) {
-        $conn->rollBack();
-        echo "Error: InsertHSA04-01 - " . $e->getMessage();
         echo '<script>alert("Error: InsertHSA04-01 - '.$e->getMessage().'");</script>';
     }
-
-    $conn = null;
 }
 
 /*Insert Menstrual History*/
-function insertMenstrualHistory($pMenarche,$pLastMensPeriod,$pPeriodDuration,$pMensInterval,$pPadsPerDay,$pOnsetSexIC,$pBirthControlMethod,$pIsMenopause,$pMenopauseAge,$pUserId,$pTransNo,$getUpdCnt, $pIsApplicable){
+function insertMenstrualHistory($conn, $pMenarche,$pLastMensPeriod,$pPeriodDuration,$pMensInterval,$pPadsPerDay,$pOnsetSexIC,$pBirthControlMethod,$pIsMenopause,$pMenopauseAge,$pUserId,$pTransNo,$getUpdCnt, $pIsApplicable){
     $ini = parse_ini_file("config.ini");
 
     try {
-        $conn = new PDO("mysql:host=".$ini["DBSERVER"].";dbname=".$ini["EPCB"], $ini['APPUSERNAME'], $ini['APPPASSWORD']);
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         $stmt = $conn->prepare("INSERT INTO ".$ini['EPCB'].".TSEKAP_TBL_PROF_MENSHIST(
                         MENARCHE_PERIOD,LAST_MENS_PERIOD,PERIOD_DURATION,MENS_INTERVAL,PADS_PER_DAY,ONSET_SEX_IC,BIRTH_CTRL_METHOD,IS_MENOPAUSE,MENOPAUSE_AGE,DATE_ADDED,ADDED_BY,TRANS_NO,UPD_CNT,IS_APPLICABLE)
@@ -12120,21 +11626,16 @@ function insertMenstrualHistory($pMenarche,$pLastMensPeriod,$pPeriodDuration,$pM
         $stmt->execute();
 
     } catch (PDOException $e) {
-        $conn->rollBack();
-        echo "Error: InsertHSA05-01 - " . $e->getMessage();
         echo '<script>alert("Error: InsertHSA05-01 - '.$e->getMessage().'");</script>';
     }
 
-    $conn = null;
 }
 
 /*Insert Pregnancy History and Family Planning*/
-function insertPrenancyHistory($pPregCnt,$pDeliveryCnt,$pDeliveryType,$pFullTermCnt,$pPrematureCnt,$pAbortionCnt,$pLivChildrenCnt,$pWithPregIndHyp,$pUserId,$pTransNo,$pWithFamPlan,$getUpdCnt, $pPregIsApplicable){
+function insertPrenancyHistory($conn, $pPregCnt,$pDeliveryCnt,$pDeliveryType,$pFullTermCnt,$pPrematureCnt,$pAbortionCnt,$pLivChildrenCnt,$pWithPregIndHyp,$pUserId,$pTransNo,$pWithFamPlan,$getUpdCnt, $pPregIsApplicable){
     $ini = parse_ini_file("config.ini");
 
     try {
-        $conn = new PDO("mysql:host=".$ini["DBSERVER"].";dbname=".$ini["EPCB"], $ini['APPUSERNAME'], $ini['APPPASSWORD']);
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         $stmt = $conn->prepare("INSERT INTO ".$ini['EPCB'].".TSEKAP_TBL_PROF_PREGHIST(
                         PREG_CNT,DELIVERY_CNT,DELIVERY_TYP,FULL_TERM_CNT,PREMATURE_CNT,ABORTION_CNT,LIV_CHILDREN_CNT,W_PREG_INDHYP,DATE_ADDED,ADDED_BY,TRANS_NO,W_FAM_PLAN,UPD_CNT,IS_APPLICABLE)
@@ -12169,21 +11670,16 @@ function insertPrenancyHistory($pPregCnt,$pDeliveryCnt,$pDeliveryType,$pFullTerm
         $stmt->execute();
 
     } catch (PDOException $e) {
-        $conn->rollBack();
-        echo "Error: InsertHSA05-02 - " . $e->getMessage();
         echo '<script>alert("Error: InsertHSA05-02 - '.$e->getMessage().'");</script>';
     }
 
-    $conn = null;
 }
 
 /*Insert Pertinent Physical Examination Findings*/
-function insertPertinentPhysicalExam($pSystolic,$pDiastolic,$pHr,$pRr,$pHeight,$pWeight,$pVisionAquity,$pLength,$pHeadCirc,$pUserId,$pTransNo,$getUpdCnt,$pTemperature, $pVisionAquityLeft, $pVisionAquityRight, $pSkinThickness, $pWaist, $pHip, $pLimbs, $pBMI, $pZScore,$pMidUpperArm){
+function insertPertinentPhysicalExam($conn, $pSystolic,$pDiastolic,$pHr,$pRr,$pHeight,$pWeight,$pVisionAquity,$pLength,$pHeadCirc,$pUserId,$pTransNo,$getUpdCnt,$pTemperature, $pVisionAquityLeft, $pVisionAquityRight, $pSkinThickness, $pWaist, $pHip, $pLimbs, $pBMI, $pZScore,$pMidUpperArm){
     $ini = parse_ini_file("config.ini");
 
     try {
-        $conn = new PDO("mysql:host=".$ini["DBSERVER"].";dbname=".$ini["EPCB"], $ini['APPUSERNAME'], $ini['APPPASSWORD']);
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         $stmt = $conn->prepare("INSERT INTO ".$ini['EPCB'].".TSEKAP_TBL_PROF_PEPERT(
                         SYSTOLIC,DIASTOLIC,HR,RR,HEIGHT,WEIGHT,TEMPERATURE,DATE_ADDED,ADDED_BY,TRANS_NO,VISION,LENGTH,HEAD_CIRC,UPD_CNT,
@@ -12237,21 +11733,16 @@ function insertPertinentPhysicalExam($pSystolic,$pDiastolic,$pHr,$pRr,$pHeight,$
         $stmt->execute();
 
     } catch (PDOException $e) {
-        $conn->rollBack();
-        echo "Error: InsertHSA06-01 - " . $e->getMessage();
         echo '<script>alert("Error: InsertHSA06-01 - '.$e->getMessage().'");</script>';
     }
 
-    $conn = null;
 }
 
 /*Insert General Survey*/
-function insertPeGeneralSurvey($pGenSurveyId, $pGenSurveyRem, $pUserId, $pTransNo){
+function insertPeGeneralSurvey($conn, $pGenSurveyId, $pGenSurveyRem, $pUserId, $pTransNo){
     $ini = parse_ini_file("config.ini");
 
     try {
-        $conn = new PDO("mysql:host=".$ini["DBSERVER"].";dbname=".$ini["EPCB"], $ini['APPUSERNAME'], $ini['APPPASSWORD']);
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         $stmt = $conn->prepare("INSERT INTO ".$ini['EPCB'].".TSEKAP_TBL_PROF_PEGENSURVEY(
                         TRANS_NO,GENSURVEY_ID,GENSURVEY_REM,DATE_ADDED,ADDED_BY)
@@ -12268,12 +11759,9 @@ function insertPeGeneralSurvey($pGenSurveyId, $pGenSurveyRem, $pUserId, $pTransN
         $stmt->execute();
 
     } catch (PDOException $e) {
-        $conn->rollBack();
-        echo "Error: InsertHSAGenSurvey - " . $e->getMessage();
         echo '<script>alert("Error: InsertHSAGenSurvey - '.$e->getMessage().'");</script>';
     }
 
-    $conn = null;
 }
 
 /*Insert General Survey*/
@@ -12309,12 +11797,12 @@ function insertCourseInTheWard($pActionDate, $pDocActionOrder, $pUserId, $pTrans
     $conn = null;
 }
 /*Insert Profile Blood Type*/
-function insertBloodType($pBloodType,$pBloodRh,$pUserId,$pTransNo,$getUpdCnt){
+function insertBloodType($conn, $pBloodType,$pBloodRh,$pUserId,$pTransNo,$getUpdCnt){
     $ini = parse_ini_file("config.ini");
 
     try {
-        $conn = new PDO("mysql:host=".$ini["DBSERVER"].";dbname=".$ini["EPCB"], $ini['APPUSERNAME'], $ini['APPPASSWORD']);
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        // $conn = new PDO("mysql:host=".$ini["DBSERVER"].";dbname=".$ini["EPCB"], $ini['APPUSERNAME'], $ini['APPPASSWORD']);
+        // $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         $stmt = $conn->prepare("INSERT INTO ".$ini['EPCB'].".TSEKAP_TBL_PROF_BLOODTYPE(
                         TRANS_NO,BLOOD_TYPE,BLOOD_RH,DATE_ADDED,ADDED_BY,UPD_CNT)
@@ -12333,21 +11821,21 @@ function insertBloodType($pBloodType,$pBloodRh,$pUserId,$pTransNo,$getUpdCnt){
         $stmt->execute();
 
     } catch (PDOException $e) {
-        $conn->rollBack();
-        echo "Error: InsertHSA06-02 - " . $e->getMessage();
+        // $conn->rollBack();
+        // echo "Error: InsertHSA06-02 - " . $e->getMessage();
         echo '<script>alert("Error: InsertHSA06-02 - '.$e->getMessage().'");</script>';
     }
 
-    $conn = null;
+    // $conn = null;
 }
 
 /*Insert Profile Physical Examination Miscellaneous */
-function insertProfilePhysicalExamMisc($pSkin, $pHeent, $pChest, $pHeart, $pAbdomen, $pNeuro, $pGU, $pRectal, $pTransNo, $pUserId, $getUpdCnt){
+function insertProfilePhysicalExamMisc($conn, $pSkin, $pHeent, $pChest, $pHeart, $pAbdomen, $pNeuro, $pGU, $pRectal, $pTransNo, $pUserId, $getUpdCnt){
     $ini = parse_ini_file("config.ini");
 
     try {
-        $conn = new PDO("mysql:host=".$ini["DBSERVER"].";dbname=".$ini["EPCB"], $ini['APPUSERNAME'], $ini['APPPASSWORD']);
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        // $conn = new PDO("mysql:host=".$ini["DBSERVER"].";dbname=".$ini["EPCB"], $ini['APPUSERNAME'], $ini['APPPASSWORD']);
+        // $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         $stmt = $conn->prepare("INSERT INTO ".$ini['EPCB'].".TSEKAP_TBL_PROF_PEMISC(
                         SKIN_ID, HEENT_ID, CHEST_ID, HEART_ID, ABDOMEN_ID, NEURO_ID, GU_ID, RECTAL_ID, TRANS_NO, DATE_ADDED, ADDED_BY, UPD_CNT) 
@@ -12378,21 +11866,21 @@ function insertProfilePhysicalExamMisc($pSkin, $pHeent, $pChest, $pHeart, $pAbdo
         $stmt->execute();
 
     } catch (PDOException $e) {
-        $conn->rollBack();
-        echo "Error: InsertHSA06-03 - " . $e->getMessage();
+        // $conn->rollBack();
+        // echo "Error: InsertHSA06-03 - " . $e->getMessage();
         echo '<script>alert("Error: InsertHSA06-03 - '.$e->getMessage().'");</script>';
     }
 
-    $conn = null;
+    // $conn = null;
 }
 
 /*Insert Physical Examination Misc Remarks*/
-function insertProfilePhysicalExamMiscRemarks($pHeentRemarks, $pChestRemarks, $pHeartRemarks, $pAbdomenRemarks, $pGenitoRemarks, $pRectalRemarks, $pSkinExtremitiesRemarks,$pNeuroRemarks, $pTransNo, $pUserId, $getUpdCnt){
+function insertProfilePhysicalExamMiscRemarks($conn, $pHeentRemarks, $pChestRemarks, $pHeartRemarks, $pAbdomenRemarks, $pGenitoRemarks, $pRectalRemarks, $pSkinExtremitiesRemarks,$pNeuroRemarks, $pTransNo, $pUserId, $getUpdCnt){
     $ini = parse_ini_file("config.ini");
 
     try {
-        $conn = new PDO("mysql:host=".$ini["DBSERVER"].";dbname=".$ini["EPCB"], $ini['APPUSERNAME'], $ini['APPPASSWORD']);
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        // $conn = new PDO("mysql:host=".$ini["DBSERVER"].";dbname=".$ini["EPCB"], $ini['APPUSERNAME'], $ini['APPPASSWORD']);
+        // $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         $stmt = $conn->prepare("INSERT INTO ".$ini['EPCB'].".TSEKAP_TBL_PROF_PESPECIFIC(
                                 SKIN_REM, HEENT_REM, CHEST_REM, HEART_REM, ABDOMEN_REM, TRANS_NO, DATE_ADDED, ADDED_BY, NEURO_REM, GU_REM, RECTAL_REM, UPD_CNT) 
@@ -12423,22 +11911,22 @@ function insertProfilePhysicalExamMiscRemarks($pHeentRemarks, $pChestRemarks, $p
         $stmt->execute();
 
     } catch (PDOException $e) {
-        $conn->rollBack();
-        echo "Error: InsertHSA06-04 - " . $e->getMessage();
+        // $conn->rollBack();
+        // echo "Error: InsertHSA06-04 - " . $e->getMessage();
         echo '<script>alert("Error: InsertHSA06-04 - '.$e->getMessage().'");</script>';
     }
 
-    $conn = null;
+    // $conn = null;
 }
 
 /*Insert NCD High-risk Assessment*/
-function insertNcdHighRiskAssessment($pQ1,$pQ2,$pQ3,$pQ4,$pQ5,$pQ511,$pQ6,$pQ7,$pQ8,$pQ67811,$pQ67812,$pQ67813,$pNcdRbgDate,$pQ67821,$pQ67822,$pNcdRblDate,
+function insertNcdHighRiskAssessment($conn, $pQ1,$pQ2,$pQ3,$pQ4,$pQ5,$pQ511,$pQ6,$pQ7,$pQ8,$pQ67811,$pQ67812,$pQ67813,$pNcdRbgDate,$pQ67821,$pQ67822,$pNcdRblDate,
                                      $pQ67831,$pQ67832,$pNcdUkDate,$pQ67841,$pQ67842,$pNcdUpDate,$pQ23,$pQ9,$pQ10,$pQ11,$pQ12,$pQ13,$pQ14,$pQ15,$pQ24,$pQ16,$pQ17,$pTransNo, $pUserId,$getUpdCnt){
     $ini = parse_ini_file("config.ini");
 
     try {
-        $conn = new PDO("mysql:host=".$ini["DBSERVER"].";dbname=".$ini["EPCB"], $ini['APPUSERNAME'], $ini['APPPASSWORD']);
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        // $conn = new PDO("mysql:host=".$ini["DBSERVER"].";dbname=".$ini["EPCB"], $ini['APPUSERNAME'], $ini['APPPASSWORD']);
+        // $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 
         $stmt = $conn->prepare("INSERT INTO ".$ini['EPCB'].".TSEKAP_TBL_PROF_NCDQANS(
@@ -12522,12 +12010,12 @@ function insertNcdHighRiskAssessment($pQ1,$pQ2,$pQ3,$pQ4,$pQ5,$pQ511,$pQ6,$pQ7,$
         $stmt->execute();
 
     } catch (PDOException $e) {
-        $conn->rollBack();
-        echo "Error: InsertHSA07-01 - " . $e->getMessage();
+        // $conn->rollBack();
+        // echo "Error: InsertHSA07-01 - " . $e->getMessage();
         echo '<script>alert("Error: InsertHSA07-01 - '.$e->getMessage().'");</script>';
     }
 
-    $conn = null;
+    // $conn = null;
 }
 
 /*Get Updated Count Value in Registration per Transaction*/
@@ -13038,7 +12526,7 @@ function getPatientHsaRecord($hsa_transNo, $getUpdCnt) {
         $conn = new PDO("mysql:host=".$ini["DBSERVER"].";dbname=".$ini["EPCB"], $ini['APPUSERNAME'], $ini['APPPASSWORD']);
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        $stmt = $conn->prepare("SELECT *, enlist.CASE_NO
+        $stmt = $conn->prepare("SELECT *, enlist.CASE_NO, enlist.EFF_YEAR
                                 FROM ".$ini['EPCB'].".TSEKAP_TBL_ENLIST AS enlist /*ENLISTMENT RECORD*/
                                 INNER JOIN ".$ini['EPCB'].".TSEKAP_TBL_PROFILE AS profile ON enlist.CASE_NO = profile.CASE_NO /*PATIENTS DETAILS*/
                                 LEFT JOIN ".$ini['EPCB'].".TSEKAP_TBL_PROF_OINFO AS oinfo ON profile.TRANS_NO = oinfo.TRANS_NO /*PATIENTS DETAILS OTHER INFO*/
