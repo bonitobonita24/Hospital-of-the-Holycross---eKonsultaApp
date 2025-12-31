@@ -8,12 +8,7 @@
 
 ################################################################################
 
-# The example below uses the PHP Apache image as the foundation for running the app.
-# By specifying the "5.5-apache" tag, it will also use whatever happens to be the
-# most recent version of that tag when you build your Dockerfile.
-# If reproducibility is important, consider using a specific digest SHA, like
-# php@sha256:99cede493dfd88720b610eb8077c8688d3cca50003d76d1d539b0efc8cca72b4.
-FROM php:5.5-apache
+FROM php:5.6-apache
 
 # Your PHP application may require additional PHP extensions to be installed
 # manually. For detailed instructions for installing extensions can be found, see
@@ -40,9 +35,8 @@ FROM php:5.5-apache
 #    && pecl install xdebug-3.2.1 \
 #    && docker-php-ext-enable redis xdebug
 
-# Use the default production configuration for PHP runtime arguments, see
-# https://github.com/docker-library/docs/tree/master/php#configuration
-RUN mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini"
+RUN mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini" \
+	&& docker-php-ext-install pdo pdo_mysql mysqli
 
 # Copy app files from the app directory.
 COPY . /var/www/html
