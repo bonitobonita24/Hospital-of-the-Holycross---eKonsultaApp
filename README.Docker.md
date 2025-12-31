@@ -1,22 +1,32 @@
-### Building and running your application
+### Environments
 
-When you're ready, start your application by running:
-`docker compose up --build`.
+- Production (default): config.ini targets the cPanel MySQL `s1105.usc1.mysecurecloudhost.com:3306` with schema/user `jerlanlo_pbe_hckonsulta`.
+- Development: config.dev.ini targets Docker compose (host `mysql`, schema `konsulta`, user `ekon_app_user`).
+- Production template: config.prod.ini mirrors the live cPanel database and can restore the default.
 
-Your application will be available at http://localhost:9000.
+Switch environment (CLI-only helper copies template to config.ini):
+
+```
+php setenv.php dev   # use Docker dev settings
+php setenv.php prod  # revert to production defaults
+```
+
+### Development with Docker
+
+1) Select dev config
+```
+php setenv.php dev
+```
+
+2) Start services (imports konsulta_100725.sql on a clean volume)
+```
+docker compose up -d --build
+```
+
+3) App URL
+```
+http://localhost:9000
+```
 
 ### PHP extensions
-If your application requires specific PHP extensions to run, they will need to be added to the Dockerfile. Follow the instructions and example in the Dockerfile to add them.
-
-### Deploying your application to the cloud
-
-First, build your image, e.g.: `docker build -t myapp .`.
-If your cloud uses a different CPU architecture than your development
-machine (e.g., you are on a Mac M1 and your cloud provider is amd64),
-you'll want to build the image for that platform, e.g.:
-`docker build --platform=linux/amd64 -t myapp .`.
-
-Then, push it to your registry, e.g. `docker push myregistry.com/myapp`.
-
-Consult Docker's [getting started](https://docs.docker.com/go/get-started-sharing/)
-docs for more detail on building and pushing.
+Extensions are installed in the Dockerfile via `docker-php-ext-install pdo pdo_mysql mysqli`. Add more there if needed.
