@@ -1,46 +1,49 @@
 # syntax=docker/dockerfile:1
 
-# Comments are provided throughout this file to help you get started.
-# If you need more help, visit the Dockerfile reference guide at
-# https://docs.docker.com/go/dockerfile-reference/
-
-# Want to help us make this template better? Share your feedback here: https://forms.gle/ybq9Krt8jtBL3iCk7
-
-################################################################################
-
 FROM php:5.6-apache
 
-# Your PHP application may require additional PHP extensions to be installed
-# manually. For detailed instructions for installing extensions can be found, see
-# https://github.com/docker-library/docs/tree/master/php#how-to-install-more-php-extensions
-# The following code blocks provide examples that you can edit and use.
-#
-# Add core PHP extensions, see
-# https://github.com/docker-library/docs/tree/master/php#php-core-extensions
-# This example adds the apt packages for the 'gd' extension's dependencies and then
-# installs the 'gd' extension. For additional tips on running apt-get:
-# https://docs.docker.com/go/dockerfile-aptget-best-practices/
-# RUN apt-get update && apt-get install -y \
-#     libfreetype-dev \
-#     libjpeg62-turbo-dev \
-#     libpng-dev \
-# && rm -rf /var/lib/apt/lists/* \
-#     && docker-php-ext-configure gd --with-freetype --with-jpeg \
-#     && docker-php-ext-install -j$(nproc) gd
-#
-# Add PECL extensions, see
-# https://github.com/docker-library/docs/tree/master/php#pecl-extensions
-# This example adds the 'redis' and 'xdebug' extensions.
-# RUN pecl install redis-5.3.7 \
-#    && pecl install xdebug-3.2.1 \
-#    && docker-php-ext-enable redis xdebug
+# Enable Apache mod_rewrite for clean URLs
+RUN a2enmod rewrite
 
-RUN mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini" \
-	&& docker-php-ext-install pdo pdo_mysql mysqli
+# Fix Debian Stretch archived repositories (EOL)
+RUN sed -i 's/deb.debian.org/archive.debian.org/g' /etc/apt/sources.list && \
+    sed -i 's|security.debian.org|archive.debian.org|g' /etc/apt/sources.list && \
+    sed -i '/stretch-updates/d' /etc/apt/sources.list
 
-# Copy app files from the app directory.
+# Install required PHP extensions for MySQL, GD, and other dependencies
+RUN apt-get update && apt-get install --allow-unauthenticated -y \
+    libfreetype6-dev \
+    libjpeg62-turbo-dev \
+    libpng-dev \
+    libmcrypt-dev \
+    zlib1g-dev \
+    mysql-client \
+    && rm -rf /var/lib/apt/lists/*
+
+# Configure and install PHP extensions
+RUN docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
+    && docker-php-ext-install -j$(nproc) \
+    pdo \
+    pdo_mysql \
+    mysqli \
+    gd \
+    mcrypt \
+    zip
+
+# Use production PHP configuration
+RUN mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini"
+
+# Set Apache document root and enable .htaccess
+RUN sed -i 's|/var/www/html|/var/www/html|g' /etc/apache2/sites-enabled/000-default.conf
+RUN sed -i '/<Directory \/var\/www\/>/,/<\/Directory>/s/AllowOverride None/AllowOverride All/' /etc/apache2/apache2.conf
+
+# Copy application files
 COPY . /var/www/html
 
-# Switch to a non-privileged user (defined in the base image) that the app will run under.
-# See https://docs.docker.com/go/dockerfile-user-best-practices/
+# Set proper permissions
+RUN chown -R www-data:www-data /var/www/html && \
+    chmod -R 755 /var/www/html && \
+    chmod -R 777 /var/www/html/files /var/www/html/tmp
+
+# Run as www-data user
 USER www-data

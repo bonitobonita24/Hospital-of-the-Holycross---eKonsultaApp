@@ -1,29 +1,41 @@
-# Comments are provided throughout this file to help you get started.
-# If you need more help, visit the Docker Compose reference guide at
-# https://docs.docker.com/go/compose-spec-reference/
-
-# Here the instructions define your application as a service called "server".
-# This service is built from the Dockerfile in the current directory.
-# You can add other services your application may depend on here, such as a
-# database or a cache. For examples, see the Awesome Compose repository:
-# https://github.com/docker/awesome-compose
 services:
   server:
     build:
       context: .
+      dockerfile: Dockerfile
+    container_name: eKonsulta_app
     ports:
-      - 8080:80
+      - "8080:80"
+    volumes:
+      - .:/var/www/html
+      - ./res:/var/www/html/res
+      - ./files:/var/www/html/files
+    environment:
+      MYSQL_HOST: mysql
+      MYSQL_DATABASE: konsulta
+      MYSQL_USER: ekon_app_user
+      MYSQL_PASSWORD: xxx123
+      ENV_TYPE: development
     depends_on:
       mysql:
         condition: service_healthy
+    networks:
+      - eKonsulta_network
 
   mysql:
     image: mysql:5.7
+    container_name: eKonsulta_mysql
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: roottoor
       MYSQL_DATABASE: konsulta
-    command: ["mysqld", "--sql-mode=", "--character-set-server=utf8", "--collation-server=utf8_general_ci", "--lower_case_table_names=1"]
+    command: 
+      - mysqld
+      - --sql-mode=
+      - --character-set-server=utf8
+      - --collation-server=utf8_general_ci
+      - --lower_case_table_names=1
+      - --default-authentication-plugin=mysql_native_password
     ports:
       - "3307:3306"
     volumes:
@@ -34,30 +46,15 @@ services:
       interval: 10s
       timeout: 5s
       retries: 10
-    expose:
-      - "3306"
+    networks:
+      - eKonsulta_network
 
 volumes:
-#   db-data:
   mysql-data:
 
-# The commented out section below is an example of how to define a PostgreSQL
-# database that your application can use. `depends_on` tells Docker Compose to
-# start the database before your application. The `db-data` volume persists the
-# database data between container restarts. The `db-password` secret is used
-# to set the database password. You must create `db/password.txt` and add
-# a password of your choosing to it before running `docker-compose up`.
-#     depends_on:
-#       db:
-#         condition: service_healthy
-#   db:
-#     image: postgres
-#     restart: always
-#     user: postgres
-#     secrets:
-#       - db-password
-#     volumes:
-#       - db-data:/var/lib/postgresql/data
+networks:
+  eKonsulta_network:
+    driver: bridge
 #     environment:
 #       - POSTGRES_DB=example
 #       - POSTGRES_PASSWORD_FILE=/run/secrets/db-password
