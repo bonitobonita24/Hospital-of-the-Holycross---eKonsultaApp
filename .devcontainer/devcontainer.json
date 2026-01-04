@@ -1,0 +1,52 @@
+{
+  "name": "eKonsulta Hospital App",
+  "dockerComposeFile": ["../compose.yaml"],
+  "service": "server",
+  "workspaceFolder": "/var/www/html",
+  
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode.vscode-mysql",
+        "felixbecker.php-pack",
+        "felixbecker.php-intellisense",
+        "bmewburn.vscode-intelephense-client",
+        "emallin.phpunit",
+        "ms-vscode-docker.remote-containers"
+      ],
+      "settings": {
+        "php.validate.executablePath": "/usr/bin/php",
+        "php.validate.run": "onSave"
+      }
+    }
+  },
+
+  "forwardPorts": [8080, 3306],
+  "portsAttributes": {
+    "8080": {
+      "label": "Application",
+      "onAutoForward": "notify"
+    },
+    "3306": {
+      "label": "MySQL",
+      "onAutoForward": "notify"
+    }
+  },
+
+  "remoteUser": "www-data",
+  "remoteEnv": {
+    "PHP_ENV": "development"
+  },
+
+  "mounts": [
+    "source=${localEnv:HOME}/.ssh,target=/home/www-data/.ssh,readonly",
+    "source=${localEnv:HOME}/.git-credentials,target=/home/www-data/.git-credentials,type=bind,readonly"
+  ],
+
+  "postCreateCommand": "php setenv.php dev && echo 'Development environment configured'",
+  "postStartCommand": "docker compose exec mysql mysqladmin ping -h localhost || true",
+
+  "features": {
+    "ghcr.io/devcontainers/features/git:1": {}
+  }
+}
