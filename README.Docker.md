@@ -1,39 +1,69 @@
 ### Environments
 
-- Production (default): config.ini targets the cPanel MySQL `s1105.usc1.mysecurecloudhost.com:3306` with schema/user `jerlanlo_pbe_hckonsulta`.
-- Development: config.dev.ini targets Docker compose (host `mysql`, schema `konsulta`, user `ekon_app_user`).
-- Production template: config.prod.ini mirrors the live cPanel database and can restore the default.
+- **Production (default)**: `config.ini` targets the cPanel MySQL `s1105.usc1.mysecurecloudhost.com:3306` with schema/user `jerlanlo_pbe_hckonsulta`.
+- **Development**: `config.dev.ini` targets Docker Compose (host `mysql`, schema `konsulta`, user `ekon_app_user`).
+- **Production template**: `config.prod.ini` mirrors the live cPanel database and can restore the default.
 
-Switch environment (CLI-only helper copies template to config.ini):
+### Environment Switching
+
+**Always use `setenv.php` to switch between dev and production.**
 
 ```bash
-php setenv.php dev   # use Docker dev settings
-php setenv.php prod  # revert to production defaults
+# Switch to development (for local Docker)
+php setenv.php dev
+
+# Switch to production (for cPanel deployment)
+php setenv.php prod
+
+# Check current environment
+php setenv.php status
 ```
+
+**Important Notes:**
+- The default `config.ini` is **production** for safe cPanel deployment.
+- Always switch to `dev` before running Docker Compose locally.
+- Always switch back to `prod` before pulling/deploying to production.
+- Do NOT manually edit `config.ini`; use `setenv.php` to manage it.
 
 ### Development with Docker
 
-**Important:** The default `config.ini` is set to **production** for safe cPanel deployment. You must switch to development config before using Docker:
-
-1) Switch to dev config (required for local Docker)
+1) **Switch to dev config** (required before Docker)
 ```bash
 php setenv.php dev
 ```
 
-2) Start services (imports konsulta_100725.sql on a clean volume)
+2) **Start services** (imports `konsulta_010826.sql` on clean init)
 ```bash
 docker compose up -d --build
 ```
 
-3) App URL
+3) **Access app**
 ```
 http://localhost:8080
 ```
 
-**Before deploying to production**, switch back to production config:
+4) **Before deploying to production**, switch back
 ```bash
 php setenv.php prod
 ```
+
+### Production Deployment
+
+After pulling updated code from main:
+
+1) **Ensure production config is active**
+```bash
+php setenv.php prod
+# or just verify config.ini has production settings
+```
+
+2) **Deploy files to cPanel**
+   - Upload to `/public_html` or your doc root
+   - Database is auto-connected via production config
+
+3) **Database updates** (if needed, via cPanel phpMyAdmin or SSH)
+   - Import any new `.sql` dumps
+   - Ensure table names match code (case-sensitive on Linux—use uppercase: `TSEKAP_TBL_*`)
 
 ### Quick Commands
 
