@@ -50,7 +50,7 @@
                         <b>Effectivity Year: </b>
                         <select name="pEffYear" id="pEffYear" class="form-control" style="width:220px;margin:0px 10px 0px 0px;" required>
                             <option value="">Select Effectivity Year</option>
-                            <option value="2026" <?php if ($_POST['pEffYear'] == "2026") { echo "selected"; } ?>>2026</option>
+							<option value="2026" <?php if ($_POST['pEffYear'] == "2026") { echo "selected"; } ?>>2026</option>
                             <option value="2025" <?php if ($_POST['pEffYear'] == "2025") { echo "selected"; } ?>>2025</option>
                             <option value="2024" <?php if ($_POST['pEffYear'] == "2024") { echo "selected"; } ?>>2024</option>
                             <option value="2023" <?php if ($_POST['pEffYear'] == "2023") { echo "selected"; } ?>>2023</option>
