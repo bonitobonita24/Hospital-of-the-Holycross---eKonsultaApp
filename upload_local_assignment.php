@@ -54,19 +54,31 @@
 
                         $logs = print_r($decryptor->getLogs(), true);
 
+                        // Debug logging
+                        error_log("Upload Assignment: Decryption successful. Output length: " . strlen($decryptedOutput));
+                        error_log("Decryptor Logs: " . $logs);
+
                         /*Save as Decrypted XML File*/
                         $pFileName = "files/Downloads/Assignment_".$file_name;
                         $fileUploaded = file_put_contents($pFileName, $decryptedOutput);
 
                         if($fileUploaded == true){
 							$_POST['uploadAssignment'] = $decryptedOutput;
-                            uploadMemberAssignment($_POST);
+                            $uploadResult = uploadMemberAssignment($_POST);
+                            if($uploadResult){
+                                echo "<script>alert('Assignment Successfully Uploaded!');</script>";
+                            } else{
+                                echo "<script>alert('Error: Assignment database upload failed.');</script>";
+                            }
                         } else{
-                            echo "<script>alert('Error: Assignment Unsuccessfully Uploaded. Please, check file and cipher key.');</script>";
+                            error_log("Failed to write decrypted file: " . $pFileName . " - file_put_contents returned: " . var_export($fileUploaded, true));
+                            echo "<script>alert('Error: Assignment Unsuccessfully Uploaded. Failed to save decrypted file.');</script>";
                         }
 
                     } catch (Exception $e){
                         $errors[] = $e->getMessage();
+                        error_log("Upload Assignment Exception: " . $e->getMessage());
+                        echo "<script>alert('Error during decryption: " . addslashes($e->getMessage()) . "');</script>";
 
                     }
                 } else{

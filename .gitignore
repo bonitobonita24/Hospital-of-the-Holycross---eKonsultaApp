@@ -16,6 +16,9 @@ files/*
 # Docker volumes
 mysql-data/
 
+# Database dumps folder
+db/
+
 # OS files
 .DS_Store
 Thumbs.db
@@ -25,6 +28,9 @@ Thumbs.db
 
 # Large database dumps
 *.sql
+
+# Spec story
+.specstory/
 
 # Windows uninstaller files
 unins*.dat

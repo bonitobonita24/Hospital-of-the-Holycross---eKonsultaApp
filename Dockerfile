@@ -50,10 +50,13 @@ RUN echo 'LimitRequestBody 524288000' >> /etc/apache2/apache2.conf
 # Copy application files
 COPY . /var/www/html
 
-# Set proper permissions
+# Set proper permissions (must run as root before USER www-data)
 RUN chown -R www-data:www-data /var/www/html && \
-    chmod -R 755 /var/www/html && \
-    chmod -R 777 /var/www/html/files /var/www/html/tmp
+    find /var/www/html -type d -exec chmod 755 {} \; && \
+    find /var/www/html -type f -exec chmod 644 {} \; && \
+    chmod -R 777 /var/www/html/files && \
+    chmod -R 777 /var/www/html/tmp && \
+    chmod 644 /var/www/html/files/.gitkeep 2>/dev/null || true
 
 # Run as www-data user
 USER www-data
