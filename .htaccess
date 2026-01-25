@@ -1,0 +1,31 @@
+# PHP timeout and memory settings
+php_value max_execution_time 300
+php_value max_input_time 300
+php_value memory_limit 256M
+php_value post_max_size 64M
+php_value upload_max_filesize 64M
+
+# Enable error reporting for debugging (comment out in production)
+# php_flag display_errors on
+# php_value error_reporting E_ALL
+
+# Set default timezone
+php_value date.timezone "Asia/Manila"
+
+# Increase MySQL timeout
+php_value mysql.connect_timeout 60
+php_value default_socket_timeout 300
+
+# Security headers
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set X-XSS-Protection "1; mode=block"
+</IfModule>
+
+# Prevent directory browsing
+Options -Indexes
+
+# Custom error pages (optional)
+# ErrorDocument 404 /404.php
+# ErrorDocument 500 /500.php
